@@ -36,7 +36,7 @@
 	</div></section>
     <section class="slide"><div>
         <h2 data-l10n-id="disclaimer-title">Disclaimer</h2>
-        <p data-l10n-id="disclaimer-p">I’m interested in technical part of cryptocurrencies, not in economy.</p>
+        <p data-l10n-id="disclaimer-p">I’m interested in technical part of cryptocurrencies, not in the economy.</p>
     </div></section>
     <section class="slide"><div>
         <h2 data-l10n-id="cryptocurrencies-title">Cryptocurrencies ?</h2>
@@ -54,12 +54,39 @@
         <figcaption><a href="http://getaddr.bitnodes.io/">bitnodes.io</a></figcaption>
         </figure>
     </div></section>
+    <section class="slide proofofwork"><div>
+        <style>
+            .slide.proofofwork input    { font-size: 28px; border: 1px solid black; width: 70%; }
+            .slide.proofofwork code     { white-space: pre-wrap; word-wrap: break-word; line-height: 1.2em; font-size: 28px; margin-top: .7em; }
+            .slide.proofofwork p        { margin-bottom: 0; }
+        </style>
+        <h2 data-l10n-id="proof-of-work-title">Proof-of-work</h2>
+        <p data-l10n-id="proof-of-work-desc">Adam Back, Britsh cryptographer, invented <a href="https://en.wikipedia.org/wiki/Hashcash">hashcash</a> in 97. Challenge based on number of 0 bit (difficulty).</p>
+        <label data-l10n-id="proofofwork-example-title">SHA256 example : <input class="in" value="Hello Bitcoin !"></label>
+        <pre>
+            <code class="sha"></code>
+            <code class="bits"></code>
+        </pre>
+        <script type="text/javascript" src="js/sha256.js"></script>
+        <script defer>
+            var hash = function() {
+                var hash = CryptoJS.SHA256(document.querySelector('.slide.proofofwork .in').value).toString();
+                document.querySelector('.slide.proofofwork .sha').innerHTML = hash;
+                var bits = "";
+                for (var i=0; i < hash.length; i++) {
+                    bits += parseInt(hash.charAt(i), 16).toString(2);
+                }
+                document.querySelector('.slide.proofofwork .bits').innerHTML = bits;
+            }
+            document.querySelector('.slide.proofofwork .in').addEventListener('keyup', hash);
+            hash();
+        </script>
+    </div></section>
     <section class="slide"><div>
         <h2 data-l10n-id="proof-of-work-title">Proof-of-work</h2>
         <ul>
-            <li>Adam Back, Britsh cryptographer, invented <a href="https://en.wikipedia.org/wiki/Hashcash">hashcash</a> in 97,
-            <li>Bitcoin : SHA-256, 00000000000000012596d17e43e08b368ddd09a5613e49024590f8da5d532dd0
-            <li>Litecoin : scrypt (memory intensive)
+            <li>Bitcoin : based on CPU via SHA-256, between 2^10 and 2^20 tries (00000000000000012596d17e43e08b368ddd09a5613e49024590f8da5d532dd0)
+            <li>Litecoin : based on memory via scrypt
         </ul>
     </div></section>
     <section class="slide"><div>
