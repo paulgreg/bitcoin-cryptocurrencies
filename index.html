@@ -69,8 +69,9 @@
         </pre>
         <script type="text/javascript" src="js/sha256.js"></script>
         <script defer>
+            var input = document.querySelector('.slide.proofofwork .in');
             var hash = function() {
-                var hash = CryptoJS.SHA256(document.querySelector('.slide.proofofwork .in').value).toString();
+                var hash = CryptoJS.SHA256(input.value).toString();
                 document.querySelector('.slide.proofofwork .sha').innerHTML = hash;
                 var bits = "";
                 for (var i=0; i < hash.length; i++) {
@@ -78,7 +79,14 @@
                 }
                 document.querySelector('.slide.proofofwork .bits').innerHTML = bits;
             }
-            document.querySelector('.slide.proofofwork .in').addEventListener('keyup', hash);
+
+            input.addEventListener('keyup', hash);
+            input.addEventListener('focus', function() {
+                window.shower.disableKeys();
+            });
+            input.addEventListener('blur', function() {
+                window.shower.enableKeys();
+            });
             hash();
         </script>
     </div></section>
@@ -202,6 +210,7 @@
         </ul>
     </div></section>
     <div class="progress"><div></div></div>
+    <!-- Custom shower build, see https://github.com/paulgreg/shower/commit/a621cf451f24b74f70233cc91f6d934904dd4ae4 -->
 	<script src="shower/shower.min.js"></script>
 </body>
 </html>
