@@ -61,8 +61,8 @@
             .slide.proofofwork p        { margin-bottom: 0; }
         </style>
         <h2 data-l10n-id="proof-of-work-title">Proof-of-work</h2>
-        <p data-l10n-id="proof-of-work-desc">Adam Back, Britsh cryptographer, invented <a href="https://en.wikipedia.org/wiki/Hashcash">hashcash</a> in 97. Challenge based on number of 0 bit (difficulty).</p>
-        <label data-l10n-id="proofofwork-example-title">SHA256 example : <input class="in" value="Hello Bitcoin !"></label>
+        <p data-l10n-id="proof-of-work-desc">Adam Back, Britsh cryptographer, invented <a href="https://en.wikipedia.org/wiki/Hashcash">hashcash</a> in 97.<br>Challenge based on number of first bits with 0 value (the difficulty).</p>
+        <label data-l10n-id="proofofwork-example-title">SHA256 example : <input type="number" class="in" value="1" min="0"></label>
         <pre>
             <code class="sha"></code>
             <code class="bits"></code>
@@ -81,6 +81,7 @@
             }
 
             input.addEventListener('keyup', hash);
+            input.addEventListener('change', hash);
             input.addEventListener('focus', function() {
                 window.shower.disableKeys();
             });
