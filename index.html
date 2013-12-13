@@ -47,16 +47,18 @@
         <figcaption><a href="https://en.wikipedia.org/wiki/Cryptocurrency">Wikipedia</a></figcaption>
         </figure>
     </div></section>
-    <!--section class="slide"><div>
-        <h2 data-l10n-id="p2p-def">Peer-to-peer, decentralized</h2>
-        <iframe src="https://blockchain.info/fr/nodes-globe?series=48hrs" style="width: 100%; height: 550px;"></iframe>
-    </div></section-->
     <section class="slide"><div>
         <h2 data-l10n-id="p2p-def">Peer-to-peer, decentralized</h2>
         <figure>
         <img src="pictures/bitnodes.png">
-        <figcaption><a href="http://getaddr.bitnodes.io/">bitnodes.io</a></figcaption>
+        <figcaption><a href="http://getaddr.bitnodes.io/">bitnodes.io</a>, <a href="https://blockchain.info/fr/nodes-globe" data-l10n-id="p2p-globe">blockchain.info globe</a></figcaption>
         </figure>
+    </div></section>
+    <section class="slide hashcash"><div>
+        <style>
+        </style>
+        <h2 data-l10n-id="proof-of-work-title">Proof-of-work</h2>
+        <p data-l10n-id="proof-of-work-desc">Adam Back, Britsh cryptographer, invented <a href="https://en.wikipedia.org/wiki/Hashcash">hashcash</a> in 97.<br>Challenge based on number of first bits with 0 value (the difficulty).</p>
     </div></section>
     <section class="slide proof-of-work"><div>
         <style>
@@ -65,7 +67,6 @@
             .slide.proof-of-work p        { margin-bottom: 0; }
         </style>
         <h2 data-l10n-id="proof-of-work-title">Proof-of-work</h2>
-        <p data-l10n-id="proof-of-work-desc">Adam Back, Britsh cryptographer, invented <a href="https://en.wikipedia.org/wiki/Hashcash">hashcash</a> in 97.<br>Challenge based on number of first bits with 0 value (the difficulty).</p>
         <label data-l10n-id="proof-of-work-example-title">SHA256 example : <input type="number" class="in" value="1" min="0"></label>
         <pre>
             <code class="sha"></code>
@@ -135,12 +136,29 @@
         <figcaption data-l10n-id="fees-caption">Transaction fees</figcaption>
         </figure>
     </div></section>
-    <section class="slide"><div>
+    <section class="slide realtime"><div>
         <h2>Bitcoin : quelques indicateurs</h2>
-        <iframe src="http://realtimebitcoin.info/" style="width: 100%; height: 400px;"></iframe>
-        <!-- TODO si offline, afficher une page statique -->
-        1 Milliards de $ en BTC contre 1200 Milliads de $
-        36 000 Petaflops (1000 x la puissance de Tiahne-2, 33 Petaflops, plus gros super calculateur)
+        <iframe src="./pictures/realtimebitcoin.png" data-src="http://realtimebitcoin.info/" scrolling="no" style="width: 100%; height: 365px;"></iframe>
+        <ul>
+            <li>1 Milliards de $ en BTC contre 1200 Milliads de $
+            <li>36 000 Petaflops (1000 x la puissance de Tiahne-2, 33 Petaflops, plus gros super calculateur)
+        </ul>
+        <script defer>
+            if (navigator.onLine) {
+                var realtimeslide = document.querySelector('.slide.realtime');
+
+                var observer = new MutationObserver(function(mutations) {
+                    mutations.forEach(function(mutation) {
+                        if (realtimeslide.classList.contains('active')) {
+                            console.log(realtimeslide.classList);
+                            var iframe = realtimeslide.querySelector('iframe')
+                            iframe.setAttribute('src', iframe.getAttribute('data-src'));
+                        }
+                    });
+                });
+                observer.observe(realtimeslide, { attributes: true, childList: false, characterData: false});
+            }
+        </script>
     </div></section>
     <section class="slide"><div>
         <h2>Client autonome, service en ligne ?</h2>
