@@ -64,29 +64,28 @@
         <figcaption><a href="https://en.wikipedia.org/wiki/Cryptocurrency">Wikipedia</a></figcaption>
         </figure>
     </div></section>
-    <section class="slide map"><div>
-        <h2 data-l10n-id="p2p-def"></h2>
-        <iframe src="./pictures/bitnodes.png" data-static-src="./pictures/bitnodes.png" data-dynamic-src="https://blockchain.info/fr/nodes-globe" scrolling="no" style="width: 100%; height: 400px;"></iframe>
-        <p><a href="http://getaddr.bitnodes.io/">bitnodes.io</a>, <a href="" data-l10n-id="p2p-globe"></a></p>
-        <script defer>
-            (function() {
-                if (navigator.onLine) {
-                    var slide = document.querySelector('.slide.map');
-                    var iframe = slide.querySelector('iframe')
-
-                    var observer = new MutationObserver(function(mutations) {
-                        mutations.forEach(function(mutation) {
-                            if (slide.classList.contains('active')) {
-                                iframe.setAttribute('src', iframe.getAttribute('data-dynamic-src'));
-                            } else if (iframe.getAttribute('src') !== iframe.getAttribute('data-static-src')) {
-                                iframe.setAttribute('src', iframe.getAttribute('data-static-src'));
-                            }
-                        });
-                    });
-                    observer.observe(slide, { attributes: true, childList: false, characterData: false});
-                }
-            })();
-        </script>
+    <section class="slide history"><div>
+        <style>
+            .slide.history li span { font-weight: bold; font-style:italic; color: #444; }
+        </style>
+        <h2 data-l10n-id="history-title"></h2>
+        <ul>
+            <li data-l10n-id="history-2008">
+            <li data-l10n-id="history-2009">
+            <li data-l10n-id="history-2011">
+            <li data-l10n-id="history-2012">
+            <li data-l10n-id="history-2013">
+        </ul>
+    </div></section>
+    <section class="slide"><div>
+        <h2>Qu’est ce qu’une adresse ?</h2>
+    </div></section>
+    <section class="slide"><div>
+        <h2>Blockchain</h2>
+        <ul>
+            <li>que se passe t’il si elle diverge
+            <li>The last block that will generate coins will be block #6,929,999 which should be generated at or near the year 2140. The total number of coins in circulation will then remain static at 20,999,999.9769 BTC.
+        </ul>
     </div></section>
     <section class="slide hashcash"><div>
         <style>
@@ -129,7 +128,7 @@
                     window.shower.enableKeys();
                 });
                 hash();
-            }))();
+            })();
         </script>
     </div></section>
     <section class="slide proof-of-work-detail" ><div>
@@ -141,25 +140,29 @@
         <pre><code><mark class="important">000000000000000</mark>12596d17e43e08b368ddd09a5613e49024590f8da5d532dd0</code></pre>
         <p>Litecoin : based on memory via scrypt</p>
     </div></section>
-    <section class="slide"><div>
-        <h2>Histoire</h2>
-        <ul>
-            <li>Satoshi Nakamoto
-            <li>White paper
-            <li>Treads
-            <li>Qui est Satoshi ?
-        </ul>
-    </div></section>
-    <section class="slide"><div>
-        <h2>Qu’est ce qu’une adresse ?</h2>
-    </div></section>
-    <section class="slide"><div>
-        <h2>Blockchain</h2>
-        <ul>
-            <li>que se passe t’il si elle diverge
-            <li><a href="https://en.bitcoin.it/wiki/Genesis_block">Genesis block</a>
-            <li>The last block that will generate coins will be block #6,929,999 which should be generated at or near the year 2140. The total number of coins in circulation will then remain static at 20,999,999.9769 BTC.
-        </ul>
+    <section class="slide map"><div>
+        <h2 data-l10n-id="p2p-def"></h2>
+        <iframe src="./pictures/bitnodes.png" data-static-src="./pictures/bitnodes.png" data-dynamic-src="https://blockchain.info/fr/nodes-globe" scrolling="no" style="width: 100%; height: 400px;"></iframe>
+        <p><a href="http://getaddr.bitnodes.io/">bitnodes.io</a>, <a href="" data-l10n-id="p2p-globe"></a></p>
+        <script defer>
+            (function() {
+                if (navigator.onLine) {
+                    var slide = document.querySelector('.slide.map');
+                    var iframe = slide.querySelector('iframe')
+
+                    var observer = new MutationObserver(function(mutations) {
+                        mutations.forEach(function(mutation) {
+                            if (slide.classList.contains('active')) {
+                                iframe.setAttribute('src', iframe.getAttribute('data-dynamic-src'));
+                            } else if (iframe.getAttribute('src') !== iframe.getAttribute('data-static-src')) {
+                                iframe.setAttribute('src', iframe.getAttribute('data-static-src'));
+                            }
+                        });
+                    });
+                    observer.observe(slide, { attributes: true, childList: false, characterData: false});
+                }
+            })();
+        </script>
     </div></section>
     <section class="slide"><div>
         <h2>Mining</h2>
