@@ -64,12 +64,29 @@
         <figcaption><a href="https://en.wikipedia.org/wiki/Cryptocurrency">Wikipedia</a></figcaption>
         </figure>
     </div></section>
-    <section class="slide"><div>
+    <section class="slide map"><div>
         <h2 data-l10n-id="p2p-def"></h2>
-        <figure>
-        <img src="pictures/bitnodes.png">
-        <figcaption><a href="http://getaddr.bitnodes.io/">bitnodes.io</a>, <a href="https://blockchain.info/fr/nodes-globe" data-l10n-id="p2p-globe"></a></figcaption>
-        </figure>
+        <iframe src="./pictures/bitnodes.png" data-static-src="./pictures/bitnodes.png" data-dynamic-src="https://blockchain.info/fr/nodes-globe" scrolling="no" style="width: 100%; height: 400px;"></iframe>
+        <p><a href="http://getaddr.bitnodes.io/">bitnodes.io</a>, <a href="" data-l10n-id="p2p-globe"></a></p>
+        <script defer>
+            (function() {
+                if (navigator.onLine) {
+                    var slide = document.querySelector('.slide.map');
+                    var iframe = slide.querySelector('iframe')
+
+                    var observer = new MutationObserver(function(mutations) {
+                        mutations.forEach(function(mutation) {
+                            if (slide.classList.contains('active')) {
+                                iframe.setAttribute('src', iframe.getAttribute('data-dynamic-src'));
+                            } else if (iframe.getAttribute('src') !== iframe.getAttribute('data-static-src')) {
+                                iframe.setAttribute('src', iframe.getAttribute('data-static-src'));
+                            }
+                        });
+                    });
+                    observer.observe(slide, { attributes: true, childList: false, characterData: false});
+                }
+            })();
+        </script>
     </div></section>
     <section class="slide hashcash"><div>
         <style>
@@ -91,26 +108,28 @@
         </pre>
         <script type="text/javascript" src="js/sha256.js"></script>
         <script defer>
-            var input = document.querySelector('.slide.proof-of-work .in');
-            var hash = function() {
-                var hash = CryptoJS.SHA256(input.value).toString();
-                document.querySelector('.slide.proof-of-work .sha').innerHTML = hash;
-                var bits = "";
-                for (var i=0; i < hash.length; i++) {
-                    bits += parseInt(hash.charAt(i), 16).toString(2);
+            (function() {
+                var input = document.querySelector('.slide.proof-of-work .in');
+                var hash = function() {
+                    var hash = CryptoJS.SHA256(input.value).toString();
+                    document.querySelector('.slide.proof-of-work .sha').innerHTML = hash;
+                    var bits = "";
+                    for (var i=0; i < hash.length; i++) {
+                        bits += parseInt(hash.charAt(i), 16).toString(2);
+                    }
+                    document.querySelector('.slide.proof-of-work .bits').innerHTML = bits;
                 }
-                document.querySelector('.slide.proof-of-work .bits').innerHTML = bits;
-            }
 
-            input.addEventListener('keyup', hash);
-            input.addEventListener('change', hash);
-            input.addEventListener('focus', function() {
-                window.shower.disableKeys();
-            });
-            input.addEventListener('blur', function() {
-                window.shower.enableKeys();
-            });
-            hash();
+                input.addEventListener('keyup', hash);
+                input.addEventListener('change', hash);
+                input.addEventListener('focus', function() {
+                    window.shower.disableKeys();
+                });
+                input.addEventListener('blur', function() {
+                    window.shower.enableKeys();
+                });
+                hash();
+            }))();
         </script>
     </div></section>
     <section class="slide proof-of-work-detail" ><div>
@@ -138,6 +157,8 @@
         <h2>Blockchain</h2>
         <ul>
             <li>que se passe t’il si elle diverge
+            <li><a href="https://en.bitcoin.it/wiki/Genesis_block">Genesis block</a>
+            <li>The last block that will generate coins will be block #6,929,999 which should be generated at or near the year 2140. The total number of coins in circulation will then remain static at 20,999,999.9769 BTC.
         </ul>
     </div></section>
     <section class="slide"><div>
@@ -155,26 +176,29 @@
     </div></section>
     <section class="slide realtime"><div>
         <h2>Bitcoin : quelques indicateurs</h2>
-        <iframe src="./pictures/realtimebitcoin.png" data-src="http://realtimebitcoin.info/" scrolling="no" style="width: 100%; height: 365px;"></iframe>
+        <iframe src="./pictures/realtimebitcoin.png" data-dynamic-src="http://realtimebitcoin.info/" scrolling="no" style="width: 100%; height: 365px;"></iframe>
         <ul>
             <li>1 Milliards de $ en BTC contre 1200 Milliads de $
             <li>36 000 Petaflops (1000 x la puissance de Tiahne-2, 33 Petaflops, plus gros super calculateur)
         </ul>
         <script defer>
-            if (navigator.onLine) {
-                var realtimeslide = document.querySelector('.slide.realtime');
+            (function() {
+                if (navigator.onLine) {
+                    var slide = document.querySelector('.slide.realtime');
+                    var urlChanged = false;
 
-                var observer = new MutationObserver(function(mutations) {
-                    mutations.forEach(function(mutation) {
-                        if (realtimeslide.classList.contains('active')) {
-                            console.log(realtimeslide.classList);
-                            var iframe = realtimeslide.querySelector('iframe')
-                            iframe.setAttribute('src', iframe.getAttribute('data-src'));
-                        }
+                    var observer = new MutationObserver(function(mutations) {
+                        mutations.forEach(function(mutation) {
+                            if (!urlChanged && slide.classList.contains('active')) {
+                                var iframe = slide.querySelector('iframe')
+                                iframe.setAttribute('src', iframe.getAttribute('data-dynamic-src'));
+                                urlChanged = true;
+                            }
+                        });
                     });
-                });
-                observer.observe(realtimeslide, { attributes: true, childList: false, characterData: false});
-            }
+                    observer.observe(slide, { attributes: true, childList: false, characterData: false});
+                }
+            })();
         </script>
     </div></section>
     <section class="slide"><div>
@@ -215,6 +239,15 @@
             <li>podcasts
         </ul>
     </div></section>
+    <section class="slide division"><div>
+        <ul>
+            <li>1 BTC = 1 bitcoin
+            <li>0.01 BTC = 1 cBTC = 1 centibitcoin, bitcent)
+            <li>0.001 BTC = 1 mBTC = 1 millibitcoin, mbit, millibit, bitmill
+            <li>0.000 001 BTC = 1 μBTC = 1 microbitcoin, ubit, microbit
+            <li>0.000 000 01 BTC = 1 satoshi
+        </ul>
+    </div></section>
     <section class="slide currencies"><div>
         <style>
             .slide.currencies ul { column-count: 2; column-gap: 1em; -webkit-column-count: 2; -webkit-column-gap: 1em; -moz-column-count: 2; -moz-column-gap: 1em; }
@@ -242,6 +275,7 @@
     <section class="slide"><div>
         <h2>Resources</h2>
         <ul>
+            <li><a href="https://en.bitcoin.it/wiki/FAQ">Bitcoin FAQ</a>
             <li><a href="https://www.grc.com/sn/sn-287.htm" title="transcript">Podcast Security Now n°287</a>
             <li><a href="http://bitcoin.stackexchange.com">http://bitcoin.stackexchange.com</a>
             <li><a href="https://rsstodolist.appspot.com/?name=bitcoin&l=100">Flux RSS "bookmarks"</a>
