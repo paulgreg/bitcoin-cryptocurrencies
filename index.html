@@ -9,9 +9,11 @@
     <script type="text/javascript" src="js/l10n.js"></script>
     <link rel="prefetch" type="application/l10n" href="l10n.ini" />
     <style>
+        abbr                { border-bottom: #999 dotted 1px; }
         .slide.cover>div    { padding-top: 105px; }
         .slide>div          { padding-top: 45px; height: 560px; }
         .border             { border: 1px solid black; }
+        small               { font-size: small; }
     </style>
 </head>
 <body class="list">
@@ -77,8 +79,34 @@
             <li data-l10n-id="history-2013">
         </ul>
     </div></section>
+    <section class="slide address"><div>
+        <style>
+            .slide.address small.privatekey { font-size: 40%; }
+            .slide.address small.publickey  { font-size: 40%; }
+            .slide.address .privatekey      { color: #A8003B; }
+            .slide.address .publickey       { color: #1600A8; }
+            .slide.address .sha256          { color: #A8005B; }
+            .slide.address .version         { color: #00A8A6; }
+            .slide.address .ripemd          { color: #21A800; }
+            .slide.address .checksum        { color: #4600A8; }
+            .slide.address .address         { color: #00A890; }
+        </style>
+        <h2 data-l10n-id="address-title"></h2>
+        <ol>
+            <li data-l10n-id="address-0">
+            <li data-l10n-id="address-1">
+            <li data-l10n-id="address-2">
+            <li data-l10n-id="address-3">
+            <li data-l10n-id="address-4">
+        </ol>
+    </div></section>
     <section class="slide"><div>
-        <h2>Qu’est ce qu’une adresse ?</h2>
+        <h2 data-l10n-id="security-concerns-title"></h2>
+        <ul>
+            <li data-l10n-id="security-address-chance">
+            <li data-l10n-id="security-address-chance">
+            <!-- Source : http://bitcoin.stackexchange.com/questions/22/is-it-possible-to-brute-force-bitcoin-address-creation-in-order-to-steal-money -->
+        </ul>
     </div></section>
     <section class="slide"><div>
         <h2>Blockchain</h2>
@@ -216,6 +244,7 @@
         <h2>Attaques</h2>
         <ul>
             <li>51 %
+            <!-- http://bitcoin.stackexchange.com/questions/658/what-can-an-attacker-with-51-of-hash-power-do -->
             <li>virus
         </ul>
     </div></section>
@@ -249,6 +278,12 @@
             <li>0.001 BTC = 1 mBTC = 1 millibitcoin, mbit, millibit, bitmill
             <li>0.000 001 BTC = 1 μBTC = 1 microbitcoin, ubit, microbit
             <li>0.000 000 01 BTC = 1 satoshi
+        </ul>
+    </div></section>
+    <section class="slide script"><div>
+        <h2>Bitcoin Script</h2>
+        <ul>
+            <li><a href="https://en.bitcoin.it/wiki/Script">Script</a>
         </ul>
     </div></section>
     <section class="slide currencies"><div>
