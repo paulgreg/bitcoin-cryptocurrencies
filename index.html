@@ -38,20 +38,20 @@
         </script>
     </div></section>
     <section class="slide cover" id="Cover"><div>
+        <style>
+            #Cover .titles { background-color: rgba(0, 0, 0, 0.6); }
+            #Cover h2, 
+            #Cover p,
+            #Cover p a      { color:#FFF; text-align:center; }
+            #Cover h2       { margin:20px 0 0; font-size:70px; }
+            #Cover p        { margin:14px 0 10px; font-style:italic; font-weight: bold; font-size:30px; }
+            #Cover p a      { color:#FFF; font-weight: bold; }
+		</style>
         <div class="titles">
             <h2 data-l10n-id="main-title"></h2>
             <p>Grégory Paul <a href="https://twitter.com/paulgreg" rel="me">@paulgreg</a> - <a href="http://paulgreg.me" rel="me">http://paulgreg.me</a></p>
         </div>
 		<img src="pictures/bitcoins-wp.jpg" alt="">
-        <style>
-            #Cover .titles { background-color: rgba(0, 0, 0, 0.6); }
-            #Cover h2, 
-            #Cover p,
-            #Cover p a  { color:#FFF; text-align:center; }
-            #Cover h2   { margin:20px 0 0; font-size:70px; }
-            #Cover p    { margin:14px 0 10px; font-style:italic; font-weight: bold; font-size:30px; }
-            #Cover p a  { color:#FFF; font-weight: bold; }
-		</style>
 	</div></section>
     <section class="slide"><div>
         <h2 data-l10n-id="disclaimer-title"></h2>
@@ -248,19 +248,22 @@
             <li>virus
         </ul>
     </div></section>
-    <section class="slide"><div>
-        <h2>404s</h2>
+    <section class="slide server404"><div>
+        <style>
+            .slide.server404 pre code    { line-height: 140%; }
+        </style>
+        <h2 data-l10n-id="server404-title"></h2>
         <pre>
             <code>404 Not Found</code>
-            <code>  /.bitcoin/wallet.dat: 1 Time(s)</code>
-            <code>  /.feathercoin/wallet.dat: 1 Time(s)</code>
-            <code>  /.litecoin/wallet.dat: 1 Time(s)</code>
-            <code>  /.namecoin/wallet.dat: 1 Time(s)</code>
-            <code>  /.novacoin/wallet.dat: 1 Time(s)</code>
-            <code>  /.ppcoin/wallet.dat: 1 Time(s)</code>
-            <code>  /.primecoin/wallet.dat: 1 Time(s)</code>
-            <code>  /.terracoin/wallet.dat: 1 Time(s)</code>
-            <code>  /wallet.dat: 1 Time(s)</code>
+            <code>  /.bitcoin/wallet.dat</code>
+            <code>  /.feathercoin/wallet.dat</code>
+            <code>  /.litecoin/wallet.dat</code>
+            <code>  /.namecoin/wallet.dat</code>
+            <code>  /.novacoin/wallet.dat</code>
+            <code>  /.ppcoin/wallet.dat</code>
+            <code>  /.primecoin/wallet.dat</code>
+            <code>  /.terracoin/wallet.dat</code>
+            <code>  /wallet.dat</code>
         </pre>
     </div></section>
     <section class="slide merchants"><div>
@@ -422,7 +425,7 @@
         <h2>Division</h2>
         <ul>
             <li>1 BTC = 1 bitcoin
-            <li>0.01 BTC = 1 cBTC = 1 centibitcoin, bitcent)
+            <li>0.01 BTC = 1 cBTC = 1 centibitcoin, bitcent
             <li>0.001 BTC = 1 mBTC = 1 millibitcoin, mbit, millibit, bitmill
             <li>0.000 001 BTC = 1 μBTC = 1 microbitcoin, ubit, microbit
             <li>0.000 000 01 BTC = 1 satoshi
@@ -438,7 +441,7 @@
         <style>
             .slide.currencies ul { column-count: 2; column-gap: 1em; -webkit-column-count: 2; -webkit-column-gap: 1em; -moz-column-count: 2; -moz-column-gap: 1em; }
         </style>
-        <h2>Les autres « Cryptocurrencies »</h2>
+        <h2 data-l10n-id="cryptocurrencies-title"></h2>
         <ul>
             <li>Anoncoin / ANC
             <li>Bitcoin / BTC
@@ -459,29 +462,48 @@
         </ul>
     </div></section>
     <section class="slide"><div>
-        <h2>Dev</h2>
+        <h2 data-l10n-id="dev-title"></h2>
         <ul>
             <li>Java : <a href="http://code.google.com/p/bitcoinj/">bitcoinj</a>,
-            <li>JavaScript : <a href="https://github.com/defunctzombie/bitcoin-address">address validation</a>, <a href="http://miohtama.github.io/bitcoin-prices/">bitcoinprices.js</a>, <a href="http://coinwidget.com/">coinwidget</a>, <a href="http://bitcoinjs.org/">bitcoinjs</a>, <a href="https://npmjs.org/package/bitcoin">node-bitcoin</a>,
-            <li>JavaScript bitcoin miner <a href="http://www.bitcoinplus.com/miner/embeddable">bitcoinplus</a>, <a href="https://code.google.com/p/hamiyoca/">hamiyoca</a> (WebWorker, WebGL),
-            <li>Blockchain : <a href="https://blockchain.info/">blockchain.info</a>, <a href="https://blockexplorer.com/">block explorer</a>,
-            <li>Tools : <a href="https://www.bitaddress.org">bitaddress.org</a>, <a href="http://brainwallet.org">Brainwallet.org</a>, <a href="http://gobittest.appspot.com/">TP’s Go Bitcoin Tests</a>.
+            <li>JavaScript : <a href="https://github.com/defunctzombie/bitcoin-address" data-l10n-id=dev-validation></a>, <a href="http://miohtama.github.io/bitcoin-prices/">bitcoinprices.js</a>, <a href="http://coinwidget.com/">coinwidget</a>, <a href="http://bitcoinjs.org/">bitcoinjs</a>, <a href="https://npmjs.org/package/bitcoin">node-bitcoin</a>,
+            <li><span data-l10n-id="dev-miner"></span> : <a href="http://www.bitcoinplus.com/miner/embeddable">bitcoinplus</a>, <a href="https://code.google.com/p/hamiyoca/">hamiyoca</a> (WebWorker, WebGL),
+            <li><span data-l10n-id="dev-blockchain"></span> : <a href="https://blockchain.info/">blockchain.info</a>, <a href="https://blockexplorer.com/">block explorer</a>,
+            <li><span data-l10n-id="dev-tools"></span>: <a href="https://www.bitaddress.org">bitaddress.org</a>, <a href="http://brainwallet.org">Brainwallet.org</a>, <a href="http://gobittest.appspot.com/">TP’s Go Bitcoin Tests</a>.
         </ul>
     </div></section>
     <section class="slide"><div>
-        <h2>Resources</h2>
+        <h2 data-l10n-id="resources-title">Resources</h2>
         <ul>
-            <li><a href="https://en.bitcoin.it/wiki/FAQ">Bitcoin FAQ</a>
-            <li><a href="https://www.grc.com/sn/sn-287.htm" title="transcript">Podcast Security Now n°287</a>
-            <li><a href="http://bitcoin.stackexchange.com">http://bitcoin.stackexchange.com</a>
-            <li><a href="https://rsstodolist.appspot.com/?name=bitcoin&l=100">Mon flux RSS sur les monnaies cryptographique</a>
+            <li data-l10n-id="ressources-faq">
+            <li data-l10n-id="ressources-sn">
+            <li data-l10n-id="ressources-stackexchange">
+            <li data-l10n-id="ressources-rss">
         </ul>
     </div></section>
+    <section class="slide qa"><div>
+        <style>
+            .slide.qa div.qa-icon       { width: 100%; text-align: center; }
+            .slide.qa div.qa-icon img   { width: 200px; }
+            .slide.qa p                 { margin-top: 3em; }
+            .slide.qa p span            { display: block;}
+            .slide.qa p img             { float: left; vertical-align: middle; margin-right: 1em; }
+        </style>
+        <h2 data-l10n-id="qa-title"></h2>
+        <div class="qa-icon">
+            <img src="pictures/speech_bubbles.svg">
+        </div>
+        <p>
+            <img src="pictures/qrcode.gif" >
+            <span data-l10n-id="qa-presentation"></span>
+            <a href="http://paulgreg.me/bitcoin-cryptocurrencies/">http://paulgreg.me/bitcoin-cryptocurrencies/</a>
+        </p>
+    </div></section>
     <section class="slide"><div>
-        <h2>Images et outils utilisées dans cette présentation</h2>
+        <h2 data-l10n-id="assets-title"></h2>
         <ul>
-            <li>Bitcoins en fond d’écran : http://www.bloomberg.com/quicktake/bitcoins/
-            <li>Présentation via <a href="https://github.com/shower/shower/">Shower</a>
+            <li data-l10n-id="assets-wallpaper">
+            <li data-l10n-id="assets-shower">
+            <li data-l10n-id="assets-webl10n">
         </ul>
     </div></section>
     <div class="progress"><div></div></div>
