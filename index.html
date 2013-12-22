@@ -23,18 +23,40 @@
     <section class="slide language selection"><div>
         <style>
             .slide.language.selection h2, 
-            .slide.language.selection p { text-align: center; }
+            .slide.language.selection p                     { text-align: center; }
+            .slide.language.selection p a.selected          { color: green; }
+            .slide.language.selection p a.selected:before   { content: "✓"; }
         </style>
         <h2>Langue - Language</h2>
         <p><a href="" class="french">en français</a> - <a href="" class="english">in english</a></p>
         <script defer>
-            var setLang = function(lng, e) {
-                e.preventDefault();
+            var setLang = function(lng, elToSelect, elToDeselect, e) {
+                if (e) {
+                    e.preventDefault();
+                }
                 document.webL10n.setLanguage(lng);
+                elToSelect.classList.add('selected');
+                elToDeselect.classList.remove('selected');
             };
             var slide = document.querySelector('.slide.language.selection');
-            slide.querySelector('.french').addEventListener('click', setLang.bind(this, 'fr'), false);
-            slide.querySelector('.english').addEventListener('click', setLang.bind(this, 'en'), false);
+            var french = slide.querySelector('.french');
+            var english = slide.querySelector('.english');
+            french.addEventListener('click', setLang.bind(this, 'fr', french, english), false);
+            english.addEventListener('click', setLang.bind(this, 'en', english, french), false);
+            var startup = true;
+            window.addEventListener('localized', function() {
+                document.documentElement.lang = document.webL10n.getLanguage();
+                document.documentElement.dir = document.webL10n.getDirection();
+                if (startup) {
+                    startup = false;
+                    if (document.webL10n.getLanguage().indexOf('en') === 0) {
+                        setLang('en', english, french);
+                        } else {
+                        setLang('fr', french, english);
+                    }
+                }
+            }, false);
+
         </script>
     </div></section>
     <section class="slide cover" id="Cover"><div>
