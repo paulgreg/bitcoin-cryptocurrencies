@@ -197,27 +197,10 @@
     </div></section>
     <section class="slide map"><div>
         <h2 data-l10n-id="p2p-def"></h2>
-        <iframe src="./pictures/bitnodes.png" data-static-src="./pictures/bitnodes.png" data-dynamic-src="https://blockchain.info/fr/nodes-globe" scrolling="no" style="width: 100%; height: 400px;"></iframe>
-        <p><a href="http://getaddr.bitnodes.io/">bitnodes.io</a>, <a href="" data-l10n-id="p2p-globe"></a></p>
-        <script defer>
-            (function() {
-                if (navigator.onLine) {
-                    var slide = document.querySelector('.slide.map');
-                    var iframe = slide.querySelector('iframe')
-
-                    var observer = new MutationObserver(function(mutations) {
-                        mutations.forEach(function(mutation) {
-                            if (slide.classList.contains('active')) {
-                                iframe.setAttribute('src', iframe.getAttribute('data-dynamic-src'));
-                            } else if (iframe.getAttribute('src') !== iframe.getAttribute('data-static-src')) {
-                                iframe.setAttribute('src', iframe.getAttribute('data-static-src'));
-                            }
-                        });
-                    });
-                    observer.observe(slide, { attributes: true, childList: false, characterData: false});
-                }
-            })();
-        </script>
+        <figure>
+        <img src="./pictures/bitnodes.png" style="width: 100%; height: 400px;">
+        <figcaption><a href="http://getaddr.bitnodes.io/">bitnodes.io</a></figcaption>
+        </figure>
     </div></section>
     <section class="slide"><div>
         <h2>Mining</h2>
