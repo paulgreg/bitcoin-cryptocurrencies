@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="shower/themes/ribbon/styles/screen.css">
     <script type="text/javascript" src="js/l10n.js"></script>
     <link rel="prefetch" type="application/l10n" href="l10n.ini" />
-    <link rel="shortcut icon" id="favicon" type="image/x-icon" href="pictures/favicon.png">
+    <link rel="shortcut icon" href="pictures/favicon.png">
     <style>
         abbr                { border-bottom: #999 dotted 1px; }
         .slide.cover>div    { padding-top: 105px; }
@@ -163,6 +163,13 @@
         </ol>
     </div></section>
     <section class="slide"><div>
+        <h2 data-l10n-id="fees-caption"></h2>
+        <figure>
+            <img data-l10n-id="fees-image" src="pictures/fees.png" class="border">
+            <figcaption data-l10n-id="fees-caption"></figcaption>
+        </figure>
+    </div></section>
+    <section class="slide"><div>
         <h2 data-l10n-id="transaction-2-title"></h2>
         <figure>
         <img data-l10n-id="transaction-2-img" style="width: 88%">
@@ -177,7 +184,7 @@
         </style>
         <h2 data-l10n-id="proof-of-work-title"></h2>
         <p data-l10n-id="proof-of-work-desc"></p>
-        <pre><code><mark class="important">0000000000000000</mark>2596d... &lt; <mark class="important">0000000000000001</mark>00000...</code></pre>
+        <pre><code><mark class="important">000</mark><mark>2596d...</mark> &lt; <mark class="important">001</mark><mark>00000...</mark></code></pre>
 	<ul>
 		<li data-l10n-id="proof-of-work-bitcoin"/>
 		<li data-l10n-id="proof-of-work-litecoin"/>
@@ -235,19 +242,69 @@
         <figcaption></figcaption>
         </figure>
     </div></section>
+    <section class="slide miningpower"><div>
+         <style>
+            .slide.miningpower figure {
+                float: left;
+                margin: 0 5px;
+            }
+            .slide.miningpower figure + figure:before {
+                content: "<";
+                position: relative;
+                top: -75px;
+                margin-right: 5px;
+            }
+            .slide.miningpower figure img {
+                max-width: 160px;
+                max-height: 160px;
+            }
+            .slide.miningpower figure figcaption {
+                text-align: center;
+                font-size: 16px;
+            }
+            .slide.miningpower figure figcaption strong {
+                display: block;
+                line-height: 8px;
+            }
+            .slide.miningpower h3 {
+                clear: both;
+                line-height: 0;
+            }
+            .slide.miningpower h3.litecoin {
+                padding-top: 30px;
+            }
+         </style>
+        <h2>Mining</h2>
+        <h3>Bitcoin</h3>
+        <figure>
+            <img src="pictures/cpu.png">
+            <figcaption><strong><abbr title="Central Processing Unit">CPU</abbr> : 18 Mh/s - 0.2 Mh/J</strong>(Core i7 2600K)</figcaption>
+        </figure>
+        <figure>
+            <img src="pictures/gpu.png">
+            <figcaption><strong><abbr title="Graphics Processing Unit">GPU</abbr> : 640 Mh/s - 3 Mh/J</strong>(AMD Radeon 7970)</figcaption>
+        </figure>
+        <figure>
+            <img src="pictures/fpga.png">
+            <figcaption><strong><abbr title="Field-Programmable Gate Array">FPGA</abbr> : 800 Mh/s - 20 Mj/J</strong>(ModMiner Quad)</figcaption>
+        </figure>
+        <figure>
+            <img src="pictures/asic.png">
+            <figcaption><strong><abbr title="Application-Specific Integrated Circuit">ASIC</abbr> : 600 Gh/s - 1714 Mj/J</strong>(Monarch BPU 600C)</figcaption>
+        </figure>
+        <h3 class="litecoin">Litecoin</h3>
+        <figure>
+            <img src="pictures/cpu.png">
+            <figcaption><strong><abbr title="Central Processing Unit">CPU</abbr> : 50 Kh/s</strong>(Core i7 2600K)</figcaption>
+        </figure>
+        <figure>
+            <img src="pictures/gpu.png">
+            <figcaption><strong><abbr title="Graphics Processing Unit">GPU</abbr> : 620 Kh/s</strong>(AMD Radeon 7970)</figcaption>
+        </figure>
+    </div></section>
     <section class="slide"><div>
         <h2>Mining</h2>
-        <ul>
-            <li>Bitcoin : CPU &gt; GPU &gt; &gt; FPGA &gt; ASIC &gt; ?
-            <li>The last block that will generate coins will be block #6,929,999 which should be generated at or near the year 2140. The total number of coins in circulation will then remain static at 20,999,999.9769 BTC.
-            <li>Litecoin, memory-intensive : CPU &gt; GPU &gt; X
-            <li>Outils : cgminer, cgminer-scrypt, etc
-            <li>Mining-rigs
-        </ul>
-        <figure>
-        <img data-l10n-id="fees-image" src="pictures/fees.png" class="border">
-        <figcaption data-l10n-id="fees-caption"></figcaption>
-        </figure>
+        <p>The last block that will generate coins will be block #6,929,999 which should be generated at or near the year 2140. The total number of coins in circulation will then remain static at 20,999,999.9769 BTC.</p>
     </div></section>
     <section class="slide"><div>
         <h2 data-l10n-id="miner-type-title"></h2>
@@ -412,6 +469,11 @@
     <section class="slide script"><div>
         <h2>Bitcoin Script</h2>
         <ul>
+            <li>Pay-to-PubKey-Hash: This is the standard payment to a bitcoin address. The address is in the output and the signature and pubkey are in the input.
+            <li>Pay-to-Pubkey: This is a payment to a pubkey. The pubkey is in the output and the signature is in the input.
+            <li>Pay-to-ScriptHash: This is being used for some of the fancier payment transactions. A script hash is in the output and the signature and a serialized script are in the input. On the first pass, the script hash is verified against the serialized script. If it checks, then the serialized script is expanded and a second pass is done using that script.
+            <li>Pay-to-MultiSig: Multiple signatures are required to sign the script. The output contains the pubkeys and the input contains the signatures. All signatures must be verified by one of the pubkeys but there can be more pubkeys than signatures. The current limit for M of N scripts is N=3.
+            <li>https://bitcoin.stackexchange.com/questions/21123/which-scripts-are-currently-considered-standard-and-therefore-actually-propagate
             <li><a href="https://en.bitcoin.it/wiki/Script">Script</a>
         </ul>
     </div></section>
