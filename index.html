@@ -185,23 +185,22 @@
         <h2 data-l10n-id="proof-of-work-title"></h2>
         <p data-l10n-id="proof-of-work-desc"></p>
         <pre><code><mark class="important">000</mark><mark>2596d...</mark> &lt; <mark class="important">001</mark><mark>00000...</mark></code></pre>
-	<ul>
-		<li data-l10n-id="proof-of-work-bitcoin"/>
-		<li data-l10n-id="proof-of-work-litecoin"/>
-	</ul>
     </div></section>
     <section class="slide proof-of-work"><div>
         <style>
-            .slide.proof-of-work input    { font-size: 28px; border: 1px solid black; width: 70%; }
-            .slide.proof-of-work code     { white-space: pre-wrap; word-wrap: break-word; line-height: 1.2em; font-size: 28px; margin-top: .7em; }
+            .slide.proof-of-work input    { font-size: 28px; border: 1px solid black; }
+            .slide.proof-of-work code     { white-space: pre-wrap; word-wrap: break-word; line-height: 1.2em; font-size: 32px; margin-top: .7em; }
             .slide.proof-of-work p        { margin-bottom: 0; }
         </style>
         <h2 data-l10n-id="proof-of-work-title"></h2>
         <label data-l10n-id="proof-of-work-example-title"><input type="number" class="in" value="1" min="0"></label>
         <pre>
             <code class="sha"></code>
-            <code class="bits"></code>
         </pre>
+        <ul>
+            <li data-l10n-id="proof-of-work-bitcoin"/>
+            <li data-l10n-id="proof-of-work-litecoin"/>
+        </ul>
         <script type="text/javascript" src="js/sha256.js"></script>
         <script defer>
             (function() {
@@ -209,11 +208,6 @@
                 var hash = function() {
                     var hash = CryptoJS.SHA256(input.value).toString();
                     document.querySelector('.slide.proof-of-work .sha').innerHTML = hash;
-                    var bits = "";
-                    for (var i=0; i < hash.length; i++) {
-                        bits += parseInt(hash.charAt(i), 16).toString(2);
-                    }
-                    document.querySelector('.slide.proof-of-work .bits').innerHTML = bits;
                 }
 
                 input.addEventListener('keyup', hash);
