@@ -10,22 +10,21 @@
     <link rel="prefetch" type="application/l10n" href="l10n.ini" />
     <link rel="shortcut icon" href="pictures/favicon.png">
     <style>
-        abbr                { border-bottom: #999 dotted 1px; }
-        .slide.cover>div    { padding-top: 105px; }
-        .slide>div          { padding-top: 45px; height: 560px; }
-        .border             { border: 1px solid black; }
-        small               { font-size: small; }
-        .slide              { background: white url('pictures/devoxxfr-vertical.png') no-repeat 10px 30px; }
-        .slide.title h1         { color: white; font-size: 80px; font-weight: bold; position: absolute; top: 130px; left: 400px; transform:rotate(-46deg); -webkit-transform:rotate(-46deg); 
-                                  line-height: 80px; background-color: rgba(0,0,0,0.6); padding: 10px 20px; width: 500px;
-                                }
-        .slide.title .color1    { background-color: #53B6BC; height: 400px; width: 400px; position: absolute; top: -200px; left: 200px; transform:rotate(-135deg); -webkit-transform:rotate(-135deg); }
-        .slide.title .color2    { background-color: #F5AF33; height: 400px; width: 400px; position: absolute; top: -270px; left: 300px; transform:rotate(-135deg); -webkit-transform:rotate(-135deg); }
-        .slide.title .color3    { background-color: white;   height: 400px; width: 400px; position: absolute; top: -340px; left: 400px; transform:rotate(-135deg); -webkit-transform:rotate(-135deg); }
-        .slide.title .footer    { background: #53B6BC url('pictures/devoxxfr-small.png') no-repeat center center; height: 50px; position: absolute; bottom: -25px; left: 0; right: 0; color: white; font-size: 24px; padding: 0 10px; }
-        .slide.title .footer a  { color: white; border: 0; }
-        .slide.title .footer .hashtag { float: left; }
-        .slide.title .footer .twitter { float: right; }
+        abbr                            { border-bottom: #999 dotted 1px; }
+        .slide.cover>div                { padding-top: 105px; }
+        .slide>div                      { padding-top: 45px; height: 560px; }
+        .border                         { border: 1px solid black; }
+        small                           { font-size: small; }
+        .slide                          { background: white url('pictures/devoxxfr-vertical.png') no-repeat 10px 30px; }
+        .slide.title h1                 { color: white; font-size: 70px; font-weight: bold; position: absolute; top: 130px; left: 400px; transform:rotate(-46deg); -webkit-transform:rotate(-46deg); 
+                                          line-height: 80px; background-color: rgba(0,0,0,0.6); padding: 10px 20px; width: 500px; }
+        .slide.title .color1            { background-color: #53B6BC; height: 400px; width: 400px; position: absolute; top: -200px; left: 200px; transform:rotate(-135deg); -webkit-transform:rotate(-135deg); }
+        .slide.title .color2            { background-color: #F5AF33; height: 400px; width: 400px; position: absolute; top: -270px; left: 300px; transform:rotate(-135deg); -webkit-transform:rotate(-135deg); }
+        .slide.title .color3            { background-color: white;   height: 400px; width: 400px; position: absolute; top: -340px; left: 400px; transform:rotate(-135deg); -webkit-transform:rotate(-135deg); }
+        .slide.title .footer            { background: #53B6BC url('pictures/devoxxfr-small.png') no-repeat center center; height: 50px; position: absolute; bottom: -25px; left: 0; right: 0; color: white; font-size: 24px; padding: 0 10px; }
+        .slide.title .footer a          { color: white; border: 0; }
+        .slide.title .footer .hashtag   { float: left; }
+        .slide.title .footer .twitter   { float: right; }
         .slide.title .footer .twitter img { display: inline; position: relative; z-index: 1; margin: 0 .2em 0 0; vertical-align: middle; }
     </style>
 </head>
@@ -116,14 +115,11 @@
         <img data-l10n-id="motivation-comic3" src="pictures/CommitStrip-fr-3.gif"/>
         </p>
     </div></section>
-    <section class="slide"><div>
-        <h2 data-l10n-id="cryptocurrency-title"></h2>
-        <figure>
-        <blockquote>
-            <p data-l10n-id="cryptocurrency-def"></p>
-        </blockquote>
-        <figcaption><a href="https://en.wikipedia.org/wiki/Cryptocurrency">Wikipedia</a></figcaption>
-        </figure>
+    <section class="slide cover title"><div>
+        <div class="color1"></div><div class="color2"></div><div class="color3"></div>
+        <h1 data-l10n-id="cryptocurrency-title"></h1>
+		<img src="pictures/bitcoins-wp.jpg" alt="">
+        <p class="footer"><span class="hashtag">#devoxxbtc</span><span class="twitter"><img src="pictures/twitter.png"><a href="https://twitter.com/paulgreg" rel="me" class="twitter">@paulgreg</a></span></p>
     </div></section>
     <section class="slide history"><div>
         <style>
@@ -137,6 +133,15 @@
             <li data-l10n-id="history-2012">
             <li data-l10n-id="history-2013">
         </ul>
+    </div></section>
+    <section class="slide"><div>
+        <h2 data-l10n-id="cryptocurrency-title"></h2>
+        <figure>
+        <blockquote>
+            <p data-l10n-id="cryptocurrency-def"></p>
+        </blockquote>
+        <figcaption><a href="https://en.wikipedia.org/wiki/Cryptocurrency">Wikipedia</a></figcaption>
+        </figure>
     </div></section>
     <section class="slide cover title"><div>
         <div class="color1"></div><div class="color2"></div><div class="color3"></div>
@@ -622,7 +627,7 @@
 		<li><a href="https://en.bitcoin.it/wiki/FAQ">Bitcoin FAQ</a>
 		<li><a href="https://www.grc.com/sn/sn-287.htm" title="transcript">Podcast - Security Now n°287</a>
 		<li><a href="http://bitcoin.stackexchange.com">http://bitcoin.stackexchange.com</a>
-		<li><a href="https://en.bitcoin.it/">Bitcoin wiki</a
+		<li><a href="https://en.bitcoin.it/">Bitcoin wiki</a>
 		<li><a href="http://www.righto.com/2014/02/bitcoins-hard-way-using-raw-bitcoin.html">Bitcoins the hard way: Using the raw Bitcoin protocol</a>
         <li><a href="http://bitcoin.org/bitcoin.pdf">Bitcoin: A Peer-to-Peer Electronic Cash System</a>
 		<li><a href="https://github.com/bitcoin/bitcoin">github.com/bitcoin</a>
