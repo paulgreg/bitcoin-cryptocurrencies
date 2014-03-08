@@ -15,6 +15,18 @@
         .slide>div          { padding-top: 45px; height: 560px; }
         .border             { border: 1px solid black; }
         small               { font-size: small; }
+        .slide              { background: white url('pictures/devoxxfr-vertical.png') no-repeat 10px 30px; }
+        .slide.title h1         { color: white; font-size: 80px; font-weight: bold; position: absolute; top: 130px; left: 400px; transform:rotate(-46deg); -webkit-transform:rotate(-46deg); 
+                                  line-height: 80px; background-color: rgba(0,0,0,0.6); padding: 10px 20px; width: 500px;
+                                }
+        .slide.title .color1    { background-color: #53B6BC; height: 400px; width: 400px; position: absolute; top: -200px; left: 200px; transform:rotate(-135deg); -webkit-transform:rotate(-135deg); }
+        .slide.title .color2    { background-color: #F5AF33; height: 400px; width: 400px; position: absolute; top: -270px; left: 300px; transform:rotate(-135deg); -webkit-transform:rotate(-135deg); }
+        .slide.title .color3    { background-color: white;   height: 400px; width: 400px; position: absolute; top: -340px; left: 400px; transform:rotate(-135deg); -webkit-transform:rotate(-135deg); }
+        .slide.title .footer    { background: #53B6BC url('pictures/devoxxfr-small.png') no-repeat center center; height: 50px; position: absolute; bottom: -25px; left: 0; right: 0; color: white; font-size: 24px; padding: 0 10px; }
+        .slide.title .footer a  { color: white; border: 0; }
+        .slide.title .footer .hashtag { float: left; }
+        .slide.title .footer .twitter { float: right; }
+        .slide.title .footer .twitter img { display: inline; position: relative; z-index: 1; margin: 0 .2em 0 0; vertical-align: middle; }
     </style>
 </head>
 <body class="list">
@@ -63,22 +75,28 @@
     </div></section>
     <section class="slide cover" id="Cover"><div>
         <style>
-            #Cover .titles { background-color: rgba(0, 0, 0, 0.6); }
-            #Cover h2, 
-            #Cover p,
-            #Cover p a      { color:#FFF; text-align:center; }
-            #Cover h2       { margin:20px 0 0; font-size:70px; }
-            #Cover p        { margin:14px 0 10px; font-style:italic; font-weight: bold; font-size:30px; }
-            #Cover p a      { color:#FFF; font-weight: bold; }
-            #Cover p img    { display: inline; position: relative; z-index: 1; margin: 0 .2em 0 1em; vertical-align: middle; }
+            #Cover .titles       { margin: -105px -120px 0 -120px; }
+            #Cover h2            { font-size: 66px; padding: 60px 20px; margin: 0; background-color: white; color:#53B6BC; width: 90%;  }
+            #Cover h3            { background-color: #F5AF33; height: 40px; width: 85%; }
+            #Cover ul            { background-color: #53B6BC; font-size:30px; width: 60%; color: white; padding: 30px 15px; }
+            #Cover ul li         { padding: 0; font-weight: bold; }
+            #Cover ul a          { color: white; }
+            #Cover a.valtech     { margin-left: 40px; position: relative; top: -4px; }
+            #Cover a.valtech img { width: 130px; }
+            #Cover ul img        { display: inline; position: relative; z-index: 1; margin: 0 .2em 0 0; vertical-align: middle; }
+            #Cover a.twitter     { margin-right: 25px; }
+            #Cover h4            { background: white url('pictures/devoxxfr.png') no-repeat 10px 10px; height: 80px; margin-top: 100px; }
+            #Cover h5            { background: #53B6BC; height: 50px; margin-top: 5px; color: white; font-size: 24px; padding-left: 10px; }
 		</style>
         <div class="titles">
             <h2 data-l10n-id="main-title"></h2>
-            <p>
-                Grégory Paul
-                <img src="pictures/twitter.png"><a href="https://twitter.com/paulgreg" rel="me">@paulgreg</a>
-                <img src="pictures/user_circle.png"><a href="http://paulgreg.me" rel="me">http://paulgreg.me</a>
-            </p>
+            <h3></h3>
+            <ul>
+                <li>Grégory Paul <a href="http://valtech.fr/" class="valtech"><img src="pictures/valtech-logo.png"></a>
+                <li><img src="pictures/twitter.png"><a href="https://twitter.com/paulgreg" rel="me" class="twitter">@paulgreg</a><img src="pictures/user_circle.png"><a href="http://paulgreg.me" rel="me">http://paulgreg.me</a>
+            </ul>
+            <h4></h4>
+            <h5>#devoxxbtc</h5>
         </div>
 		<img src="pictures/bitcoins-wp.jpg" alt="">
 	</div></section>
@@ -107,12 +125,37 @@
         <figcaption><a href="https://en.wikipedia.org/wiki/Cryptocurrency">Wikipedia</a></figcaption>
         </figure>
     </div></section>
+    <section class="slide history"><div>
+        <style>
+            .slide.history li span { font-weight: bold; font-style:italic; color: #444; }
+        </style>
+        <h2 data-l10n-id="history-title"></h2>
+        <ul>
+            <li data-l10n-id="history-2008">
+            <li data-l10n-id="history-2009">
+            <li data-l10n-id="history-2011">
+            <li data-l10n-id="history-2012">
+            <li data-l10n-id="history-2013">
+        </ul>
+    </div></section>
+    <section class="slide cover title"><div>
+        <div class="color1"></div><div class="color2"></div><div class="color3"></div>
+        <h1 data-l10n-id="p2p-title"></h1>
+		<img src="pictures/bitcoins-wp.jpg" alt="">
+        <p class="footer"><span class="hashtag">#devoxxbtc</span><span class="twitter"><img src="pictures/twitter.png"><a href="https://twitter.com/paulgreg" rel="me" class="twitter">@paulgreg</a></span></p>
+    </div></section>
     <section class="slide map"><div>
         <h2 data-l10n-id="p2p-title"></h2>
         <figure>
         <img src="./pictures/bitnodes.png" style="width: 100%; max-height: 400px;">
         <figcaption><a href="http://getaddr.bitnodes.io/">bitnodes.io</a></figcaption>
         </figure>
+    </div></section>
+    <section class="slide cover title"><div>
+        <div class="color1"></div><div class="color2"></div><div class="color3"></div>
+        <h1 data-l10n-id="crypto-title"></h1>
+		<img src="pictures/bitcoins-wp.jpg" alt="">
+        <p class="footer"><span class="hashtag">#devoxxbtc</span><span class="twitter"><img src="pictures/twitter.png"><a href="https://twitter.com/paulgreg" rel="me" class="twitter">@paulgreg</a></span></p>
     </div></section>
     <section class="slide"><div>
         <h2 data-l10n-id="crypto-symmetric-cipher-title"></h2>
@@ -146,6 +189,12 @@
         <figcaption></figcaption>
         </figure>
     </div></section>
+    <section class="slide cover title"><div>
+        <div class="color1"></div><div class="color2"></div><div class="color3"></div>
+        <h1 data-l10n-id="transaction-basic-title"></h1>
+		<img src="pictures/bitcoins-wp.jpg" alt="">
+        <p class="footer"><span class="hashtag">#devoxxbtc</span><span class="twitter"><img src="pictures/twitter.png"><a href="https://twitter.com/paulgreg" rel="me" class="twitter">@paulgreg</a></span></p>
+    </div></section>
     <section class="slide"><div>
         <h2 data-l10n-id="transaction-1-title"></h2>
         <figure>
@@ -178,8 +227,13 @@
         <h2 data-l10n-id="fees-caption"></h2>
         <figure>
             <img data-l10n-id="fees-image" src="pictures/fees.png" class="border">
-            <figcaption data-l10n-id="fees-caption"></figcaption>
         </figure>
+    </div></section>
+    <section class="slide cover title"><div>
+        <div class="color1"></div><div class="color2"></div><div class="color3"></div>
+        <h1 data-l10n-id="transaction-block-title"></h1>
+		<img src="pictures/bitcoins-wp.jpg" alt="">
+        <p class="footer"><span class="hashtag">#devoxxbtc</span><span class="twitter"><img src="pictures/twitter.png"><a href="https://twitter.com/paulgreg" rel="me" class="twitter">@paulgreg</a></span></p>
     </div></section>
     <section class="slide"><div>
         <h2 data-l10n-id="transaction-2-title"></h2>
@@ -241,12 +295,11 @@
         <figcaption></figcaption>
         </figure>
     </div></section>
-    <section class="slide"><div>
-        <h2 data-l10n-id="clients-title"></h2>
-        <figure>
-        <img data-l10n-id="clients-img">
-        <figcaption></figcaption>
-        </figure>
+    <section class="slide cover title"><div>
+        <div class="color1"></div><div class="color2"></div><div class="color3"></div>
+        <h1 data-l10n-id="mining-title"></h1>
+		<img src="pictures/bitcoins-wp.jpg" alt="">
+        <p class="footer"><span class="hashtag">#devoxxbtc</span><span class="twitter"><img src="pictures/twitter.png"><a href="https://twitter.com/paulgreg" rel="me" class="twitter">@paulgreg</a></span></p>
     </div></section>
     <section class="slide miningpower"><div>
          <style>
@@ -280,7 +333,7 @@
                 padding-top: 30px;
             }
          </style>
-        <h2>Mining</h2>
+        <h2 data-l10n-id="mining-title"></h2>
         <h3>Bitcoin</h3>
         <figure>
             <img src="pictures/cpu.png">
@@ -309,7 +362,7 @@
         </figure>
     </div></section>
     <section class="slide"><div>
-        <h2>Mining</h2>
+        <h2 data-l10n-id="mining-title"></h2>
         <p>The last block that will generate coins will be block #6,929,999 which should be generated at or near the year 2140. The total number of coins in circulation will then remain static at 20,999,999.9769 BTC.</p>
     </div></section>
     <section class="slide"><div>
@@ -318,6 +371,12 @@
         <img data-l10n-id="miner-type-img" style="width: 58%">
         <figcaption></figcaption>
         </figure>
+    </div></section>
+    <section class="slide cover title"><div>
+        <div class="color1"></div><div class="color2"></div><div class="color3"></div>
+        <h1 data-l10n-id="transaction-complete-title"></h1>
+		<img src="pictures/bitcoins-wp.jpg" alt="">
+        <p class="footer"><span class="hashtag">#devoxxbtc</span><span class="twitter"><img src="pictures/twitter.png"><a href="https://twitter.com/paulgreg" rel="me" class="twitter">@paulgreg</a></span></p>
     </div></section>
     <section class="slide"><div>
         <h2 data-l10n-id="transaction-3-title"></h2>
@@ -353,6 +412,19 @@
                 }
             })();
         </script>
+    </div></section>
+    <section class="slide cover title"><div>
+        <div class="color1"></div><div class="color2"></div><div class="color3"></div>
+        <h1 data-l10n-id="security-title"></h1>
+		<img src="pictures/bitcoins-wp.jpg" alt="">
+        <p class="footer"><span class="hashtag">#devoxxbtc</span><span class="twitter"><img src="pictures/twitter.png"><a href="https://twitter.com/paulgreg" rel="me" class="twitter">@paulgreg</a></span></p>
+    </div></section>
+    <section class="slide"><div>
+        <h2 data-l10n-id="clients-title"></h2>
+        <figure>
+        <img data-l10n-id="clients-img">
+        <figcaption></figcaption>
+        </figure>
     </div></section>
     <section class="slide"><div>
         <h2 data-l10n-id="security-concerns-title"></h2>
@@ -395,18 +467,11 @@
             <code>  /wallet.dat</code>
         </pre>
     </div></section>
-    <section class="slide history"><div>
-        <style>
-            .slide.history li span { font-weight: bold; font-style:italic; color: #444; }
-        </style>
-        <h2 data-l10n-id="history-title"></h2>
-        <ul>
-            <li data-l10n-id="history-2008">
-            <li data-l10n-id="history-2009">
-            <li data-l10n-id="history-2011">
-            <li data-l10n-id="history-2012">
-            <li data-l10n-id="history-2013">
-        </ul>
+    <section class="slide cover title"><div>
+        <div class="color1"></div><div class="color2"></div><div class="color3"></div>
+        <h1 data-l10n-id="practical-title"></h1>
+		<img src="pictures/bitcoins-wp.jpg" alt="">
+        <p class="footer"><span class="hashtag">#devoxxbtc</span><span class="twitter"><img src="pictures/twitter.png"><a href="https://twitter.com/paulgreg" rel="me" class="twitter">@paulgreg</a></span></p>
     </div></section>
     <section class="slide merchants"><div>
         <style>
@@ -476,27 +541,6 @@
             <li>0.000 000 01 BTC = 1 Satoshi
         </ul>
     </div></section>
-    <section class="slide script"><div>
-        <h2>Bitcoin Script</h2>
-        <ul>
-            <li>Pay-to-PubKey-Hash: This is the standard payment to a bitcoin address. The address is in the output and the signature and pubkey are in the input.
-            <li>Pay-to-Pubkey: This is a payment to a pubkey. The pubkey is in the output and the signature is in the input.
-            <li>Pay-to-ScriptHash: This is being used for some of the fancier payment transactions. A script hash is in the output and the signature and a serialized script are in the input. On the first pass, the script hash is verified against the serialized script. If it checks, then the serialized script is expanded and a second pass is done using that script.
-            <li>Pay-to-MultiSig: Multiple signatures are required to sign the script. The output contains the pubkeys and the input contains the signatures. All signatures must be verified by one of the pubkeys but there can be more pubkeys than signatures. The current limit for M of N scripts is N=3.
-            <li>https://bitcoin.stackexchange.com/questions/21123/which-scripts-are-currently-considered-standard-and-therefore-actually-propagate
-            <li><a href="https://en.bitcoin.it/wiki/Script">Script</a>
-        </ul>
-    </div></section>
-    <section class="slide"><div>
-        <h2 data-l10n-id="dev-title"></h2>
-        <ul>
-            <li>Java : <a href="http://code.google.com/p/bitcoinj/">bitcoinj</a>,
-            <li>JavaScript : <a href="https://github.com/defunctzombie/bitcoin-address" data-l10n-id=dev-validation></a>, <a href="http://miohtama.github.io/bitcoin-prices/">bitcoinprices.js</a>, <a href="http://coinwidget.com/">coinwidget</a>, <a href="http://bitcoinjs.org/">bitcoinjs</a>, <a href="https://npmjs.org/package/bitcoin">node-bitcoin</a>,
-            <li><span data-l10n-id="dev-miner"></span> : <a href="http://www.bitcoinplus.com/miner/embeddable">bitcoinplus</a>, <a href="https://code.google.com/p/hamiyoca/">hamiyoca</a> (WebWorker, WebGL),
-            <li><span data-l10n-id="dev-blockchain"></span> : <a href="https://blockchain.info/">blockchain.info</a>, <a href="https://blockexplorer.com/">block explorer</a>,
-            <li><span data-l10n-id="dev-tools"></span>: <a href="https://www.bitaddress.org">bitaddress.org</a>, <a href="http://brainwallet.org">Brainwallet.org</a>, <a href="http://gobittest.appspot.com/">TP’s Go Bitcoin Tests</a>.
-        </ul>
-    </div></section>
     <section class="slide currencies"><div>
         <style>
             .slide.currencies ul { column-count: 2; column-gap: 1em; -webkit-column-count: 2; -webkit-column-gap: 1em; -moz-column-count: 2; -moz-column-gap: 1em; }
@@ -525,6 +569,23 @@
             <!-- https://bitcointalk.org/index.php?PHPSESSID=3m18crc564mqjhds1i072bb7j5&topic=134179.0 -->
         </ul>
     </div></section>
+    <section class="slide cover title"><div>
+        <div class="color1"></div><div class="color2"></div><div class="color3"></div>
+        <h1 data-l10n-id="more-title"></h1>
+		<img src="pictures/bitcoins-wp.jpg" alt="">
+        <p class="footer"><span class="hashtag">#devoxxbtc</span><span class="twitter"><img src="pictures/twitter.png"><a href="https://twitter.com/paulgreg" rel="me" class="twitter">@paulgreg</a></span></p>
+    </div></section>
+    <section class="slide script"><div>
+        <h2>Bitcoin Script</h2>
+        <ul>
+            <li>Pay-to-PubKey-Hash: This is the standard payment to a bitcoin address. The address is in the output and the signature and pubkey are in the input.
+            <li>Pay-to-Pubkey: This is a payment to a pubkey. The pubkey is in the output and the signature is in the input.
+            <li>Pay-to-ScriptHash: This is being used for some of the fancier payment transactions. A script hash is in the output and the signature and a serialized script are in the input. On the first pass, the script hash is verified against the serialized script. If it checks, then the serialized script is expanded and a second pass is done using that script.
+            <li>Pay-to-MultiSig: Multiple signatures are required to sign the script. The output contains the pubkeys and the input contains the signatures. All signatures must be verified by one of the pubkeys but there can be more pubkeys than signatures. The current limit for M of N scripts is N=3.
+            <li>https://bitcoin.stackexchange.com/questions/21123/which-scripts-are-currently-considered-standard-and-therefore-actually-propagate
+            <li><a href="https://en.bitcoin.it/wiki/Script">Script</a>
+        </ul>
+    </div></section>
     <section class="slide"><div>
         <h2 data-l10n-id="based-on-bitcoin-title"></h2>
         <figure>
@@ -532,6 +593,28 @@
         <figcaption><a href="https://bitmessage.org/">bitmessage</a></figcaption>
         </figure>
         <p><a href="http://www.proofofexistence.com/">proof of existence</a>
+    </div></section>
+    <section class="slide cover title"><div>
+        <div class="color1"></div><div class="color2"></div><div class="color3"></div>
+        <h1 data-l10n-id="dev-title"></h1>
+		<img src="pictures/bitcoins-wp.jpg" alt="">
+        <p class="footer"><span class="hashtag">#devoxxbtc</span><span class="twitter"><img src="pictures/twitter.png"><a href="https://twitter.com/paulgreg" rel="me" class="twitter">@paulgreg</a></span></p>
+    </div></section>
+    <section class="slide"><div>
+        <h2 data-l10n-id="dev-title"></h2>
+        <ul>
+            <li>Java : <a href="http://code.google.com/p/bitcoinj/">bitcoinj</a>,
+            <li>JavaScript : <a href="https://github.com/defunctzombie/bitcoin-address" data-l10n-id=dev-validation></a>, <a href="http://miohtama.github.io/bitcoin-prices/">bitcoinprices.js</a>, <a href="http://coinwidget.com/">coinwidget</a>, <a href="http://bitcoinjs.org/">bitcoinjs</a>, <a href="https://npmjs.org/package/bitcoin">node-bitcoin</a>,
+            <li><span data-l10n-id="dev-miner"></span> : <a href="http://www.bitcoinplus.com/miner/embeddable">bitcoinplus</a>, <a href="https://code.google.com/p/hamiyoca/">hamiyoca</a> (WebWorker, WebGL),
+            <li><span data-l10n-id="dev-blockchain"></span> : <a href="https://blockchain.info/">blockchain.info</a>, <a href="https://blockexplorer.com/">block explorer</a>,
+            <li><span data-l10n-id="dev-tools"></span>: <a href="https://www.bitaddress.org">bitaddress.org</a>, <a href="http://brainwallet.org">Brainwallet.org</a>, <a href="http://gobittest.appspot.com/">TP’s Go Bitcoin Tests</a>.
+        </ul>
+    </div></section>
+    <section class="slide cover title"><div>
+        <div class="color1"></div><div class="color2"></div><div class="color3"></div>
+        <h1 data-l10n-id="resources-title"></h1>
+		<img src="pictures/bitcoins-wp.jpg" alt="">
+        <p class="footer"><span class="hashtag">#devoxxbtc</span><span class="twitter"><img src="pictures/twitter.png"><a href="https://twitter.com/paulgreg" rel="me" class="twitter">@paulgreg</a></span></p>
     </div></section>
     <section class="slide"><div>
         <h2 data-l10n-id="resources-title">Resources</h2>
@@ -545,6 +628,12 @@
 		<li><a href="https://github.com/bitcoin/bitcoin">github.com/bitcoin</a>
 		<li><a href="https://rsstodolist.appspot.com/?name=bitcoin&l=100">http://rsstodolist.appspot.com/?n=bitcoin</a>
         </ul>
+    </div></section>
+    <section class="slide cover title"><div>
+        <div class="color1"></div><div class="color2"></div><div class="color3"></div>
+        <h1 data-l10n-id="qa-title"></h1>
+		<img src="pictures/bitcoins-wp.jpg" alt="">
+        <p class="footer"><span class="hashtag">#devoxxbtc</span><span class="twitter"><img src="pictures/twitter.png"><a href="https://twitter.com/paulgreg" rel="me" class="twitter">@paulgreg</a></span></p>
     </div></section>
     <section class="slide qa"><div>
         <style>
@@ -564,6 +653,12 @@
             <a href="http://paulgreg.me/bitcoin-cryptocurrencies/">http://paulgreg.me/bitcoin-cryptocurrencies/</a>
             <a href="https://github.com/paulgreg/bitcoin-cryptocurrencies/">github.com/paulgreg/bitcoin-cryptocurrencies/</a>
         </p>
+    </div></section>
+    <section class="slide cover title"><div>
+        <div class="color1"></div><div class="color2"></div><div class="color3"></div>
+        <h1 data-l10n-id="assets-title"></h1>
+		<img src="pictures/bitcoins-wp.jpg" alt="">
+        <p class="footer"><span class="hashtag">#devoxxbtc</span><span class="twitter"><img src="pictures/twitter.png"><a href="https://twitter.com/paulgreg" rel="me" class="twitter">@paulgreg</a></span></p>
     </div></section>
     <section class="slide"><div>
         <h2 data-l10n-id="assets-title"></h2>
