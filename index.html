@@ -243,6 +243,12 @@
             <li data-l10n-id="address-4">
         </ol>
     </div></section>
+    <section class="slide"><div>
+        <h2 data-l10n-id="fees-caption"></h2>
+        <figure>
+            <img data-l10n-id="fees-image" src="pictures/fees.png" class="border">
+        </figure>
+    </div></section>
     <section class="slide cover title"><div>
         <div class="color1"></div><div class="color2"></div><div class="color3"></div>
         <h1 data-l10n-id="transaction-block-title"></h1>
@@ -399,34 +405,6 @@
         <figcaption></figcaption>
         </figure>
     </div></section>
-    <section class="slide realtime"><div>
-        <h2>Bitcoin : quelques indicateurs</h2>
-        <iframe src="./pictures/realtimebitcoin.png" data-dynamic-src="http://realtimebitcoin.info/" scrolling="no" style="width: 100%; height: 365px;"></iframe>
-        <ul>
-            <li>1 Milliards de $ en BTC contre 1200 Milliads de $
-            <li>64 exaFLOPS (64,000 petaFLOPS) - top 500 supercomputers combined clocked in at 0.250 exaFLOPS (250 petaFLOPS).
-            <li>http://www.forbes.com/sites/reuvencohen/2013/11/28/global-bitcoin-computing-power-now-256-times-faster-than-top-500-supercomputers-combined/
-        </ul>
-        <script defer>
-            (function() {
-                if (navigator.onLine) {
-                    var slide = document.querySelector('.slide.realtime');
-                    var urlChanged = false;
-
-                    var observer = new MutationObserver(function(mutations) {
-                        mutations.forEach(function(mutation) {
-                            if (!urlChanged && slide.classList.contains('active')) {
-                                var iframe = slide.querySelector('iframe')
-                                iframe.setAttribute('src', iframe.getAttribute('data-dynamic-src'));
-                                urlChanged = true;
-                            }
-                        });
-                    });
-                    observer.observe(slide, { attributes: true, childList: false, characterData: false});
-                }
-            })();
-        </script>
-    </div></section>
     <section class="slide cover title"><div>
         <div class="color1"></div><div class="color2"></div><div class="color3"></div>
         <h1 data-l10n-id="security-title"></h1>
@@ -480,6 +458,47 @@
         <h1 data-l10n-id="practical-title"></h1>
 		<img src="pictures/bitcoins-wp.jpg" alt="">
         <p class="footer"><span class="hashtag">#devoxxbtc</span><span class="twitter"><img src="pictures/twitter.png"><a href="https://twitter.com/paulgreg" rel="me" class="twitter">@paulgreg</a></span></p>
+    </div></section>
+    <section class="slide realtime"><div>
+        <style>
+            .slide.realtime .greater { width: 100px; text-align: center; }
+            .slide.realtime .numbers { color: #666; }
+        </style>
+        <h2 data-l10n-id="realtime-title"></h2>
+        <iframe src="./pictures/realtimebitcoin.png" data-dynamic-src="http://realtimebitcoin.info/" scrolling="no" style="width: 100%; height: 365px;"></iframe>
+        <table>
+            <tr>
+                <td data-l10n-id="realtime-data-1"></td>
+                <td class="greater">&gt;</td>
+                <td data-l10n-id="realtime-data-2"></td>
+                <td></td>
+            </tr>
+            <tr class="numbers">
+                <td data-l10n-id="realtime-data-3"></td>
+                <td class="greater">&gt;</td>
+                <td data-l10n-id="realtime-data-4"></td>
+                <td>(<a href="http://www.forbes.com/sites/reuvencohen/2013/11/28/global-bitcoin-computing-power-now-256-times-faster-than-top-500-supercomputers-combined/">source</a>)</td>
+            </tr>
+        </table>
+        <script defer>
+            (function() {
+                if (navigator.onLine) {
+                    var slide = document.querySelector('.slide.realtime');
+                    var urlChanged = false;
+
+                    var observer = new MutationObserver(function(mutations) {
+                        mutations.forEach(function(mutation) {
+                            if (!urlChanged && slide.classList.contains('active')) {
+                                var iframe = slide.querySelector('iframe')
+                                iframe.setAttribute('src', iframe.getAttribute('data-dynamic-src'));
+                                urlChanged = true;
+                            }
+                        });
+                    });
+                    observer.observe(slide, { attributes: true, childList: false, characterData: false});
+                }
+            })();
+        </script>
     </div></section>
     <section class="slide merchants"><div>
         <style>
