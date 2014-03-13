@@ -563,31 +563,21 @@
     </div></section>
     <section class="slide currencies"><div>
         <style>
-            .slide.currencies ul { column-count: 2; column-gap: 1em; -webkit-column-count: 2; -webkit-column-gap: 1em; -moz-column-count: 2; -moz-column-gap: 1em; }
+            .slide.currencies li        { font-size: 20px; }
+            .slide.currencies li:last-child    { font-size: 18px; }
+            .slide.currencies li span   { font-weight: bold; }
         </style>
         <h2 data-l10n-id="other-cryptocurrencies-title"></h2>
         <ul>
-            <li>Anoncoin / ANC
-            <li>Bitcoin / BTC
-            <li>DataCoin / DTC
-            <li>Digitalcoin / DGC
-            <li>Devcoin / DVC
-            <li>Dogecoin / DOVE
-            <li>Devcoin / DVC
-            <li>Freicoin / FRC
-            <li>Feathercoin / FTC
-            <li>I0coin / I0C
-            <li>Ixcoin / IXC
-            <li>Litecoin / LTC
-            <li>Namecoin / NMC
-            <li>Novacoin / NVC
-            <li>Peercoin / PPC
-            <li>Terracoin / TRC
-            <li>Worldcoin / WDC
-            <li>Primecoin / XPM
-            <li><a href="https://vircurex.com/" title="cryptocurrencie exchange">vircurex.com</a>
-            <!-- https://bitcointalk.org/index.php?PHPSESSID=3m18crc564mqjhds1i072bb7j5&topic=134179.0 -->
-        </ul>
+            <li data-l10n-id="other-ltc">
+            <li data-l10n-id="other-ppc">
+            <li data-l10n-id="other-nvc">
+            <li data-l10n-id="other-mmc">
+            <li data-l10n-id="other-dvc">
+            <li data-l10n-id="other-ftc">
+            <li data-l10n-id="other-dov">
+            <li data-l10n-id="other-msc">
+            <li data-l10n-id="other-etc">.
     </div></section>
     <section class="slide cover title"><div>
         <div class="color1"></div><div class="color2"></div><div class="color3"></div>
@@ -598,12 +588,10 @@
     <section class="slide script"><div>
         <h2>Bitcoin Script</h2>
         <ul>
-            <li>Pay-to-PubKey-Hash: This is the standard payment to a bitcoin address. The address is in the output and the signature and pubkey are in the input.
-            <li>Pay-to-Pubkey: This is a payment to a pubkey. The pubkey is in the output and the signature is in the input.
-            <li>Pay-to-ScriptHash: This is being used for some of the fancier payment transactions. A script hash is in the output and the signature and a serialized script are in the input. On the first pass, the script hash is verified against the serialized script. If it checks, then the serialized script is expanded and a second pass is done using that script.
-            <li>Pay-to-MultiSig: Multiple signatures are required to sign the script. The output contains the pubkeys and the input contains the signatures. All signatures must be verified by one of the pubkeys but there can be more pubkeys than signatures. The current limit for M of N scripts is N=3.
-            <li>https://bitcoin.stackexchange.com/questions/21123/which-scripts-are-currently-considered-standard-and-therefore-actually-propagate
-            <li><a href="https://en.bitcoin.it/wiki/Script">Script</a>
+            <li data-l10n-id="script-1">
+            <li data-l10n-id="script-2">
+            <li data-l10n-id="script-3">
+            <li data-l10n-id="script-4">
         </ul>
     </div></section>
     <section class="slide"><div>
