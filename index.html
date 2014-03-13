@@ -123,8 +123,8 @@
     </div></section>
     <section class="slide history"><div>
         <style>
-            .slide.history .prices  { position: fixed; background: url('pictures/price-history.png') 0 bottom no-repeat; background-size: 98%;  }
-            .slide.history ul       { margin-bottom: 80px; width: 88%; }
+            .slide.history .prices  { background: url('pictures/price-history.png') 0 bottom no-repeat; height: 84%; background-size: 100%;  }
+            .slide.history ul       { width: 88%; }
             .slide.history li span  { font-weight: bold; font-style:italic; color: #444; }
         </style>
         <h2 data-l10n-id="history-title"></h2>
@@ -156,9 +156,12 @@
         <p class="footer"><span class="hashtag">#devoxxbtc</span><span class="twitter"><img src="pictures/twitter.png"><a href="https://twitter.com/paulgreg" rel="me" class="twitter">@paulgreg</a></span></p>
     </div></section>
     <section class="slide map"><div>
+        <style>
+            .slide.map figure { margin: 0 0 0 50px; }
+        </style>
         <h2 data-l10n-id="p2p-title"></h2>
         <figure>
-        <img src="./pictures/bitnodes.png" style="width: 100%; max-height: 400px;">
+        <img src="./pictures/bitnodes.png" style="max-height: 415px;">
         <figcaption><a href="http://getaddr.bitnodes.io/">bitnodes.io</a></figcaption>
         </figure>
     </div></section>
@@ -168,14 +171,20 @@
 		<img src="pictures/bitcoins-wp.jpg" alt="">
         <p class="footer"><span class="hashtag">#devoxxbtc</span><span class="twitter"><img src="pictures/twitter.png"><a href="https://twitter.com/paulgreg" rel="me" class="twitter">@paulgreg</a></span></p>
     </div></section>
-    <section class="slide"><div>
+    <section class="slide symetric"><div>
+        <style>
+            .slide.symetric figure { margin: 100px 0 0 100px; }
+        </style>
         <h2 data-l10n-id="crypto-symmetric-cipher-title"></h2>
         <figure>
         <img src="./pictures/symmetric-cipher.png">
         <figcaption></figcaption>
         </figure>
     </div></section>
-    <section class="slide"><div>
+    <section class="slide asymetric"><div>
+        <style>
+            .slide.asymetric figure { margin: 0 0 0 80px; }
+        </style>
         <h2 data-l10n-id="crypto-asymmetric-cipher-title"></h2>
         <figure>
         <img src="./pictures/asymmetric-cipher.png">
@@ -193,7 +202,7 @@
             <code><mark>0c06d876dabb4403cede1245e3b0bf1d81afd497</mark></code>
        </pre>
     </div></section>
-    <section class="slide"><div>
+    <section class="slide signature"><div>
         <h2 data-l10n-id="crypto-signature-title"></h2>
         <figure>
         <img src="./pictures/signature.png">
