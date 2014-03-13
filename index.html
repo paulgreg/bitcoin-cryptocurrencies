@@ -439,21 +439,32 @@
 		<img src="pictures/bitcoins-wp.jpg" alt="">
         <p class="footer"><span class="hashtag">#devoxxbtc</span><span class="twitter"><img src="pictures/twitter.png"><a href="https://twitter.com/paulgreg" rel="me" class="twitter">@paulgreg</a></span></p>
     </div></section>
-    <section class="slide"><div>
+    <section class="slide clients"><div>
+        <style>
+            .slide.clients img      { margin: -20px 0 0 50px; max-height: 340px; }
+            .slide.clients ol li { display: inline; margin: 0 25px;  }
+        </style>
         <h2 data-l10n-id="clients-title"></h2>
-        <figure>
-        <img data-l10n-id="clients-img">
-        <figcaption></figcaption>
-        </figure>
+        <img src="pictures/client-types.png">
+        <ol>
+            <li data-l10n-id="clients-type-1">
+            <li data-l10n-id="clients-type-2">
+            <li data-l10n-id="clients-type-3">
+        </ol>
     </div></section>
-    <section class="slide"><div>
-        <h2 data-l10n-id="security-concerns-title"></h2>
+    </div></section>
+    <section class="slide malware"><div>
+        <style>
+            .slide.server404 pre code    { line-height: 140%; }
+        </style>
+        <h2 data-l10n-id="server404-title"></h2>
         <ul>
-            <li data-l10n-id="security-address-chance">
-            <!-- Source : http://bitcoin.stackexchange.com/questions/22/is-it-possible-to-brute-force-bitcoin-address-creation-in-order-to-steal-money -->
             <li>CryptoLocker : 41,928 BTC
-            <!--  https://www.grc.com/sn/sn-439.htm -->
         </ul>
+        <pre>
+            <code>404 Not Found</code>
+            <code>  /.bitcoin/wallet.dat</code>
+        </pre>
     </div></section>
     <section class="slide"><div>
         <h2>Attaques</h2>
@@ -466,27 +477,7 @@
     http://www.bitcoin.fr/post/Ghash.io-danger - http://www.bitcoin.fr/public/divers/docs/communique_de_presse_de_ghashio.pdf
     https://bitcointalk.org/index.php?topic=83794.0#post_toc_10
 -->
-            <li>ransomware
         </ul>
-    </div></section>
-    <section class="slide server404"><div>
-        <style>
-            .slide.server404 pre code    { line-height: 140%; }
-        </style>
-        <h2 data-l10n-id="server404-title"></h2>
-        <pre>
-            <code>404 Not Found</code>
-            <code>  /.bitcoin/wallet.dat</code>
-            <code>  /.feathercoin/wallet.dat</code>
-            <code>  /.litecoin/wallet.dat</code>
-            <code>  /.namecoin/wallet.dat</code>
-            <code>  /.novacoin/wallet.dat</code>
-            <code>  /.ppcoin/wallet.dat</code>
-            <code>  /.primecoin/wallet.dat</code>
-            <code>  /.terracoin/wallet.dat</code>
-            <code>  /wallet.dat</code>
-        </pre>
-    </div></section>
     <section class="slide cover title"><div>
         <div class="color1"></div><div class="color2"></div><div class="color3"></div>
         <h1 data-l10n-id="practical-title"></h1>
