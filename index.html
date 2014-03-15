@@ -229,17 +229,19 @@
             .slide.address .privatekey      { color: #A8003B; }
             .slide.address .publickey       { color: #1600A8; }
             .slide.address .sha256          { color: #A8005B; }
-            .slide.address .version         { color: #00A8A6; }
+            .slide.address .version         { color: #FF00AC; }
             .slide.address .ripemd          { color: #21A800; }
             .slide.address .checksum        { color: #4600A8; }
             .slide.address .address         { color: #00A890; }
         </style>
         <h2 data-l10n-id="address-title"></h2>
         <ol>
-            <li data-l10n-id="address-0">
-            <li data-l10n-id="address-1" class="next">
-            <li data-l10n-id="address-2" class="next">
-            <li data-l10n-id="address-3" class="next">
+            <li><small class="address">16UwLL9Risc3QfPqBUvKofHmBQ7wMtjvM</small> <small>?</small>
+            <li class="next"><span data-l10n-id="address-keypair"></span> : <small class="privatekey">18E14A7B6A307F426A94F8114701E7C8E774E7F9A47E2C2035DB29A206321725</small> <small>(256 bits)</small> <small class="publickey">0450863AD64A87AE8A2FE83C1AF1A8403CB53F53E486D8511DAD8A04887E5B23522CD470243453A299FA9E77237716103ABC11A1DF38855ED6F2EE187E9C582BA6</small> <small>(520 bits)</small>
+            <li class="next"><small class="address">16UwLL9Risc3QfPqBUvKofHmBQ7wMtjvM</small> = Base58(<span class="version">version</span>+<span class="ripemd">hash</span>+<span class="checksum">checksum</span>)
+            <li class="next"><span class="ripemd">hash</span> = RIPEMD-160(SHA-256(<small class="publickey">0450863AD...</small>)) = <small class="ripemd">010966776006953D5567439E5E39F86A0D273BEE</small>
+            <li class="next"><span class="checksum">checksum</span> =  4 octets de SHA-256(SHA-256(<small class="version">00</small><small class="ripemd">01096...</small>)) = <small class="checksum">D61967F6</small>
+            <li class="next"><small class="address">16UwLL9Risc3QfPqBUvKofHmBQ7wMtjvM</small> = Base58(<small class="version">00</small><small class="ripemd">010966776006953D5567439E5E39F86A0D273BEE</small><small class="checksum">D61967F6</small>)
         </ol>
     </div></section>
     <section class="slide cover title"><div>
