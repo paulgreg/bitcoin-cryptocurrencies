@@ -215,12 +215,166 @@
 		<img src="pictures/bitcoins-wp.jpg" alt="">
         <p class="footer"><span class="hashtag">#devoxxbtc</span><span class="twitter"><img src="pictures/twitter.png"><a href="https://twitter.com/paulgreg" rel="me" class="twitter">@paulgreg</a></span></p>
     </div></section>
-    <section class="slide"><div>
-        <h2 data-l10n-id="transaction-1-title"></h2>
-        <figure>
-        <img data-l10n-id="transaction-1-img">
-        <figcaption></figcaption>
+    <section class="slide diag"><div>
+        <style>
+            .slide.diag ul>li:before                     { content: ""; }
+            .slide.diag ul                               { padding: 0 10px 10px 10px; }
+            .slide.diag figure div,
+            .slide.diag figure ul,
+            .slide.diag img                              { transition: all 1s ease-in-out; }
+            .slide.diag figure div                       { position: absolute; text-align: center; }
+            .slide.diag figure h2                        { font-size: 26px; }
+            .slide.diag .user                            { border: 1px solid black; border-radius: 10px; width: 200px; top: 120px; height: 100px; }
+            .slide.diag .user img.person                 { position: absolute; top: 0px; right: -60px; width: 60%; }
+            .slide.diag .user .keys img                  { position: absolute; left: -30px; }
+            .slide.diag .user .keys img.k1               { top: -60px; }
+            .slide.diag .user .keys img.k2               { top: -45px; }
+            .slide.diag .user .keys img.k3               { top: -25px; }
+            .slide.diag .user .keys img.k4               { top: -5px; }
+            .slide.diag .alice                           { left: 100px; border-color: #A8003B; }
+            .slide.diag .alice h2                        { color: #A8003B; }
+            .slide.diag .alice .link                     { width: 230px; height: 1px; background-color: black; position: absolute; transform: rotate(35deg); -webkit-transform: rotate(35deg); top: 160px; left: 160px; }
+            .slide.diag .bob                             { right: 100px; border-color: #1600A8; }
+            .slide.diag .bob h2                          { color: #1600A8; }
+            .slide.diag .bob .link                       { width: 230px; height: 1px; background-color: black; position: absolute; transform: rotate(-35deg); -webkit-transform: rotate(-35deg); top: 166px; right: 140px; }
+            .slide.diag .network                         { width: 128px; height: 128px; background: url('pictures/cloud.png') no-repeat 0 -10px; background-size: 100%; top: 300px; right: 440px; }
+            .slide.diag .network h2                      { margin-top: 50px; }
+            .slide.diag .blocks .block                   { border: 1px solid black; border-radius: 10px; background-color: white; }
+            .slide.diag .blocks .block:nth-child(2)      { position: absolute; top: 10px; left: 10px; }
+            .slide.diag .blocks .block:nth-child(3)      { position: absolute; top: 20px; left: 20px; }
+            .slide.diag .blocks .block h2                { margin: 10px; }
+            .slide.diag .blocks-alice,
+            .slide.diag .blocks-bob                      { position: absolute; top: 380px; left: 490px; }
+            .slide.diag .trans                           { font-size: 20px; padding: 0 10px; text-align: right; }
+            .slide.diag .trans div                       { display: block; position:relative; }
+            .slide.diag .trans img                       { width: 30px; margin: 4px 0 0 6px; vertical-align: text-bottom; }
+            .slide.diag .trans-to-bob                    { position: absolute; top: 200px; left: 120px; border: 1px solid black; background-color: white; border-radius: 10px; }
+            .slide.diag .alice .trans                    { position: absolute; top: 20px; width: 100px; left: 15px; font-size: 20px; text-align: left; }
+            .slide.diag .input                           { color: green; }
+            .slide.diag .output                          { color: red; }
+
+            .slide.diag .step1 .keys,
+            .slide.diag .step1 .network,        .slide.diag .step2 .network,
+            .slide.diag .step1 .link,           .slide.diag .step2 .link,
+            .slide.diag .step1 .blocks,         .slide.diag figure.step2 .blocks,   .slide.diag figure.step3 .blocks,
+            .slide.diag .step1 .trans,          .slide.diag .step2 .trans,          .slide.diag .step3 .trans,          .slide.diag .step4 .trans,         .slide.diag .step5 .trans
+            .slide.diag .step5 .blocks,         .slide.diag figure.step6 .blocks,   .slide.diag figure.step7 .blocks,   .slide.diag figure.step8 .blocks,  .slide.diag figure.step9 .blocks,
+            .slide.diag .step1 .trans-to-bob,   .slide.diag .step2 .trans-to-bob,   .slide.diag .step3 .trans-to-bob,   .slide.diag .step4 .trans-to-bob,  .slide.diag .step5 .trans-to-bob,    .slide.diag .step6 .trans-to-bob,
+            .slide.diag .step1 .keypair2,       .slide.diag .step2 .keypair2,       .slide.diag .step3 .keypair2,       .slide.diag .step4 .keypair2,      .slide.diag .step5 .keypair2,        .slide.diag .step6 .keypair2
+                                                          { opacity: 0; }
+            .slide.diag .step5 .blocks-alice,   .slide.diag .step6 .blocks-alice                { top: 170px; left: 210px; }
+            .slide.diag .step5 .blocks-bob,     .slide.diag .step6 .blocks-bob                  { top: 170px; left: 840px; }
+            .slide.diag .step8 .trans-to-bob,   .slide.diag .step9 .trans-to-bob,   .slide.diag .step10 .trans-to-bob,  .slide.diag .step11 .trans-to-bob, .slide.diag .step12 .trans-to-bob    {top: 260px; left: 230px; }
+
+            .slide.diag label                              { position: absolute; bottom: 10px; right: 100px; }
+            .slide.diag label a                            { border: 0; }
+
+            .slide.diag .desc                   { position: absolute; top: 560px; }
+            .slide.diag .desc span              { display: none; }
+            .slide.diag .step1 .desc1           { display: block; }
+            .slide.diag .step2 .desc2           { display: block; }
+            .slide.diag .step3 .desc3           { display: block; }
+            .slide.diag .step4 .desc4           { display: block; }
+            .slide.diag .step5 .desc5           { display: block; }
+            .slide.diag .step6 .desc6           { display: block; }
+            .slide.diag .step7 .desc7           { display: block; }
+            .slide.diag .step8 .desc8           { display: block; }
+            .slide.diag .step9 .desc9           { display: block; }
+
+        </style>
+        <h2 data-l10n-id="transaction-title"></h2>
+        <figure class="step1">
+            <div class="user alice">
+                <h2>Alice</h2>
+                <img class="person" src="pictures/user.png">
+                <div class="keys">
+                    <img class="k1" src="pictures/key-orange.png">
+                    <img class="k2" src="pictures/key-blue.png">
+                    <img class="keypair2 k3" src="pictures/key-green.png">
+                    <img class="keypair2 k4" src="pictures/key-red.png">
+                </div>
+                <div class="trans">
+                    <div class="trans1">10 BTC<img src="pictures/key-blue.png"></div>
+                </div>
+                <div class="link"></div>
+            </div>
+            <div class="user bob">
+                <h2>Bob</h2>
+                <img class="person" src="pictures/user.png">
+                <div class="keys">
+                    <img class="k1" src="pictures/key-pink.png">
+                    <img class="k2" src="pictures/key-purple.png">
+                </div>
+                <div class="trans">
+                </div>
+                <div class="link"></div>
+            </div>
+            <div class="network">
+                <h2>Réseau</h2>
+            </div>
+            <div class="blocks blocks-alice">
+                <div class="block"><h2>bloc</h2></div>
+                <div class="block"><h2>bloc</h2></div>
+                <div class="block"><h2>bloc</h2></div>
+            </div>
+            <div class="blocks blocks-bob">
+                <div class="block"><h2>bloc</h2></div>
+                <div class="block"><h2>bloc</h2></div>
+                <div class="block"><h2>bloc</h2></div>
+            </div>
+            <ul class="trans trans-to-bob">
+                <li><span class="input">input : </span>10.00 BTC<img src="pictures/key-blue.png">
+                <li><span class="output">output : </span>01.00 BTC<img src="pictures/key-purple.png">
+                <li><span class="output">output : </span>08.99 BTC<img src="pictures/key-red.png">
+                <li><span class="signed">signé : </span>Alice<img src="pictures/key-orange.png">
+            </ul>
+            <p class="desc">
+                <span class="desc1">1. Alice et Bob lancent leur client Bitcoin</span>
+                <span class="desc2">2. Une paire de clé privée et publique est créé</span>
+                <span class="desc3">3. Les clients se connectent aux autres clients (réseau)</span>
+                <span class="desc4">4. Le réseau contient la liste des blocs (blockchain)</span>
+                <span class="desc5">5. La liste est envoyé aux clients.</span>
+                <span class="desc6">6. Alice découvre 10 BTC.</span>
+                <span class="desc7">7. Alice veut envoyer 1 BTC à Bob (et 0.01 de frais)</span>
+                <span class="desc8">8. Elle envoit la transaction à ces voisins (au réseau)</span>
+                <span class="desc9">9. </span>
+            </p>
         </figure>
+        <label>
+            <input type="range" min="1" max="15" value="1">
+             <a href="" class="inc">+</a>/<a href="" class="dec">-</a>
+        </label>
+        <script defer>
+            (function() {
+                var slider = document.querySelector('.diag label input[type=range]');
+                var inc = document.querySelector('.diag label a.inc');
+                var dec = document.querySelector('.diag label a.dec');
+                var figure = document.querySelector('.diag figure');
+                var desc = document.querySelector('.diag .desc');
+                var onChange = function() {
+                    var v = 'step'+slider.value;
+                    if (figure.className !== v) {
+                        figure.className = v;
+                    }
+                };
+                slider.addEventListener('change', onChange);
+                slider.addEventListener('input', onChange);
+                inc.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    if (+slider.value < +slider.max) {
+                        slider.value = (+slider.value)+1;
+                        onChange();
+                    }
+                });
+                dec.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    if (+slider.value > +slider.min) {
+                        slider.value = (+slider.value)-1;
+                        onChange();
+                    }
+                });
+            })();
+        </script>
     </div></section>
     <section class="slide address"><div>
         <style>
@@ -243,19 +397,6 @@
             <li class="next"><span class="checksum">checksum</span> =  4 octets de SHA-256(SHA-256(<small class="version">00</small><small class="ripemd">01096...</small>)) = <small class="checksum">D61967F6</small>
             <li class="next"><small class="address">16UwLL9Risc3QfPqBUvKofHmBQ7wMtjvM</small> = Base58(<small class="version">00</small><small class="ripemd">010966776006953D5567439E5E39F86A0D273BEE</small><small class="checksum">D61967F6</small>)
         </ol>
-    </div></section>
-    <section class="slide cover title"><div>
-        <div class="color1"></div><div class="color2"></div><div class="color3"></div>
-        <h1 data-l10n-id="transaction-block-title"></h1>
-		<img src="pictures/bitcoins-wp.jpg" alt="">
-        <p class="footer"><span class="hashtag">#devoxxbtc</span><span class="twitter"><img src="pictures/twitter.png"><a href="https://twitter.com/paulgreg" rel="me" class="twitter">@paulgreg</a></span></p>
-    </div></section>
-    <section class="slide"><div>
-        <h2 data-l10n-id="transaction-2-title"></h2>
-        <figure>
-        <img data-l10n-id="transaction-2-img" style="width: 88%">
-        <figcaption></figcaption>
-        </figure>
     </div></section>
     <section class="slide proof"><div>
         <style>
@@ -390,19 +531,6 @@
         <h2 data-l10n-id="miner-type-title"></h2>
         <figure>
         <img data-l10n-id="miner-type-img" style="width: 60%; margin: -20px 0 0 90px;">
-        <figcaption></figcaption>
-        </figure>
-    </div></section>
-    <section class="slide cover title"><div>
-        <div class="color1"></div><div class="color2"></div><div class="color3"></div>
-        <h1 data-l10n-id="transaction-complete-title"></h1>
-		<img src="pictures/bitcoins-wp.jpg" alt="">
-        <p class="footer"><span class="hashtag">#devoxxbtc</span><span class="twitter"><img src="pictures/twitter.png"><a href="https://twitter.com/paulgreg" rel="me" class="twitter">@paulgreg</a></span></p>
-    </div></section>
-    <section class="slide"><div>
-        <h2 data-l10n-id="transaction-3-title"></h2>
-        <figure>
-        <img data-l10n-id="transaction-3-img" style="width: 88%">
         <figcaption></figcaption>
         </figure>
     </div></section>
