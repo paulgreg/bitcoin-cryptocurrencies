@@ -217,26 +217,30 @@
     </div></section>
     <section class="slide diag"><div>
         <style>
-            .slide.diag ul>li:before                     { content: ""; }
-            .slide.diag ul                               { padding: 0 10px 10px 10px; }
+            .slide.diag figure ul li:before              { content: ""; }
+            .slide.diag figure ul li                     { line-height: 28px; }
             .slide.diag figure div,
             .slide.diag figure ul,
-            .slide.diag img                              { transition: all 1s ease-in-out; }
+            .slide.diag figure img                       { transition: all 1s ease-in-out; }
             .slide.diag figure div                       { position: absolute; text-align: center; }
             .slide.diag figure h2                        { font-size: 26px; }
+            .slide.diag .private                         { transform: rotate(10deg); -webkit-transform: rotate(10deg); }
             .slide.diag .user                            { border: 1px solid black; border-radius: 10px; width: 200px; top: 120px; height: 100px; }
             .slide.diag .user img.person                 { position: absolute; top: 0px; right: -60px; width: 60%; }
             .slide.diag .user .keys img                  { position: absolute; left: -30px; }
             .slide.diag .user .keys img.k1               { top: -60px; }
-            .slide.diag .user .keys img.k2               { top: -45px; }
+            .slide.diag .user .keys img.k2               { top: -50px; }
             .slide.diag .user .keys img.k3               { top: -25px; }
-            .slide.diag .user .keys img.k4               { top: -5px; }
+            .slide.diag .user .keys img.k4               { top: -15px; }
             .slide.diag .alice                           { left: 100px; border-color: #A8003B; }
             .slide.diag .alice h2                        { color: #A8003B; }
             .slide.diag .alice .link                     { width: 230px; height: 1px; background-color: black; position: absolute; transform: rotate(35deg); -webkit-transform: rotate(35deg); top: 160px; left: 160px; }
             .slide.diag .bob                             { right: 100px; border-color: #1600A8; }
             .slide.diag .bob h2                          { color: #1600A8; }
             .slide.diag .bob .link                       { width: 230px; height: 1px; background-color: black; position: absolute; transform: rotate(-35deg); -webkit-transform: rotate(-35deg); top: 166px; right: 140px; }
+            .slide.diag .miner                           { right: 450px; top:450px; border-color: green; }
+            .slide.diag .miner h2                        { color: green; }
+            .slide.diag .miner .link                     { width: 60px; height: 1px; background-color: black; position: absolute; transform: rotate(-90deg); -webkit-transform: rotate(-90deg); top: -30px; right: 22px; }
             .slide.diag .network                         { width: 128px; height: 128px; background: url('pictures/cloud.png') no-repeat 0 -10px; background-size: 100%; top: 300px; right: 440px; }
             .slide.diag .network h2                      { margin-top: 50px; }
             .slide.diag .blocks .block                   { border: 1px solid black; border-radius: 10px; background-color: white; }
@@ -256,18 +260,21 @@
             .slide.diag .step1 .keys,
             .slide.diag .step1 .network,        .slide.diag .step2 .network,
             .slide.diag .step1 .link,           .slide.diag .step2 .link,
-            .slide.diag .step1 .blocks,         .slide.diag figure.step2 .blocks,   .slide.diag figure.step3 .blocks,
-            .slide.diag .step1 .trans,          .slide.diag .step2 .trans,          .slide.diag .step3 .trans,          .slide.diag .step4 .trans,         .slide.diag .step5 .trans
-            .slide.diag .step5 .blocks,         .slide.diag figure.step6 .blocks,   .slide.diag figure.step7 .blocks,   .slide.diag figure.step8 .blocks,  .slide.diag figure.step9 .blocks,
+            .slide.diag .step1 .blocks,         .slide.diag .step2 .blocks,         .slide.diag .step3 .blocks,
+            .slide.diag .step6 .blocks,         .slide.diag .step7 .blocks,         .slide.diag .step8 .blocks,         .slide.diag .step9 .blocks,        .slide.diag .step10 .blocks,         .slide.diag .step11 .blocks,        .slide.diag .step10 .blocks,
+            .slide.diag .step1 .trans,          .slide.diag .step2 .trans,          .slide.diag .step3 .trans,          .slide.diag .step4 .trans,         .slide.diag .step5 .trans,
             .slide.diag .step1 .trans-to-bob,   .slide.diag .step2 .trans-to-bob,   .slide.diag .step3 .trans-to-bob,   .slide.diag .step4 .trans-to-bob,  .slide.diag .step5 .trans-to-bob,    .slide.diag .step6 .trans-to-bob,
-            .slide.diag .step1 .keypair2,       .slide.diag .step2 .keypair2,       .slide.diag .step3 .keypair2,       .slide.diag .step4 .keypair2,      .slide.diag .step5 .keypair2,        .slide.diag .step6 .keypair2
-                                                          { opacity: 0; }
+            .slide.diag .step1 .keypair2,       .slide.diag .step2 .keypair2,       .slide.diag .step3 .keypair2,       .slide.diag .step4 .keypair2,      .slide.diag .step5 .keypair2,        .slide.diag .step6 .keypair2,
+            .slide.diag .step1 .miner,          .slide.diag .step2 .miner,          .slide.diag .step3 .miner,          .slide.diag .step4 .miner,         .slide.diag .step5 .miner,           .slide.diag .step6 .miner,          .slide.diag .step7 .miner,      .slide.diag .step8 .miner,
+            .slide.diag .step1 .mining,         .slide.diag .step2 .mining,         .slide.diag .step3 .mining,         .slide.diag .step4 .mining,        .slide.diag .step5 .mining,          .slide.diag .step6 .mining,         .slide.diag .step7 .mining,     .slide.diag .step8 .mining
+                { opacity: 0; }
             .slide.diag .step5 .blocks-alice,   .slide.diag .step6 .blocks-alice                { top: 170px; left: 210px; }
             .slide.diag .step5 .blocks-bob,     .slide.diag .step6 .blocks-bob                  { top: 170px; left: 840px; }
             .slide.diag .step8 .trans-to-bob,   .slide.diag .step9 .trans-to-bob,   .slide.diag .step10 .trans-to-bob,  .slide.diag .step11 .trans-to-bob, .slide.diag .step12 .trans-to-bob    {top: 260px; left: 230px; }
 
-            .slide.diag label                              { position: absolute; bottom: 10px; right: 100px; }
-            .slide.diag label a                            { border: 0; }
+            .slide.diag label                   { position: absolute; bottom: -10px; right: 60px; text-align: right; }
+            .slide.diag label input             { width: 80px; display: block; margin: 0; }
+            .slide.diag label a                 { border: 0; }
 
             .slide.diag .desc                   { position: absolute; top: 560px; }
             .slide.diag .desc span              { display: none; }
@@ -288,9 +295,9 @@
                 <h2>Alice</h2>
                 <img class="person" src="pictures/user.png">
                 <div class="keys">
-                    <img class="k1" src="pictures/key-orange.png">
+                    <img class="k1 private" src="pictures/key-orange.png">
                     <img class="k2" src="pictures/key-blue.png">
-                    <img class="keypair2 k3" src="pictures/key-green.png">
+                    <img class="keypair2 k3 private" src="pictures/key-green.png">
                     <img class="keypair2 k4" src="pictures/key-red.png">
                 </div>
                 <div class="trans">
@@ -302,8 +309,19 @@
                 <h2>Bob</h2>
                 <img class="person" src="pictures/user.png">
                 <div class="keys">
-                    <img class="k1" src="pictures/key-pink.png">
+                    <img class="k1 private" src="pictures/key-pink.png">
                     <img class="k2" src="pictures/key-purple.png">
+                </div>
+                <div class="trans">
+                </div>
+                <div class="link"></div>
+            </div>
+            <div class="user miner">
+                <h2>Miner</h2>
+                <img class="person" src="pictures/user.png">
+                <div class="keys">
+                    <img class="k1 private" src="pictures/key-grey.png">
+                    <img class="k2" src="pictures/key-white.png">
                 </div>
                 <div class="trans">
                 </div>
@@ -326,7 +344,7 @@
                 <li><span class="input">input : </span>10.00 BTC<img src="pictures/key-blue.png">
                 <li><span class="output">output : </span>01.00 BTC<img src="pictures/key-purple.png">
                 <li><span class="output">output : </span>08.99 BTC<img src="pictures/key-red.png">
-                <li><span class="signed">signé : </span>Alice<img src="pictures/key-orange.png">
+                <li><span class="signed">signé : </span>Alice<img class="private" src="pictures/key-orange.png">
             </ul>
             <p class="desc">
                 <span class="desc1">1. Alice et Bob lancent leur client Bitcoin</span>
@@ -337,7 +355,7 @@
                 <span class="desc6">6. Alice découvre 10 BTC.</span>
                 <span class="desc7">7. Alice veut envoyer 1 BTC à Bob (et 0.01 de frais)</span>
                 <span class="desc8">8. Elle envoit la transaction à ces voisins (au réseau)</span>
-                <span class="desc9">9. </span>
+                <span class="desc9">9. Un mineur aggrège la transaction dans un bloc et cherche un nonce</span>
             </p>
         </figure>
         <label>
