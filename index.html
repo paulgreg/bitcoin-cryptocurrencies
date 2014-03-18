@@ -215,6 +215,62 @@
 		<img src="pictures/bitcoins-wp.jpg" alt="">
         <p class="footer"><span class="hashtag">#devoxxbtc</span><span class="twitter"><img src="pictures/twitter.png"><a href="https://twitter.com/paulgreg" rel="me" class="twitter">@paulgreg</a></span></p>
     </div></section>
+    <section class="slide generation"><div>
+        <style>
+            .slide.generation img { max-height: 500px; margin: -25px 0 0 40px; }
+        </style>
+        <h2 data-l10n-id="coins-generation-title"></h2>
+        <figure>
+        <img src="pictures/Total_bitcoins_over_time.png">
+        <figcaption></figcaption>
+        </figure>
+    </div></section>
+    <section class="slide proof"><div>
+        <style>
+            .proof p { margin: 0; }
+            .proof pre { margin: 0 0 1em 0; }
+            .proof pre code { font-size: 20px; }
+        </style>
+        <h2 data-l10n-id="proof-of-work-title"></h2>
+        <p data-l10n-id="proof-of-work-desc"></p>
+        <pre><code><mark class="important">000</mark><mark>2596d...</mark> &lt; <mark class="important">001</mark><mark>00000...</mark></code></pre>
+    </div></section>
+    <section class="slide proof-of-work"><div>
+        <style>
+            .slide.proof-of-work input    { font-size: 28px; border: 1px solid black; }
+            .slide.proof-of-work code     { white-space: pre-wrap; word-wrap: break-word; line-height: 1.2em; font-size: 32px; margin-top: .7em; }
+            .slide.proof-of-work p        { margin-bottom: 0; }
+        </style>
+        <h2 data-l10n-id="proof-of-work-title"></h2>
+        <label data-l10n-id="proof-of-work-example-title"><input type="number" class="in" value="1" min="0"></label>
+        <pre>
+            <code class="sha"></code>
+        </pre>
+        <ul>
+            <li data-l10n-id="proof-of-work-bitcoin"/>
+            <li data-l10n-id="proof-of-work-litecoin"/>
+        </ul>
+        <script type="text/javascript" src="js/sha256.js"></script>
+        <script defer>
+            (function() {
+                var input = document.querySelector('.slide.proof-of-work .in');
+                var hash = function() {
+                    var hash = CryptoJS.SHA256(input.value).toString();
+                    document.querySelector('.slide.proof-of-work .sha').innerHTML = hash;
+                }
+
+                input.addEventListener('keyup', hash);
+                input.addEventListener('change', hash);
+                input.addEventListener('focus', function() {
+                    window.shower.disableKeys();
+                });
+                input.addEventListener('blur', function() {
+                    window.shower.enableKeys();
+                });
+                hash();
+            })();
+        </script>
+    </div></section>
     <section class="slide diag"><div>
         <style>
             .slide.diag figure ul li:before              { content: ""; }
@@ -434,6 +490,13 @@
             })();
         </script>
     </div></section>
+    <section class="slide"><div>
+        <h2 data-l10n-id="blockchain-title"></h2>
+        <figure>
+        <img src="pictures/blockchain.png" style="max-width: 800px; margin-top: 60px;">
+        <figcaption></figcaption>
+        </figure>
+    </div></section>
     <section class="slide address"><div>
         <style>
             .slide.address small.privatekey { font-size: 40%; }
@@ -455,59 +518,6 @@
             <li class="next"><span class="checksum">checksum</span> =  4 octets de SHA-256(SHA-256(<small class="version">00</small><small class="ripemd">01096...</small>)) = <small class="checksum">D61967F6</small>
             <li class="next"><small class="address">16UwLL9Risc3QfPqBUvKofHmBQ7wMtjvM</small> = Base58(<small class="version">00</small><small class="ripemd">010966776006953D5567439E5E39F86A0D273BEE</small><small class="checksum">D61967F6</small>)
         </ol>
-    </div></section>
-    <section class="slide proof"><div>
-        <style>
-            .proof p { margin: 0; }
-            .proof pre { margin: 0 0 1em 0; }
-            .proof pre code { font-size: 20px; }
-        </style>
-        <h2 data-l10n-id="proof-of-work-title"></h2>
-        <p data-l10n-id="proof-of-work-desc"></p>
-        <pre><code><mark class="important">000</mark><mark>2596d...</mark> &lt; <mark class="important">001</mark><mark>00000...</mark></code></pre>
-    </div></section>
-    <section class="slide proof-of-work"><div>
-        <style>
-            .slide.proof-of-work input    { font-size: 28px; border: 1px solid black; }
-            .slide.proof-of-work code     { white-space: pre-wrap; word-wrap: break-word; line-height: 1.2em; font-size: 32px; margin-top: .7em; }
-            .slide.proof-of-work p        { margin-bottom: 0; }
-        </style>
-        <h2 data-l10n-id="proof-of-work-title"></h2>
-        <label data-l10n-id="proof-of-work-example-title"><input type="number" class="in" value="1" min="0"></label>
-        <pre>
-            <code class="sha"></code>
-        </pre>
-        <ul>
-            <li data-l10n-id="proof-of-work-bitcoin"/>
-            <li data-l10n-id="proof-of-work-litecoin"/>
-        </ul>
-        <script type="text/javascript" src="js/sha256.js"></script>
-        <script defer>
-            (function() {
-                var input = document.querySelector('.slide.proof-of-work .in');
-                var hash = function() {
-                    var hash = CryptoJS.SHA256(input.value).toString();
-                    document.querySelector('.slide.proof-of-work .sha').innerHTML = hash;
-                }
-
-                input.addEventListener('keyup', hash);
-                input.addEventListener('change', hash);
-                input.addEventListener('focus', function() {
-                    window.shower.disableKeys();
-                });
-                input.addEventListener('blur', function() {
-                    window.shower.enableKeys();
-                });
-                hash();
-            })();
-        </script>
-    </div></section>
-    <section class="slide"><div>
-        <h2 data-l10n-id="blockchain-title"></h2>
-        <figure>
-        <img src="pictures/blockchain.png" style="max-width: 800px; margin-top: 60px;">
-        <figcaption></figcaption>
-        </figure>
     </div></section>
     <section class="slide cover title"><div>
         <div class="color1"></div><div class="color2"></div><div class="color3"></div>
@@ -573,16 +583,6 @@
         <figure>
             <img src="pictures/gpu.png">
             <figcaption><strong><abbr title="Graphics Processing Unit">GPU</abbr> : 620 Kh/s</strong>(AMD Radeon 7970)</figcaption>
-        </figure>
-    </div></section>
-    <section class="slide generation"><div>
-        <style>
-            .slide.generation img { max-height: 500px; margin: -25px 0 0 40px; }
-        </style>
-        <h2 data-l10n-id="coins-generation-title"></h2>
-        <figure>
-        <img src="pictures/Total_bitcoins_over_time.png">
-        <figcaption></figcaption>
         </figure>
     </div></section>
     <section class="slide"><div>
