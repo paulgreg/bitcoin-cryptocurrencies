@@ -243,34 +243,54 @@
             .slide.diag .miner .link                     { width: 60px; height: 1px; background-color: black; position: absolute; transform: rotate(-90deg); -webkit-transform: rotate(-90deg); top: -30px; right: 22px; }
             .slide.diag .network                         { width: 128px; height: 128px; background: url('pictures/cloud.png') no-repeat 0 -10px; background-size: 100%; top: 300px; right: 440px; }
             .slide.diag .network h2                      { margin-top: 50px; }
-            .slide.diag .blocks .block                   { border: 1px solid black; border-radius: 10px; background-color: white; }
+            .slide.diag .block                           { border: 1px solid black; border-radius: 10px; background-color: white; }
+            .slide.diag .block h2                        { margin: 10px; }
             .slide.diag .blocks .block:nth-child(2)      { position: absolute; top: 10px; left: 10px; }
             .slide.diag .blocks .block:nth-child(3)      { position: absolute; top: 20px; left: 20px; }
-            .slide.diag .blocks .block h2                { margin: 10px; }
             .slide.diag .blocks-alice,
             .slide.diag .blocks-bob                      { position: absolute; top: 380px; left: 490px; }
             .slide.diag .trans                           { font-size: 20px; padding: 0 10px; text-align: right; }
             .slide.diag .trans div                       { display: block; position:relative; }
             .slide.diag .trans img                       { width: 30px; margin: 4px 0 0 6px; vertical-align: text-bottom; }
-            .slide.diag .trans-to-bob                    { position: absolute; top: 200px; left: 120px; border: 1px solid black; background-color: white; border-radius: 10px; }
-            .slide.diag .alice .trans                    { position: absolute; top: 20px; width: 100px; left: 15px; font-size: 20px; text-align: left; }
+            .slide.diag .trans-to-bob                    { position: absolute; top: 200px; left: 120px; border: 1px solid black; background-color: white; border-radius: 10px; z-index: 2; }
+            .slide.diag .alice .trans                    { position: absolute; top: 20px; width: 140px; left: 15px; font-size: 20px; text-align: left; }
+            .slide.diag .bob .trans                      { position: absolute; top: 20px; width: 140px; left: 15px; font-size: 20px; text-align: left; }
             .slide.diag .input                           { color: green; }
             .slide.diag .output                          { color: red; }
+            .slide.diag .hash                            { color: #333; }
+            .slide.diag .signed                          { color: #111; }
+            .slide.diag .nonce                           { color: #222; }
+            .slide.diag .next-block                      { position: absolute; top: 330px; left: 600px; border: 1px solid black; border-radius: 10px; height: 270px; background-color: white; z-index: 1; }
+            .slide.diag .next-block li:first-child       { margin-bottom: 140px; text-align: center; }
+            .slide.diag .next-block li:last-child        { border-top: 1px solid black; text-align: center; }
+            .slide.diag .found-block                     { position: absolute; top: 450px; left: 680px; }
 
             .slide.diag .step1 .keys,
-            .slide.diag .step1 .network,        .slide.diag .step2 .network,
-            .slide.diag .step1 .link,           .slide.diag .step2 .link,
-            .slide.diag .step1 .blocks,         .slide.diag .step2 .blocks,         .slide.diag .step3 .blocks,
-            .slide.diag .step6 .blocks,         .slide.diag .step7 .blocks,         .slide.diag .step8 .blocks,         .slide.diag .step9 .blocks,        .slide.diag .step10 .blocks,         .slide.diag .step11 .blocks,        .slide.diag .step10 .blocks,
-            .slide.diag .step1 .trans,          .slide.diag .step2 .trans,          .slide.diag .step3 .trans,          .slide.diag .step4 .trans,         .slide.diag .step5 .trans,
-            .slide.diag .step1 .trans-to-bob,   .slide.diag .step2 .trans-to-bob,   .slide.diag .step3 .trans-to-bob,   .slide.diag .step4 .trans-to-bob,  .slide.diag .step5 .trans-to-bob,    .slide.diag .step6 .trans-to-bob,
-            .slide.diag .step1 .keypair2,       .slide.diag .step2 .keypair2,       .slide.diag .step3 .keypair2,       .slide.diag .step4 .keypair2,      .slide.diag .step5 .keypair2,        .slide.diag .step6 .keypair2,
-            .slide.diag .step1 .miner,          .slide.diag .step2 .miner,          .slide.diag .step3 .miner,          .slide.diag .step4 .miner,         .slide.diag .step5 .miner,           .slide.diag .step6 .miner,          .slide.diag .step7 .miner,      .slide.diag .step8 .miner,
-            .slide.diag .step1 .mining,         .slide.diag .step2 .mining,         .slide.diag .step3 .mining,         .slide.diag .step4 .mining,        .slide.diag .step5 .mining,          .slide.diag .step6 .mining,         .slide.diag .step7 .mining,     .slide.diag .step8 .mining
+            .slide.diag .step1 .network,       .slide.diag .step2 .network,
+            .slide.diag .step1 .link,          .slide.diag .step2 .link,
+            .slide.diag .step1 .blocks,        .slide.diag .step2 .blocks,        .slide.diag .step3 .blocks,
+            .slide.diag .step6 .blocks,        .slide.diag .step7 .blocks,        .slide.diag .step8 .blocks,        .slide.diag .step9 .blocks,        .slide.diag .step10 .blocks,        .slide.diag .step11 .blocks,       .slide.diag .step10 .blocks,    .slide.diag .step11 .blocks,    .slide.diag .step12 .blocks, .slide.diag .step13 .blocks, .slide.diag .step14 .blocks,
+            .slide.diag .step1 .trans,         .slide.diag .step2 .trans,         .slide.diag .step3 .trans,         .slide.diag .step4 .trans,         .slide.diag .step5 .trans,
+            .slide.diag .step1 .trans2,        .slide.diag .step2 .trans2,        .slide.diag .step3 .trans2,        .slide.diag .step4 .trans2,        .slide.diag .step5 .trans2,         .slide.diag .step6 .trans2,       .slide.diag .step7 .trans2,         .slide.diag .step8 .trans2,         .slide.diag .step9 .trans2,         .slide.diag .step10 .trans2, .slide.diag .step11 .trans2,        .slide.diag .step12 .trans2,         .slide.diag .step13 .trans2,
+            .slide.diag .step1 .trans3,        .slide.diag .step2 .trans3,        .slide.diag .step3 .trans3,        .slide.diag .step4 .trans3,        .slide.diag .step5 .trans3,         .slide.diag .step6 .trans3,       .slide.diag .step7 .trans3,         .slide.diag .step8 .trans3,         .slide.diag .step9 .trans3,         .slide.diag .step10 .trans3, .slide.diag .step11 .trans3,        .slide.diag .step12 .trans3,         .slide.diag .step13 .trans3,
+            .slide.diag .step1 .trans-to-bob,  .slide.diag .step2 .trans-to-bob,  .slide.diag .step3 .trans-to-bob,  .slide.diag .step4 .trans-to-bob,  .slide.diag .step5 .trans-to-bob,   .slide.diag .step6 .trans-to-bob,
+            .slide.diag .step1 .keypair2,      .slide.diag .step2 .keypair2,      .slide.diag .step3 .keypair2,      .slide.diag .step4 .keypair2,      .slide.diag .step5 .keypair2,       .slide.diag .step6 .keypair2,
+            .slide.diag .step1 .miner,         .slide.diag .step2 .miner,         .slide.diag .step3 .miner,         .slide.diag .step4 .miner,         .slide.diag .step5 .miner,          .slide.diag .step6 .miner,         .slide.diag .step7 .miner,      .slide.diag .step8 .miner,
+            .slide.diag .step1 .mining,        .slide.diag .step2 .mining,        .slide.diag .step3 .mining,        .slide.diag .step4 .mining,        .slide.diag .step5 .mining,         .slide.diag .step6 .mining,        .slide.diag .step7 .mining,     .slide.diag .step8 .mining,
+            .slide.diag .step1 .next-block,    .slide.diag .step2 .next-block,    .slide.diag .step3 .next-block,    .slide.diag .step4 .next-block,    .slide.diag .step5 .next-block,     .slide.diag .step6 .next-block,    .slide.diag .step7 .next-block, .slide.diag .step8 .next-block,  .slide.diag .step9 .next-block,
+            .slide.diag .step11 .next-block,   .slide.diag .step12 .next-block,   .slide.diag .step13 .next-block,   .slide.diag .step14 .next-block,
+            .slide.diag .step11 .trans-to-bob, .slide.diag .step12 .trans-to-bob, .slide.diag .step13 .trans-to-bob, .slide.diag .step14 .trans-to-bob,
+            .slide.diag .step1 .found-block,   .slide.diag .step2 .found-block,   .slide.diag .step3 .found-block,   .slide.diag .step4 .found-block,   .slide.diag .step5 .found-block,   .slide.diag .step6 .found-block,   .slide.diag .step7 .found-block, .slide.diag .step8 .found-block, .slide.diag .step9 .found-block, .slide.diag .step10 .found-block, .slide.diag .step14 .found-block
                 { opacity: 0; }
-            .slide.diag .step5 .blocks-alice,   .slide.diag .step6 .blocks-alice                { top: 170px; left: 210px; }
-            .slide.diag .step5 .blocks-bob,     .slide.diag .step6 .blocks-bob                  { top: 170px; left: 840px; }
-            .slide.diag .step8 .trans-to-bob,   .slide.diag .step9 .trans-to-bob,   .slide.diag .step10 .trans-to-bob,  .slide.diag .step11 .trans-to-bob, .slide.diag .step12 .trans-to-bob    {top: 260px; left: 230px; }
+
+            .slide.diag .step5 .blocks-alice,  .slide.diag .step6 .blocks-alice,
+            .slide.diag .step13 .found-alice,  .slide.diag .step14 .found-alice                                         { top: 170px; left: 210px; }
+            .slide.diag .step5 .blocks-bob,    .slide.diag .step6 .blocks-bob,
+            .slide.diag .step13 .found-bob,    .slide.diag .step14 .found-bob                                           { top: 170px; left: 840px; }
+            .slide.diag .step8 .trans-to-bob,  .slide.diag .step9 .trans-to-bob                                         { top: 260px; left: 230px; }
+            .slide.diag .step10 .trans-to-bob, .slide.diag .step11 .trans-to-bob                                        { top: 360px; left: 600px; }
+            .slide.diag .step12 .found-block                                                                            { top: 380px; left: 490px; }
+            .slide.diag .step14 .trans1                                                                                 { text-decoration:line-through;}
 
             .slide.diag label                   { position: absolute; bottom: -10px; right: 60px; text-align: right; }
             .slide.diag label input             { width: 80px; display: block; margin: 0; }
@@ -287,6 +307,11 @@
             .slide.diag .step7 .desc7           { display: block; }
             .slide.diag .step8 .desc8           { display: block; }
             .slide.diag .step9 .desc9           { display: block; }
+            .slide.diag .step10 .desc10         { display: block; }
+            .slide.diag .step11 .desc11         { display: block; }
+            .slide.diag .step12 .desc12         { display: block; }
+            .slide.diag .step13 .desc13         { display: block; }
+            .slide.diag .step14 .desc14         { display: block; }
 
         </style>
         <h2 data-l10n-id="transaction-title"></h2>
@@ -301,7 +326,8 @@
                     <img class="keypair2 k4" src="pictures/key-red.png">
                 </div>
                 <div class="trans">
-                    <div class="trans1">10 BTC<img src="pictures/key-blue.png"></div>
+                    <div class="trans1">10.00 BTC<img src="pictures/key-blue.png"></div>
+                    <div class="trans2">08.99 BTC<img src="pictures/key-red.png"></div>
                 </div>
                 <div class="link"></div>
             </div>
@@ -313,11 +339,12 @@
                     <img class="k2" src="pictures/key-purple.png">
                 </div>
                 <div class="trans">
+                    <div class="trans3">01.00 BTC<img src="pictures/key-purple.png"></div>
                 </div>
                 <div class="link"></div>
             </div>
             <div class="user miner">
-                <h2>Miner</h2>
+                <h2>Mineur</h2>
                 <img class="person" src="pictures/user.png">
                 <div class="keys">
                     <img class="k1 private" src="pictures/key-grey.png">
@@ -346,20 +373,33 @@
                 <li><span class="output">output : </span>08.99 BTC<img src="pictures/key-red.png">
                 <li><span class="signed">signé : </span>Alice<img class="private" src="pictures/key-orange.png">
             </ul>
+            <ul class="trans next-block">
+                <li><span class="hash">hash</span>
+                <li><span class="output">output : </span>25.01 BTC<img src="pictures/key-white.png">
+                <li><span class="signed">signé : </span>Mineur<img class="private" src="pictures/key-grey.png">
+                <li><span class="nonce">nonce</span>
+            </ul>
+            <div class="block found-block found-alice"><h2>bloc</h2></div>
+            <div class="block found-block found-bob"><h2>bloc</h2></div>
             <p class="desc">
                 <span class="desc1">1. Alice et Bob lancent leur client Bitcoin</span>
                 <span class="desc2">2. Une paire de clé privée et publique est créé</span>
-                <span class="desc3">3. Les clients se connectent aux autres clients (réseau)</span>
-                <span class="desc4">4. Le réseau contient la liste des blocs (blockchain)</span>
-                <span class="desc5">5. La liste est envoyé aux clients.</span>
+                <span class="desc3">3. Les clients se connectent aux autres clients (réseau p2p)</span>
+                <span class="desc4">4. Chaque client possède la liste complète des blocs (blockchain)</span>
+                <span class="desc5">5. Les blocs sont envoyés à Alice et Bob ; ils les vérifient</span>
                 <span class="desc6">6. Alice découvre 10 BTC.</span>
                 <span class="desc7">7. Alice veut envoyer 1 BTC à Bob (et 0.01 de frais)</span>
-                <span class="desc8">8. Elle envoit la transaction à ces voisins (au réseau)</span>
-                <span class="desc9">9. Un mineur aggrège la transaction dans un bloc et cherche un nonce</span>
+                <span class="desc8">8. Elle envoie la transaction aux autres clients</span>
+                <span class="desc9">9. Les mineurs vont aggréger les transactions en attente...</span>
+                <span class="desc10">10. ...et cherchent un nonce</span>
+                <span class="desc11">11. Le 1er mineur qui trouve le nonce transmet le bloc aux autres clients</span>
+                <span class="desc12">12. Chaque client valide alors le bloc et le propage à ses voisins</span>
+                <span class="desc13">13. Alice et Bob récupère ce bloc et le vérifie</span>
+                <span class="desc14">14. et mettent à jour leur solde</span>
             </p>
         </figure>
         <label>
-            <input type="range" min="1" max="15" value="1">
+            <input type="range" min="1" max="14" value="1">
              <a href="" class="inc">+</a>/<a href="" class="dec">-</a>
         </label>
         <script defer>
