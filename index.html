@@ -227,13 +227,20 @@
     </div></section>
     <section class="slide proof"><div>
         <style>
-            .proof p { margin: 0; }
-            .proof pre { margin: 0 0 1em 0; }
+            .proof p        { margin: 0; }
+            .proof pre      { margin: 1em 0 0 0; }
             .proof pre code { font-size: 20px; }
+            .proof .date    { color: blue; background-color: transparent; padding: 0; }
+            .proof .email   { color: purple; background-color: transparent; padding: 0; }
+            .proof .nonce   { color: red; background-color: transparent; padding: 0; }
         </style>
         <h2 data-l10n-id="proof-of-work-title"></h2>
         <p data-l10n-id="proof-of-work-desc"></p>
-        <pre><code><mark class="important">000</mark><mark>2596d...</mark> &lt; <mark class="important">001</mark><mark>00000...</mark></code></pre>
+        <pre>
+            <code>echo -n "1:20:<mark class="date">060408</mark>:<mark class="email">adam@cypherspace.org</mark>::<mark class="nonce">1QTjaYd7niiQA/sc:ePa</mark>" | sha1sum</code>
+            <code>00000a4a8bd07bddbdb0c4ea9ddb2d29b8d1cc5e</code>
+        </pre>
+        <pre><code><mark class="important">00000</mark><mark>a4a8bd...</mark> <strong>&lt;</strong> <mark class="important">00001</mark><mark>00000...</mark></code></pre>
     </div></section>
     <section class="slide proof-of-work"><div>
         <style>
@@ -573,11 +580,11 @@
         </figure>
         <figure>
             <img src="pictures/fpga.png">
-            <figcaption><strong><abbr title="Field-Programmable Gate Array">FPGA</abbr> : 800 Mh/s - 20 Mj/J</strong>(ModMiner Quad)</figcaption>
+            <figcaption><strong><abbr title="Field-Programmable Gate Array">FPGA</abbr> : 800 Mh/s - 20 Mh/J</strong>(ModMiner Quad)</figcaption>
         </figure>
         <figure>
             <img src="pictures/asic.png">
-            <figcaption><strong><abbr title="Application-Specific Integrated Circuit">ASIC</abbr> : 600 Gh/s - 1714 Mj/J</strong>(Monarch BPU 600C)</figcaption>
+            <figcaption><strong><abbr title="Application-Specific Integrated Circuit">ASIC</abbr> : 600 Gh/s - 1714 Mh/J</strong>(Monarch BPU 600C)</figcaption>
         </figure>
         <h3 class="litecoin">Litecoin</h3>
         <figure>
@@ -604,8 +611,9 @@
     </div></section>
     <section class="slide clients"><div>
         <style>
-            .slide.clients img      { margin: -20px 0 0 50px; max-height: 340px; }
-            .slide.clients ol li { display: inline; margin: 0 25px;  }
+            .slide.clients img      { margin: -20px 0 0 60px; max-height: 340px; }
+            .slide.clients ol li    { display: inline; margin-left: 50px;  }
+            .slide.clients ol li:first-child    { margin-left: 20px;  }
         </style>
         <h2 data-l10n-id="clients-title"></h2>
         <img src="pictures/client-types.png">
@@ -622,8 +630,8 @@
         </style>
         <h2 data-l10n-id="malware-title"></h2>
         <ul>
-            <li data-l10n-id="malware-cryptolocker">
             <li data-l10n-id="malware-wallet">
+            <li data-l10n-id="malware-cryptolocker">
             <li data-l10n-id="malware-404s">
             <pre>
                 <code>404 Not Found</code>
@@ -847,6 +855,11 @@
     </div></section>
     <section class="slide conclusion"><div>
         <h2 data-l10n-id="conclusion-title"></h2>
+        <ul>
+            <li>Bitcoin dans 5 ans ?
+            <li class="next">Par contre, avancé technologique indéniable (comme HTTP, email, P2P, ?)
+            <li class="next">2.4 milliards d’internautes, 1 milliard sans accès au système bancaire
+        </ul>
     </div></section>
     <section class="slide cover title"><div>
         <div class="color1"></div><div class="color2"></div><div class="color3"></div>
