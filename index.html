@@ -99,10 +99,6 @@
         </div>
 		<img src="pictures/bitcoins-wp.jpg" alt="">
 	</div></section>
-    <section class="slide"><div>
-        <h2 data-l10n-id="disclaimer-title"></h2>
-        <p data-l10n-id="disclaimer-p"></p>
-    </div></section>
     <section class="slide motivation"><div>
         <style>
             .slide.motivation p { text-align: center; }
@@ -173,7 +169,7 @@
     </div></section>
     <section class="slide symetric"><div>
         <style>
-            .slide.symetric figure { margin: 100px 0 0 100px; }
+            .slide.symetric figure { margin: 100px 0 0 80px; }
         </style>
         <h2 data-l10n-id="crypto-symmetric-cipher-title"></h2>
         <figure>
@@ -217,11 +213,11 @@
     </div></section>
     <section class="slide generation"><div>
         <style>
-            .slide.generation img { max-height: 500px; margin: -25px 0 0 40px; }
+            .slide.generation img { max-height: 500px; margin: -25px 0 0 20px; }
         </style>
         <h2 data-l10n-id="coins-generation-title"></h2>
         <figure>
-        <img src="pictures/Total_bitcoins_over_time.png">
+            <img src="pictures/bitcoin-introduction.png">
         <figcaption></figcaption>
         </figure>
     </div></section>
@@ -510,25 +506,12 @@
     </div></section>
     <section class="slide address"><div>
         <style>
-            .slide.address small.privatekey { font-size: 40%; }
-            .slide.address small.publickey  { font-size: 40%; }
-            .slide.address .privatekey      { color: #A8003B; }
-            .slide.address .publickey       { color: #1600A8; }
-            .slide.address .sha256          { color: #A8005B; }
-            .slide.address .version         { color: #FF00AC; }
-            .slide.address .ripemd          { color: #21A800; }
-            .slide.address .checksum        { color: #4600A8; }
-            .slide.address .address         { color: #00A890; }
+            .slide.address img      { max-width: 600px; margin: -30px 0 0 70px; }
         </style>
         <h2 data-l10n-id="address-title"></h2>
-        <ol>
-            <li><small class="address">16UwLL9Risc3QfPqBUvKofHmBQ7wMtjvM</small> <small>?</small>
-            <li class="next"><span data-l10n-id="address-keypair"></span> : <small class="privatekey">18E14A7B6A307F426A94F8114701E7C8E774E7F9A47E2C2035DB29A206321725</small> <small>(256 bits)</small> <small class="publickey">0450863AD64A87AE8A2FE83C1AF1A8403CB53F53E486D8511DAD8A04887E5B23522CD470243453A299FA9E77237716103ABC11A1DF38855ED6F2EE187E9C582BA6</small> <small>(520 bits)</small>
-            <li class="next"><small class="address">16UwLL9Risc3QfPqBUvKofHmBQ7wMtjvM</small> = Base58(<span class="version">version</span>+<span class="ripemd">hash</span>+<span class="checksum">checksum</span>)
-            <li class="next"><span class="ripemd">hash</span> = RIPEMD-160(SHA-256(<small class="publickey">0450863AD...</small>)) = <small class="ripemd">010966776006953D5567439E5E39F86A0D273BEE</small>
-            <li class="next"><span class="checksum">checksum</span> =  4 octets de SHA-256(SHA-256(<small class="version">00</small><small class="ripemd">01096...</small>)) = <small class="checksum">D61967F6</small>
-            <li class="next"><small class="address">16UwLL9Risc3QfPqBUvKofHmBQ7wMtjvM</small> = Base58(<small class="version">00</small><small class="ripemd">010966776006953D5567439E5E39F86A0D273BEE</small><small class="checksum">D61967F6</small>)
-        </ol>
+        <figure>
+            <img data-l10n-id="address-picture">
+        </figure>
     </div></section>
     <section class="slide cover title"><div>
         <div class="color1"></div><div class="color2"></div><div class="color3"></div>
@@ -626,7 +609,8 @@
     </div></section>
     <section class="slide malware"><div>
         <style>
-            .slide.malware pre code { margin-left: 100px; line-height: 140%; }
+            .slide.malware li           { margin: 40px 0 0 0; }
+            .slide.malware pre code     { margin-left: 100px; line-height: 140%; }
         </style>
         <h2 data-l10n-id="malware-title"></h2>
         <ul>
