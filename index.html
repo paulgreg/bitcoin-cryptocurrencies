@@ -63,9 +63,9 @@
                 if (startup) {
                     startup = false;
                     var selection = localStorage.lng || ((document.webL10n.getLanguage().indexOf('en') === 0) ? 'en' : 'fr');
-		    if (selection === 'fr') {
+                    if (selection === 'fr') {
                           setLang('fr', french, english);
-		    } else {
+                    } else {
                           setLang('en', english, french);
                     }
                 }
@@ -478,22 +478,40 @@
                         figure.className = v;
                     }
                 };
-                slider.addEventListener('change', onChange);
-                slider.addEventListener('input', onChange);
-                inc.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    if (+slider.value < +slider.max) {
-                        slider.value = (+slider.value)+1;
-                        onChange();
-                    }
-                });
-                dec.addEventListener('click', function(e) {
-                    e.preventDefault();
+
+                var back = function() {
                     if (+slider.value > +slider.min) {
                         slider.value = (+slider.value)-1;
                         onChange();
                     }
+                };
+                var next = function() {
+                    if (+slider.value < +slider.max) {
+                        slider.value = (+slider.value)+1;
+                        onChange();
+                    }
+                };
+
+                slider.addEventListener('change', onChange);
+                slider.addEventListener('input', onChange);
+                inc.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    next();
                 });
+                dec.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    back();
+                });
+
+                document.addEventListener('keydown', function(e) {
+                    e.preventDefault();
+                    if (e.which === 187 || e.which === 61) {
+                        next();
+                    } else if (e.which === 189 || e.which === 173) {
+                        back();
+                    }
+                });
+
             })();
         </script>
     </div></section>
