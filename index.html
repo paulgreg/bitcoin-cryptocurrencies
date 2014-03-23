@@ -207,7 +207,7 @@
     </div></section>
     <section class="slide cover title"><div>
         <div class="color1"></div><div class="color2"></div><div class="color3"></div>
-        <h1 data-l10n-id="transaction-basic-title"></h1>
+        <h1 data-l10n-id="coins-generation-title"></h1>
 		<img src="pictures/bitcoins-wp.jpg" alt="">
         <p class="footer"><a class="hashtag" href="https://twitter.com/search?q=%23deboxxbtc">#devoxxbtc</a><span class="twitter"><img src="pictures/twitter.png"><a href="https://twitter.com/paulgreg" rel="me" class="twitter">@paulgreg</a></span></p>
     </div></section>
@@ -221,6 +221,12 @@
         <figcaption></figcaption>
         </figure>
     </div></section>
+    <section class="slide cover title"><div>
+        <div class="color1"></div><div class="color2"></div><div class="color3"></div>
+        <h1 data-l10n-id="proof-of-work-title"></h1>
+		<img src="pictures/bitcoins-wp.jpg" alt="">
+        <p class="footer"><a class="hashtag" href="https://twitter.com/search?q=%23deboxxbtc">#devoxxbtc</a><span class="twitter"><img src="pictures/twitter.png"><a href="https://twitter.com/paulgreg" rel="me" class="twitter">@paulgreg</a></span></p>
+    </div></section>
     <section class="slide proof"><div>
         <style>
             .proof p        { margin: 0; }
@@ -230,7 +236,7 @@
             .proof .email   { color: purple; background-color: transparent; padding: 0; }
             .proof .nonce   { color: red; background-color: transparent; padding: 0; }
         </style>
-        <h2 data-l10n-id="proof-of-work-title"></h2>
+        <h2 data-l10n-id="proof-of-work-hashcash-title"></h2>
         <p data-l10n-id="proof-of-work-desc"></p>
         <pre>
             <code>echo -n "1:20:<mark class="date">060408</mark>:<mark class="email">adam@cypherspace.org</mark>::<mark class="nonce">1QTjaYd7niiQA/sc:ePa</mark>" | sha1sum</code>
@@ -241,11 +247,12 @@
     <section class="slide proof-of-work"><div>
         <style>
             .slide.proof-of-work input    { font-size: 28px; border: 1px solid black; }
+            .slide.proof-of-work label a  { margin: 0 0 0 10px; }
             .slide.proof-of-work code     { white-space: pre-wrap; word-wrap: break-word; line-height: 1.2em; font-size: 32px; margin-top: .7em; }
             .slide.proof-of-work p        { margin-bottom: 0; }
         </style>
-        <h2 data-l10n-id="proof-of-work-title"></h2>
-        <label data-l10n-id="proof-of-work-example-title"><input type="number" class="in" value="1" min="0"></label>
+        <h2 data-l10n-id="proof-of-work-currency-title"></h2>
+        <label data-l10n-id="proof-of-work-example-title"><input type="number" class="in" value="1" min="0"><a href="">hash</a></label>
         <pre>
             <code class="sha"></code>
         </pre>
@@ -256,7 +263,7 @@
         <script type="text/javascript" src="js/sha256.js"></script>
         <script defer>
             (function() {
-                var input = document.querySelector('.slide.proof-of-work .in');
+                var input = document.querySelector('.slide.proof-of-work input');
                 var hash = function() {
                     var hash = CryptoJS.SHA256(input.value).toString();
                     document.querySelector('.slide.proof-of-work .sha').innerHTML = hash;
@@ -270,9 +277,34 @@
                 input.addEventListener('blur', function() {
                     window.shower.enableKeys();
                 });
+                var hashing;
+                var increaseAndHash = function() {
+                    input.value = parseInt(input.value, 10) + 1;
+                    hash();
+                    hashing = setTimeout(increaseAndHash, 400);
+                }
+                var hashingLink = document.querySelector('.slide.proof-of-work a');
+                hashingLink.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    if (hashing) {
+                        clearInterval(hashing)
+                        hashing = null;
+                        hashingLink.innerHTML = 'hash';
+                    } else {
+                        increaseAndHash();
+                        hashingLink.innerHTML = 'stop';
+                    }
+                });
                 hash();
             })();
         </script>
+    </div></section>
+    <section class="slide cover title"><div>
+        <div class="color1"></div><div class="color2"></div><div class="color3"></div>
+        <h1 data-l10n-id="transaction-title"></h1>
+		<img src="pictures/bitcoins-wp.jpg" alt="">
+        <p class="footer"><a class="hashtag" href="https://twitter.com/search?q=%23deboxxbtc">#devoxxbtc</a><span class="twitter"><img src="pictures/twitter.png"><a href="https://twitter.com/paulgreg" rel="me" class="twitter">@paulgreg</a></span></p>
     </div></section>
     <section class="slide diag"><div>
         <style>
@@ -857,9 +889,11 @@
     <section class="slide conclusion"><div>
         <h2 data-l10n-id="conclusion-title"></h2>
         <ul>
-            <li>Bitcoin dans 5 ans ?
-            <li class="next">Par contre, avancé technologique indéniable (comme HTTP, email, P2P, ?)
-            <li class="next">2.4 milliards d’internautes, 1 milliard sans accès au système bancaire
+            <li data-l10n-id="conclusion-1">
+            <li data-l10n-id="conclusion-2" class="next">
+            <li data-l10n-id="conclusion-3" class="next">
+            <li data-l10n-id="conclusion-4" class="next">
+            <li data-l10n-id="conclusion-5" class="next">
         </ul>
     </div></section>
     <section class="slide cover title"><div>
