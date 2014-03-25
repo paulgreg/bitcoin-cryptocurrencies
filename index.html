@@ -11,7 +11,7 @@
     <link rel="shortcut icon" href="pictures/favicon.png">
     <style>
         abbr                            { border-bottom: #999 dotted 1px; }
-        .slide.cover>div                { padding-top: 105px; }
+        .slide.cover>div                { padding-top: 100px; }
         .slide>div                      { padding-top: 45px; height: 560px; }
         .border                         { border: 1px solid black; }
         small                           { font-size: small; }
@@ -26,6 +26,9 @@
         .slide.title .footer a          { color: white; border: 0; }
         .slide.title .footer .twitter   { float: right; }
         .slide.title .footer .twitter img { display: inline; position: relative; z-index: 1; margin: 0 .2em 0 0; vertical-align: middle; }
+        @media print {
+            .slide.cover>div                { padding-top: 80px; }
+        }
     </style>
 </head>
 <body class="list">
@@ -38,6 +41,9 @@
             .slide.language.selection p                     { text-align: center; }
             .slide.language.selection p a.selected          { color: green; }
             .slide.language.selection p a.selected:before   { content: "✓"; }
+            @media print {
+                .slide.language { display: none; }
+            }
         </style>
         <h2>Langue - Language</h2>
         <p><a href="" class="french">en français</a> - <a href="" class="english">in english</a></p>
@@ -107,8 +113,8 @@
         <h2 data-l10n-id="motivation-title"></h2>
         <p>
         <img data-l10n-id="motivation-comic1" src="pictures/CommitStrip-fr-1.gif"/>
-        <img data-l10n-id="motivation-comic2" src="pictures/CommitStrip-fr-2.gif"/>
-        <img data-l10n-id="motivation-comic3" src="pictures/CommitStrip-fr-3.gif"/>
+        <img class="next" data-l10n-id="motivation-comic2" src="pictures/CommitStrip-fr-2.gif"/>
+        <img class="next" data-l10n-id="motivation-comic3" src="pictures/CommitStrip-fr-3.gif"/>
         </p>
     </div></section>
     <section class="slide cover title"><div>
@@ -405,7 +411,6 @@
             .slide.diag .step12 .desc12         { display: block; }
             .slide.diag .step13 .desc13         { display: block; }
             .slide.diag .step14 .desc14         { display: block; }
-
         </style>
         <h2 data-l10n-id="transaction-title"></h2>
         <figure class="step1">
