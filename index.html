@@ -91,6 +91,7 @@
             #Cover ul img        { display: inline; position: relative; z-index: 1; margin: 0 .2em 0 0; vertical-align: middle; }
             #Cover a.twitter     { margin-right: 25px; }
             #Cover h4            { background: white url('pictures/devoxxfr.png') no-repeat 10px 10px; height: 80px; margin-top: 100px; }
+            #Cover .tweetme      { right: 10px; position: absolute; top: 300px; width: 280px; padding: 5px; line-height: 30px; background-color: rgba(255, 255, 255, .8); transform: rotate(-30deg); -webkit-transform: rotate(-30deg); }
             #Cover h5            { background: #53B6BC; height: 50px; margin-top: 5px; color: white; font-size: 24px; padding-left: 10px; }
 		</style>
         <div class="titles">
@@ -102,6 +103,7 @@
             </ul>
             <h4></h4>
             <h5><a class="hashtag" href="https://twitter.com/search?q=%23deboxxbtc">#devoxxbtc</a></h5>
+            <span class="tweetme" data-l10n-id="tweetme"></span>
         </div>
 		<img src="pictures/bitcoins-wp.jpg" alt="">
 	</div></section>
@@ -716,18 +718,8 @@
             (function() {
                 if (navigator.onLine) {
                     var slide = document.querySelector('.slide.realtime');
-                    var urlChanged = false;
-
-                    var observer = new MutationObserver(function(mutations) {
-                        mutations.forEach(function(mutation) {
-                            if (!urlChanged && slide.classList.contains('active')) {
-                                var iframe = slide.querySelector('iframe')
-                                iframe.setAttribute('src', iframe.getAttribute('data-dynamic-src'));
-                                urlChanged = true;
-                            }
-                        });
-                    });
-                    observer.observe(slide, { attributes: true, childList: false, characterData: false});
+                    var iframe = slide.querySelector('iframe')
+                    iframe.setAttribute('src', iframe.getAttribute('data-dynamic-src'));
                 }
             })();
         </script>
@@ -758,7 +750,7 @@
             <li data-l10n-id="other-mmc">
             <li data-l10n-id="other-nvc">
             <li data-l10n-id="other-dvc">
-            <li data-l10n-id="other-ftc">
+            <li data-l10n-id="other-vtc">
             <li data-l10n-id="other-dov">
             <li data-l10n-id="other-aur">
             <li data-l10n-id="other-etc">
@@ -778,6 +770,18 @@
             <li data-l10n-id="script-4" class="next">
         </ul>
     </div></section>
+    <section class="slide basedonbtc"><div>
+        <style>
+            .slide.basedonbtc li            { margin: 60px 0 30px 0; }
+            .slide.basedonbtc li a          { color: #666; border-bottom: 1px solid #666; }
+        </style>
+        <h2 data-l10n-id="based-on-bitcoin-title"></h2>
+        <ul>
+            <li><a href="https://bitmessage.org/"><img src="./pictures/bitmessage.png"></a>
+            <li><a href="https://frostwire.wordpress.com/2014/02/27/frostwire-integrates-bitcoin-donations-and-creative-commons-licensing-into-torrent-files/">FrostWire & Bitcoin</a>
+            <li><a href="http://www.proofofexistence.com/">proof of existence</a>
+        </ul>
+    </div></section>
     <section class="slide cover title"><div>
         <div class="color1"></div><div class="color2"></div><div class="color3"></div>
         <h1 data-l10n-id="dev-title"></h1>
@@ -793,6 +797,12 @@
             <li><span data-l10n-id="dev-blockchain"></span> : <a href="https://blockchain.info/">blockchain.info</a>, <a href="https://blockexplorer.com/">block explorer</a>,
             <li><span data-l10n-id="dev-tools"></span>: <a href="https://www.bitaddress.org">bitaddress.org</a>, <a href="http://brainwallet.org">Brainwallet.org</a>, <a href="http://gobittest.appspot.com/">TP’s Go Bitcoin Tests</a>.
         </ul>
+    </div></section>
+    <section class="slide cover title"><div>
+        <div class="color1"></div><div class="color2"></div><div class="color3"></div>
+        <h1 data-l10n-id="demo-title"></h1>
+		<img src="pictures/bitcoins-wp.jpg" alt="">
+        <p class="footer"><a class="hashtag" href="https://twitter.com/search?q=%23deboxxbtc">#devoxxbtc</a><span class="twitter"><img src="pictures/twitter.png"><a href="https://twitter.com/paulgreg" rel="me" class="twitter">@paulgreg</a></span></p>
     </div></section>
     <section class="slide cover title"><div>
         <div class="color1"></div><div class="color2"></div><div class="color3"></div>
@@ -945,18 +955,6 @@
 		<li class="assoc"><a href="http://archive.org/"><span><img src="pictures/merchants/internet-archives.jpeg"/></span></a>
 		<li class="assoc"><a href="https://supporters.eff.org/donate"><span><img src="pictures/merchants/eff.jpeg"/></span></a>
 		<li class="assoc"><a href="http://shop.wikileaks.org/donate#dbitcoin"><span><img src="pictures/merchants/wikileaks.jpeg"/></span></a>
-        </ul>
-    </div></section>
-    <section class="slide basedonbtc"><div>
-        <style>
-            .slide.basedonbtc li            { margin: 60px 0 30px 0; }
-            .slide.basedonbtc li a          { color: #666; border-bottom: 1px solid #666; }
-        </style>
-        <h2 data-l10n-id="based-on-bitcoin-title"></h2>
-        <ul>
-            <li><a href="https://bitmessage.org/"><img src="./pictures/bitmessage.png"></a>
-            <li><a href="http://www.proofofexistence.com/">proof of existence</a>
-            <li><a href="https://frostwire.wordpress.com/2014/02/27/frostwire-integrates-bitcoin-donations-and-creative-commons-licensing-into-torrent-files/">FrostWire & Bitcoin</a>
         </ul>
     </div></section>
     <div class="progress"><div></div></div>
