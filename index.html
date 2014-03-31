@@ -250,12 +250,11 @@
     <section class="slide proof-of-work"><div>
         <style>
             .slide.proof-of-work input    { font-size: 28px; border: 1px solid black; }
-            .slide.proof-of-work label a  { margin: 0 0 0 10px; }
             .slide.proof-of-work code     { white-space: pre-wrap; word-wrap: break-word; line-height: 1.2em; font-size: 32px; margin-top: .7em; }
             .slide.proof-of-work p        { margin-bottom: 0; }
         </style>
         <h2 data-l10n-id="proof-of-work-currency-title"></h2>
-        <label data-l10n-id="proof-of-work-example-title"><input type="number" class="in" value="1" min="0"><a href="">hash</a></label>
+        <label data-l10n-id="proof-of-work-example-title"><input type="number" class="in" value="1" min="0"></label>
         <pre>
             <code class="sha"></code>
         </pre>
@@ -266,40 +265,33 @@
         <script type="text/javascript" src="js/sha256.js"></script>
         <script defer>
             (function() {
-                var input = document.querySelector('.slide.proof-of-work input');
+                var slide = document.querySelector('.slide.proof-of-work');
+                var input = slide.querySelector('input');
                 var hash = function() {
                     var hash = CryptoJS.SHA256(input.value).toString();
                     document.querySelector('.slide.proof-of-work .sha').innerHTML = hash;
                 }
+                var hashing = null;
+                var shouldHash = false;
+                hash();
 
-                input.addEventListener('keyup', hash);
-                input.addEventListener('change', hash);
-                input.addEventListener('focus', function() {
-                    window.shower.disableKeys();
-                });
-                input.addEventListener('blur', function() {
-                    window.shower.enableKeys();
-                });
-                var hashing;
                 var increaseAndHash = function() {
                     input.value = parseInt(input.value, 10) + 1;
                     hash();
-                    hashing = setTimeout(increaseAndHash, 400);
-                }
-                var hashingLink = document.querySelector('.slide.proof-of-work a');
-                hashingLink.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    if (hashing) {
-                        clearInterval(hashing)
-                        hashing = null;
-                        hashingLink.innerHTML = 'hash';
-                    } else {
-                        increaseAndHash();
-                        hashingLink.innerHTML = 'stop';
+                    if (shouldHash === true) {
+                        clearTimeout(hashing);
+                        hashing = setTimeout(increaseAndHash, 500);
                     }
+                }
+
+                var observer = new MutationObserver(function(mutations) {
+                    mutations.forEach(function(mutation) {
+                        shouldHash = slide.classList.contains('active');
+                        increaseAndHash();
+                    });
                 });
-                hash();
+                observer.observe(slide, { attributes: true, childList: false, characterData: false});
+
             })();
         </script>
     </div></section>
