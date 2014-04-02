@@ -107,6 +107,10 @@
         </div>
 		<img src="pictures/bitcoins-wp.jpg" alt="">
 	</div></section>
+    <section class="slide"><div>
+        <h2 data-l10n-id="disclaimer-title"></h2>
+        <p data-l10n-id="disclaimer-p"></p>
+    </div></section>
     <section class="slide motivation"><div>
         <style>
             .slide.motivation p { text-align: center; }
@@ -279,18 +283,22 @@
     </div></section>
     <section class="slide proof-of-work"><div>
         <style>
-            .slide.proof-of-work input    { font-size: 28px; border: 1px solid black; }
+            .slide.proof-of-work figure   { width: 260px; display: inline-block; }
+            .slide.proof-of-work pre      { display: inline-block;position: absolute; width: 520px;}
+            .slide.proof-of-work img      { max-height: 250px; }
+            .slide.proof-of-work input    { position: absolute; margin: 18px 0 0 28px; width: 160px; font-size: 28px; border: 1px solid black; text-align: center; }
             .slide.proof-of-work code     { white-space: pre-wrap; word-wrap: break-word; line-height: 1.2em; font-size: 32px; margin-top: .7em; }
-            .slide.proof-of-work p        { margin-bottom: 0; }
         </style>
         <h2 data-l10n-id="proof-of-work-currency-title"></h2>
-        <label data-l10n-id="proof-of-work-example-title"><input type="number" class="in" value="1" min="0"></label>
-        <pre>
-            <code class="sha"></code>
-        </pre>
+        <figure>
+            <input type="number" class="in" value="1" min="0">
+            <img data-l10n-id="coins-generation-img">
+        </figure>
+        <pre><code class="sha"></code></pre>
         <ul>
-            <li data-l10n-id="proof-of-work-bitcoin"/>
-            <li data-l10n-id="proof-of-work-litecoin"/>
+            <li data-l10n-id="proof-of-work-bitcoin">
+            <li data-l10n-id="proof-of-work-litecoin" class="next">
+            <li data-l10n-id="proof-of-work-difficulty" class="next">
         </ul>
         <script type="text/javascript" src="js/sha256.js"></script>
         <script defer>
@@ -714,6 +722,16 @@
         <h1 data-l10n-id="practical-title"></h1>
 		<img src="pictures/bitcoins-wp.jpg" alt="">
         <p class="footer"><a class="hashtag" href="https://twitter.com/search?q=%23deboxxbtc">#devoxxbtc</a><span class="twitter"><img src="pictures/twitter.png"><a href="https://twitter.com/paulgreg" rel="me" class="twitter">@paulgreg</a></span></p>
+    </div></section>
+    <section class="slide"><div>
+        <h2 data-l10n-id="feature-title"></h2>
+        <ul>
+            <li data-l10n-id="feature-1">
+            <li data-l10n-id="feature-2" class="next">
+            <li data-l10n-id="feature-3" class="next">
+            <li data-l10n-id="feature-4" class="next">
+            <li data-l10n-id="feature-5" class="next">
+        </ul>
     </div></section>
     <section class="slide realtime"><div>
         <style>
