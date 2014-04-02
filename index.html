@@ -210,8 +210,8 @@
     <section class="slide signature"><div>
         <h2 data-l10n-id="crypto-signature-title"></h2>
         <figure>
-        <img src="./pictures/signature.png">
-        <figcaption></figcaption>
+            <img src="./pictures/signature.png">
+            <figcaption></figcaption>
         </figure>
     </div></section>
     <section class="slide cover title"><div>
@@ -220,6 +220,24 @@
 		<img src="pictures/bitcoins-wp.jpg" alt="">
         <p class="footer"><a class="hashtag" href="https://twitter.com/search?q=%23deboxxbtc">#devoxxbtc</a><span class="twitter"><img src="pictures/twitter.png"><a href="https://twitter.com/paulgreg" rel="me" class="twitter">@paulgreg</a></span></p>
     </div></section>
+    <section class="slide generation-def"><div>
+        <style>
+            .slide.generation-def ul        { margin: 0; }
+            .slide.generation-def ul li     { line-height: 40px; }
+            .slide.generation-def img       { margin-left: 250px; max-height: 320px; }
+        </style>
+        <h2 data-l10n-id="coins-generation-title"></h2>
+        <ul>
+            <li data-l10n-id="coins-generation-1">
+            <li data-l10n-id="coins-generation-2">
+            <li data-l10n-id="coins-generation-3">
+            <li data-l10n-id="coins-generation-4">
+        </ul>
+        <figure>
+            <img data-l10n-id="coins-generation-img">
+            <figcaption></figcaption>
+        </figure>
+    </div></section>
     <section class="slide generation"><div>
         <style>
             .slide.generation img { max-height: 500px; margin: -25px 0 0 20px; }
@@ -227,7 +245,18 @@
         <h2 data-l10n-id="coins-generation-title"></h2>
         <figure>
             <img src="pictures/bitcoin-introduction.png">
-        <figcaption></figcaption>
+            <figcaption></figcaption>
+        </figure>
+    </div></section>
+    <section class="slide proof-intro"><div>
+        <style>
+            .slide.proof-intro img { margin-left: 130px; }
+        </style>
+        <h2 data-l10n-id="proof-of-work-hashcash-title"></h2>
+        <p data-l10n-id="proof-of-work-desc1"></p>
+        <figure>
+            <img src="pictures/hashcash.png">
+            <figcaption></figcaption>
         </figure>
     </div></section>
     <section class="slide proof"><div>
@@ -240,12 +269,13 @@
             .proof .nonce   { color: red; background-color: transparent; padding: 0; }
         </style>
         <h2 data-l10n-id="proof-of-work-hashcash-title"></h2>
-        <p data-l10n-id="proof-of-work-desc"></p>
+        <p data-l10n-id="proof-of-work-desc2"></p>
         <pre>
-            <code>echo -n "1:20:<mark class="date">060408</mark>:<mark class="email">adam@cypherspace.org</mark>::<mark class="nonce">1QTjaYd7niiQA/sc:ePa</mark>" | sha1sum</code>
-            <code>00000a4a8bd07bddbdb0c4ea9ddb2d29b8d1cc5e</code>
+            <code class="next">SHA1("1:20:<mark class="date">date</mark>:<mark class="email">email</mark>::<mark class="nonce">nonce</mark>") &lt; <mark class="important">000001</mark></code>
+            <code class="next">echo -n "1:20:<mark class="date">060408</mark>:<mark class="email">adam@cypherspace.org</mark>::<mark class="nonce">1QTjaYd7niiQA/sc:ePa</mark>" | sha1sum</code>
+            <code class="next">00000a4a8bd07bddbdb0c4ea9ddb2d29b8d1cc5e</code>
         </pre>
-        <pre><code><mark class="important">00000</mark><mark>a4a8bd...</mark> <strong>&lt;</strong> <mark class="important">00001</mark><mark>00000...</mark></code></pre>
+        <pre class="next"><code><mark class="important">00000</mark><mark>a4a8bd...</mark> <strong>&lt;</strong> <mark class="important">00001</mark><mark>00000...</mark></code></pre>
     </div></section>
     <section class="slide proof-of-work"><div>
         <style>
