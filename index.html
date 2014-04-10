@@ -16,6 +16,7 @@
         .border                         { border: 1px solid black; }
         small                           { font-size: small; }
         .slide                          { background: white url('pictures/devoxxfr-vertical.png') no-repeat 10px 30px; }
+        .slide.big                      { font-size: 32px; }
         .slide .hashtag                 { float: left; color: white; text-decoration: none; border: 0; }
         .slide.title h1                 { color: white; font-size: 70px; font-weight: bold; position: absolute; top: 130px; left: 400px; transform:rotate(-46deg); -webkit-transform:rotate(-46deg); 
                                           line-height: 80px; background-color: rgba(0,0,0,0.6); padding: 10px 20px; width: 500px; }
@@ -35,7 +36,7 @@
 	<header class="caption">
 		<h1 data-l10n-id="main-title"></h1>
 	</header>
-    <section class="slide language selection"><div>
+    <section class="slide language selection big"><div>
         <style>
             .slide.language.selection h2, 
             .slide.language.selection p                     { text-align: center; }
@@ -103,22 +104,41 @@
             <h4></h4>
             <h5><a class="hashtag" href="https://twitter.com/search?q=%23deboxxbtc">#devoxxbtc</a></h5>
         </div>
-		<img src="pictures/bitcoins-wp.jpg" alt="">
+		<img src="pictures/bitcoins.jpg" alt="">
 	</div></section>
-    <section class="slide disclaimer"><div>
-        <style>
-            .slide.disclaimer p { font-size: 34px; }
-        </style>
+    <section class="slide disclaimer big"><div>
         <h2 data-l10n-id="disclaimer-title"></h2>
         <p data-l10n-id="disclaimer-p"></p>
+    </div></section>
+    <section class="slide toc big"><div>
+        <style>
+            .slide.toc ol { columns: 2; -moz-columns: 2; -webkit-columns: 2; width: 920px; }
+        </style>
+        <h2 data-l10n-id="toc-title"></h2>
+        <ol>
+            <li data-l10n-id="intro-title">
+            <li data-l10n-id="p2p-title" class="next">
+            <li data-l10n-id="crypto-title" class="next">
+            <li data-l10n-id="coins-generation-title" class="next">
+            <li data-l10n-id="proof-of-work-title" class="next">
+            <li data-l10n-id="transaction-title" class="next">
+            <li data-l10n-id="mining-title" class="next">
+            <li data-l10n-id="security-title" class="next">
+            <li data-l10n-id="practical-title" class="next">
+            <li data-l10n-id="dev-title" class="next">
+            <li data-l10n-id="conclusion-title" class="next">
+            <li data-l10n-id="qa-title" class="next">
+        </ol>
     </div></section>
     <section class="slide motivation"><div>
         <style>
             .slide.motivation p { text-align: center; }
             .slide.motivation img { width: 340px; margin: 0 10px; display: inline; }
+            .slide.motivation a { position: absolute; border-bottom: none; text-decoration: underline; bottom: 0; right: 120px; }
         </style>
         <h2 data-l10n-id="motivation-title"></h2>
         <p>
+        <a href="http://www.commitstrip.com/fr/2014/02/28/about-bitcoins/">CommitStrip</a>
         <img data-l10n-id="motivation-comic1" src="pictures/CommitStrip-fr-1.gif"/>
         <img class="next" data-l10n-id="motivation-comic2" src="pictures/CommitStrip-fr-2.gif"/>
         <img class="next" data-l10n-id="motivation-comic3" src="pictures/CommitStrip-fr-3.gif"/>
@@ -127,8 +147,28 @@
     <section class="slide cover title"><div>
         <div class="color1"></div><div class="color2"></div><div class="color3"></div>
         <h1 data-l10n-id="intro-title"></h1>
-		<img src="pictures/bitcoins-wp.jpg" alt="">
+		<img src="pictures/bitcoins.jpg" alt="">
         <p class="footer"><a class="hashtag" href="https://twitter.com/search?q=%23deboxxbtc">#devoxxbtc</a><span class="twitter"><img src="pictures/twitter.png"><a href="https://twitter.com/paulgreg" rel="me" class="twitter">@paulgreg</a></span></p>
+    </div></section>
+    <section class="slide what big"><div>
+        <h2>Bitcoin ?</h2>
+        <ol>
+            <li data-l10n-id="bitcoin-1">
+            <li data-l10n-id="bitcoin-2" class="next">
+            <li data-l10n-id="bitcoin-3" class="next">
+        </ol>
+    </div></section>
+    <section class="slide def"><div>
+        <style>
+            .slide.def { font-size: 32px; }
+        </style>
+        <h2 data-l10n-id="cryptocurrency-title"></h2>
+        <figure>
+        <blockquote>
+            <p data-l10n-id="cryptocurrency-def"></p>
+        </blockquote>
+        <figcaption><a href="https://en.wikipedia.org/wiki/Cryptocurrency">Wikipedia</a></figcaption>
+        </figure>
     </div></section>
     <section class="slide history"><div>
         <style>
@@ -149,20 +189,10 @@
             </ul>
         </div>
     </div></section>
-    <section class="slide"><div>
-        <h2 data-l10n-id="cryptocurrency-title"></h2>
-        <figure>
-        <blockquote>
-            <p data-l10n-id="cryptocurrency-def"></p>
-        </blockquote>
-        <figcaption><a href="https://en.wikipedia.org/wiki/Cryptocurrency">Wikipedia</a></figcaption>
-        </figure>
-        <p data-l10n-id="cryptocurrency-details" class="next"></p>
-    </div></section>
     <section class="slide cover title"><div>
         <div class="color1"></div><div class="color2"></div><div class="color3"></div>
         <h1 data-l10n-id="p2p-title"></h1>
-		<img src="pictures/bitcoins-wp.jpg" alt="">
+		<img src="pictures/bitcoins.jpg" alt="">
         <p class="footer"><a class="hashtag" href="https://twitter.com/search?q=%23deboxxbtc">#devoxxbtc</a><span class="twitter"><img src="pictures/twitter.png"><a href="https://twitter.com/paulgreg" rel="me" class="twitter">@paulgreg</a></span></p>
     </div></section>
     <section class="slide map"><div>
@@ -178,7 +208,7 @@
     <section class="slide cover title"><div>
         <div class="color1"></div><div class="color2"></div><div class="color3"></div>
         <h1 data-l10n-id="crypto-title"></h1>
-		<img src="pictures/bitcoins-wp.jpg" alt="">
+		<img src="pictures/bitcoins.jpg" alt="">
         <p class="footer"><a class="hashtag" href="https://twitter.com/search?q=%23deboxxbtc">#devoxxbtc</a><span class="twitter"><img src="pictures/twitter.png"><a href="https://twitter.com/paulgreg" rel="me" class="twitter">@paulgreg</a></span></p>
     </div></section>
     <section class="slide symetric"><div>
@@ -221,8 +251,8 @@
     </div></section>
     <section class="slide cover title"><div>
         <div class="color1"></div><div class="color2"></div><div class="color3"></div>
-        <h1 data-l10n-id="prerequisite-title"></h1>
-		<img src="pictures/bitcoins-wp.jpg" alt="">
+        <h1 data-l10n-id="coins-generation-title"></h1>
+		<img src="pictures/bitcoins.jpg" alt="">
         <p class="footer"><a class="hashtag" href="https://twitter.com/search?q=%23deboxxbtc">#devoxxbtc</a><span class="twitter"><img src="pictures/twitter.png"><a href="https://twitter.com/paulgreg" rel="me" class="twitter">@paulgreg</a></span></p>
     </div></section>
     <section class="slide generation"><div>
@@ -264,6 +294,12 @@
             <li data-l10n-id="coins-generation-7" class="next q">
             <li data-l10n-id="coins-generation-8" class="next a">
         </ul>
+    </div></section>
+    <section class="slide cover title"><div>
+        <div class="color1"></div><div class="color2"></div><div class="color3"></div>
+        <h1 data-l10n-id="proof-of-work-title"></h1>
+		<img src="pictures/bitcoins.jpg" alt="">
+        <p class="footer"><a class="hashtag" href="https://twitter.com/search?q=%23deboxxbtc">#devoxxbtc</a><span class="twitter"><img src="pictures/twitter.png"><a href="https://twitter.com/paulgreg" rel="me" class="twitter">@paulgreg</a></span></p>
     </div></section>
     <section class="slide proof-intro"><div>
         <style>
@@ -349,7 +385,7 @@
     <section class="slide cover title"><div>
         <div class="color1"></div><div class="color2"></div><div class="color3"></div>
         <h1 data-l10n-id="transaction-title"></h1>
-		<img src="pictures/bitcoins-wp.jpg" alt="">
+		<img src="pictures/bitcoins.jpg" alt="">
         <p class="footer"><a class="hashtag" href="https://twitter.com/search?q=%23deboxxbtc">#devoxxbtc</a><span class="twitter"><img src="pictures/twitter.png"><a href="https://twitter.com/paulgreg" rel="me" class="twitter">@paulgreg</a></span></p>
     </div></section>
     <section class="slide diag"><div>
@@ -361,13 +397,14 @@
             .slide.diag figure img                       { transition: all 1s ease-in-out; }
             .slide.diag figure div                       { position: absolute; text-align: center; }
             .slide.diag figure h2                        { font-size: 26px; }
-            .slide.diag .private                         { transform: rotate(10deg); -webkit-transform: rotate(10deg); }
+            .slide.diag .private                         { }
+            .slide.diag .public                          { }
             .slide.diag .user                            { border: 1px solid black; border-radius: 10px; width: 200px; top: 120px; height: 100px; }
             .slide.diag .user img.person                 { position: absolute; top: 0px; right: -60px; width: 60%; }
-            .slide.diag .user .keys img                  { position: absolute; left: -30px; }
-            .slide.diag .user .keys img.k1               { top: -60px; }
-            .slide.diag .user .keys img.k2               { top: -50px; }
-            .slide.diag .user .keys img.k3               { top: -25px; }
+            .slide.diag .user .keys img                  { position: absolute; left: -45px; }
+            .slide.diag .user .keys img.k1               { top: -60px; left: -20px; }
+            .slide.diag .user .keys img.k2               { top: -60px; }
+            .slide.diag .user .keys img.k3               { top: -15px; left: -20px; }
             .slide.diag .user .keys img.k4               { top: -15px; }
             .slide.diag .alice                           { left: 100px; border-color: #A8003B; }
             .slide.diag .alice h2                        { color: #A8003B; }
@@ -469,10 +506,10 @@
                 <h2>Alice</h2>
                 <img class="person" src="pictures/user.png">
                 <div class="keys">
+                    <img class="k2 public" src="pictures/key-blue.png">
                     <img class="k1 private" src="pictures/key-orange.png">
-                    <img class="k2" src="pictures/key-blue.png">
+                    <img class="keypair2 k4 public" src="pictures/key-red.png">
                     <img class="keypair2 k3 private" src="pictures/key-green.png">
-                    <img class="keypair2 k4" src="pictures/key-red.png">
                 </div>
                 <div class="trans">
                     <div class="trans1">10.00 BTC<img src="pictures/key-blue.png"></div>
@@ -485,7 +522,7 @@
                 <img class="person" src="pictures/user.png">
                 <div class="keys">
                     <img class="k1 private" src="pictures/key-pink.png">
-                    <img class="k2" src="pictures/key-purple.png">
+                    <img class="k2 public" src="pictures/key-purple.png">
                 </div>
                 <div class="trans">
                     <div class="trans3">01.00 BTC<img src="pictures/key-purple.png"></div>
@@ -497,7 +534,7 @@
                 <img class="person" src="pictures/user.png">
                 <div class="keys">
                     <img class="k1 private" src="pictures/key-grey.png">
-                    <img class="k2" src="pictures/key-white.png">
+                    <img class="k2 public" src="pictures/key-white.png">
                 </div>
                 <div class="trans">
                     <div class="trans3">25.01 BTC<img src="pictures/key-white.png"></div>
@@ -518,15 +555,15 @@
                 <div class="block"><h2 data-l10n-id="transaction-block"></h2></div>
             </div>
             <ul class="trans trans-to-bob">
-                <li><span class="input" data-l10n-id="transaction-input"></span>10.00 BTC<img src="pictures/key-blue.png">
-                <li><span class="output" data-l10n-id="transaction-output"></span>01.00 BTC<img src="pictures/key-purple.png">
-                <li class="without-fees"><span class="output" data-l10n-id="transaction-output"></span>09.00 BTC<img src="pictures/key-red.png">
-                <li class="with-fees"><span class="output" data-l10n-id="transaction-output"></span>08.99 BTC<img src="pictures/key-red.png">
+                <li><span class="input" data-l10n-id="transaction-input"></span>10.00 BTC<img class="public" src="pictures/key-blue.png">
+                <li><span class="output" data-l10n-id="transaction-output"></span>01.00 BTC<img class="public" src="pictures/key-purple.png">
+                <li class="without-fees"><span class="output" data-l10n-id="transaction-output"></span>09.00 BTC<img class="public" src="pictures/key-red.png">
+                <li class="with-fees"><span class="output" data-l10n-id="transaction-output"></span>08.99 BTC<img class="public" src="pictures/key-red.png">
                 <li><span class="signed" data-l10n-id="transaction-signed"></span>Alice<img class="private" src="pictures/key-orange.png">
             </ul>
             <ul class="trans next-block">
                 <li><span class="nonce" data-l10n-id="transaction-nonce"></span>
-                <li><span class="output" data-l10n-id="transaction-output"></span>25.01 BTC<img src="pictures/key-white.png">
+                <li><span class="output" data-l10n-id="transaction-output"></span>25.01 BTC<img class="public" src="pictures/key-white.png">
                 <li><span class="signed" data-l10n-id="transaction-signed"></span><span data-l10n-id="transaction-miner"></span><img class="private" src="pictures/key-grey.png">
                 <li><span class="hash" data-l10n-id="transaction-hash"></span>
             </ul>
@@ -594,9 +631,15 @@
                 });
 
                 document.addEventListener('keydown', function(e) {
-                    if (e.which === 187 || e.which === 61 || e.which === 66) {
+                    // 61 =
+                    // 66 B (remote)
+                    // 43 +
+                    // 187 »
+                    // 173 -
+                    // 189 ½
+                    if (e.which === 43 || e.which === 61 || e.which === 66 || e.which === 187) {
                         next();
-                    } else if (e.which === 189 || e.which === 173) {
+                    } else if (e.which === 173 || e.which === 189) {
                         back();
                     }
                 });
@@ -623,7 +666,7 @@
     <section class="slide cover title"><div>
         <div class="color1"></div><div class="color2"></div><div class="color3"></div>
         <h1 data-l10n-id="mining-title"></h1>
-		<img src="pictures/bitcoins-wp.jpg" alt="">
+		<img src="pictures/bitcoins.jpg" alt="">
         <p class="footer"><a class="hashtag" href="https://twitter.com/search?q=%23deboxxbtc">#devoxxbtc</a><span class="twitter"><img src="pictures/twitter.png"><a href="https://twitter.com/paulgreg" rel="me" class="twitter">@paulgreg</a></span></p>
     </div></section>
     <section class="slide miningpower"><div>
@@ -696,7 +739,7 @@
     <section class="slide cover title"><div>
         <div class="color1"></div><div class="color2"></div><div class="color3"></div>
         <h1 data-l10n-id="security-title"></h1>
-		<img src="pictures/bitcoins-wp.jpg" alt="">
+		<img src="pictures/bitcoins.jpg" alt="">
         <p class="footer"><a class="hashtag" href="https://twitter.com/search?q=%23deboxxbtc">#devoxxbtc</a><span class="twitter"><img src="pictures/twitter.png"><a href="https://twitter.com/paulgreg" rel="me" class="twitter">@paulgreg</a></span></p>
     </div></section>
     <section class="slide clients"><div>
@@ -714,7 +757,7 @@
         </ol>
     </div></section>
     </div></section>
-    <section class="slide malware"><div>
+    <section class="slide malware big"><div>
         <style>
             .slide.malware li           { margin: 40px 0 0 0; }
             .slide.malware pre code     { margin-left: 100px; line-height: 140%; }
@@ -730,7 +773,7 @@
             <li data-l10n-id="malware-cryptolocker" class="next">
         </ul>
     </div></section>
-    <section class="slide attack51"><div>
+    <section class="slide attack51 big"><div>
         <style>
             .slide.attack51 img { float: left; margin: 50px; max-height: 200px; }
         </style>
@@ -743,10 +786,10 @@
     <section class="slide cover title"><div>
         <div class="color1"></div><div class="color2"></div><div class="color3"></div>
         <h1 data-l10n-id="practical-title"></h1>
-		<img src="pictures/bitcoins-wp.jpg" alt="">
+		<img src="pictures/bitcoins.jpg" alt="">
         <p class="footer"><a class="hashtag" href="https://twitter.com/search?q=%23deboxxbtc">#devoxxbtc</a><span class="twitter"><img src="pictures/twitter.png"><a href="https://twitter.com/paulgreg" rel="me" class="twitter">@paulgreg</a></span></p>
     </div></section>
-    <section class="slide"><div>
+    <section class="slide big"><div>
         <h2 data-l10n-id="feature-title"></h2>
         <ul>
             <li data-l10n-id="feature-1">
@@ -803,11 +846,13 @@
     </div></section>
     <section class="slide currencies"><div>
         <style>
-            .slide.currencies li        { font-size: 20px; }
-            .slide.currencies li:last-child    { font-size: 18px; }
-            .slide.currencies li span   { font-weight: bold; }
+            .slide.currencies li            { font-size: 20px; }
+            .slide.currencies li:last-child { font-size: 18px; }
+            .slide.currencies li span       { font-weight: bold; }
+            .slide.currencies img           { float: right; max-width: 200px; }
         </style>
         <h2 data-l10n-id="other-cryptocurrencies-title"></h2>
+        <img src="pictures/marketcap-currencies.png">
         <ul>
             <li data-l10n-id="other-ltc">
             <li data-l10n-id="other-ppc">
@@ -818,11 +863,12 @@
             <li data-l10n-id="other-dov">
             <li data-l10n-id="other-aur">
             <li data-l10n-id="other-etc">
+        </ul>
     </div></section>
     <section class="slide cover title"><div>
         <div class="color1"></div><div class="color2"></div><div class="color3"></div>
         <h1 data-l10n-id="more-title"></h1>
-		<img src="pictures/bitcoins-wp.jpg" alt="">
+		<img src="pictures/bitcoins.jpg" alt="">
         <p class="footer"><a class="hashtag" href="https://twitter.com/search?q=%23deboxxbtc">#devoxxbtc</a><span class="twitter"><img src="pictures/twitter.png"><a href="https://twitter.com/paulgreg" rel="me" class="twitter">@paulgreg</a></span></p>
     </div></section>
     <section class="slide script"><div>
@@ -849,14 +895,14 @@
     <section class="slide cover title"><div>
         <div class="color1"></div><div class="color2"></div><div class="color3"></div>
         <h1 data-l10n-id="dev-title"></h1>
-		<img src="pictures/bitcoins-wp.jpg" alt="">
+		<img src="pictures/bitcoins.jpg" alt="">
         <p class="footer"><a class="hashtag" href="https://twitter.com/search?q=%23deboxxbtc">#devoxxbtc</a><span class="twitter"><img src="pictures/twitter.png"><a href="https://twitter.com/paulgreg" rel="me" class="twitter">@paulgreg</a></span></p>
     </div></section>
     <section class="slide"><div>
         <h2 data-l10n-id="dev-title"></h2>
         <ul>
             <li>Java : <a href="http://code.google.com/p/bitcoinj/">bitcoinj</a>,
-            <li>JavaScript : <a href="https://github.com/defunctzombie/bitcoin-address" data-l10n-id=dev-validation></a>, <a href="http://miohtama.github.io/bitcoin-prices/">bitcoinprices.js</a>, <a href="http://coinwidget.com/">coinwidget</a>, <a href="http://bitcoinjs.org/">bitcoinjs</a>, <a href="https://npmjs.org/package/bitcoin">node-bitcoin</a>,
+            <li>JavaScript : <a href="https://github.com/defunctzombie/bitcoin-address" data-l10n-id=dev-validation></a>, <a href="http://miohtama.github.io/bitcoin-prices/">bitcoinprices.js</a>, <a href="http://bitcoinjs.org/">bitcoinjs</a>, <a href="https://npmjs.org/package/bitcoin">node-bitcoin</a>,
             <li><span data-l10n-id="dev-miner"></span> : <a href="http://www.bitcoinplus.com/miner/embeddable">bitcoinplus</a>, <a href="https://code.google.com/p/hamiyoca/">hamiyoca</a> (WebWorker, WebGL),
             <li><span data-l10n-id="dev-blockchain"></span> : <a href="https://blockchain.info/">blockchain.info</a>, <a href="https://blockexplorer.com/">block explorer</a>,
             <li><span data-l10n-id="dev-tools"></span>: <a href="https://www.bitaddress.org">bitaddress.org</a>, <a href="http://brainwallet.org">Brainwallet.org</a>, <a href="http://gobittest.appspot.com/">TP’s Go Bitcoin Tests</a>.
@@ -865,7 +911,7 @@
     <section class="slide cover title"><div>
         <div class="color1"></div><div class="color2"></div><div class="color3"></div>
         <h1 data-l10n-id="resources-title"></h1>
-		<img src="pictures/bitcoins-wp.jpg" alt="">
+		<img src="pictures/bitcoins.jpg" alt="">
         <p class="footer"><a class="hashtag" href="https://twitter.com/search?q=%23deboxxbtc">#devoxxbtc</a><span class="twitter"><img src="pictures/twitter.png"><a href="https://twitter.com/paulgreg" rel="me" class="twitter">@paulgreg</a></span></p>
     </div></section>
     <section class="slide"><div>
@@ -885,10 +931,13 @@
     <section class="slide cover title"><div>
         <div class="color1"></div><div class="color2"></div><div class="color3"></div>
         <h1 data-l10n-id="conclusion-title"></h1>
-		<img src="pictures/bitcoins-wp.jpg" alt="">
+		<img src="pictures/bitcoins.jpg" alt="">
         <p class="footer"><a class="hashtag" href="https://twitter.com/search?q=%23deboxxbtc">#devoxxbtc</a><span class="twitter"><img src="pictures/twitter.png"><a href="https://twitter.com/paulgreg" rel="me" class="twitter">@paulgreg</a></span></p>
     </div></section>
-    <section class="slide conclusion"><div>
+    <section class="slide conclusion big"><div>
+        <style>
+            .slide.conclusion small { font-size: 24px; }
+        </style>
         <h2 data-l10n-id="conclusion-title"></h2>
         <ul>
             <li data-l10n-id="conclusion-1">
@@ -902,7 +951,7 @@
     <section class="slide cover title"><div>
         <div class="color1"></div><div class="color2"></div><div class="color3"></div>
         <h1 data-l10n-id="qa-title"></h1>
-		<img src="pictures/bitcoins-wp.jpg" alt="">
+		<img src="pictures/bitcoins.jpg" alt="">
         <p class="footer"><a class="hashtag" href="https://twitter.com/search?q=%23deboxxbtc">#devoxxbtc</a><span class="twitter"><img src="pictures/twitter.png"><a href="https://twitter.com/paulgreg" rel="me" class="twitter">@paulgreg</a></span></p>
     </div></section>
     <section class="slide qa"><div>
@@ -927,10 +976,10 @@
     <section class="slide cover title"><div>
         <div class="color1"></div><div class="color2"></div><div class="color3"></div>
         <h1 data-l10n-id="assets-title"></h1>
-		<img src="pictures/bitcoins-wp.jpg" alt="">
+		<img src="pictures/bitcoins.jpg" alt="">
         <p class="footer"><a class="hashtag" href="https://twitter.com/search?q=%23deboxxbtc">#devoxxbtc</a><span class="twitter"><img src="pictures/twitter.png"><a href="https://twitter.com/paulgreg" rel="me" class="twitter">@paulgreg</a></span></p>
     </div></section>
-    <section class="slide"><div>
+    <section class="slide big"><div>
         <h2 data-l10n-id="assets-title"></h2>
         <ul>
             <li data-l10n-id="assets-wallpaper">
@@ -944,7 +993,7 @@
     <section class="slide cover title"><div>
         <div class="color1"></div><div class="color2"></div><div class="color3"></div>
         <h1 data-l10n-id="more-title"></h1>
-		<img src="pictures/bitcoins-wp.jpg" alt="">
+		<img src="pictures/bitcoins.jpg" alt="">
         <p class="footer"><a class="hashtag" href="https://twitter.com/search?q=%23deboxxbtc">#devoxxbtc</a><span class="twitter"><img src="pictures/twitter.png"><a href="https://twitter.com/paulgreg" rel="me" class="twitter">@paulgreg</a></span></p>
     </div></section>
     <section class="slide merchants"><div>
