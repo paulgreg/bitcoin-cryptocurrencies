@@ -112,7 +112,12 @@
     </div></section>
     <section class="slide toc big"><div>
         <style>
-            .slide.toc ol { columns: 2; -moz-columns: 2; -webkit-columns: 2; width: 920px; }
+            @media screen {
+                .slide.toc ol { columns: 2; -moz-columns: 2; -webkit-columns: 2; width: 920px; }
+            }
+            @media print {
+                .slide.toc ol { font-size: 20px; }
+            }
         </style>
         <h2 data-l10n-id="toc-title"></h2>
         <ol>
