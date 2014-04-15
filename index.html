@@ -166,6 +166,7 @@
     <section class="slide def"><div>
         <style>
             .slide.def { font-size: 32px; }
+            .slide.def figcaption { text-align: right; }
         </style>
         <h2 data-l10n-id="cryptocurrency-title"></h2>
         <figure>
@@ -202,11 +203,14 @@
     </div></section>
     <section class="slide map"><div>
         <style>
-            .slide.map figure { margin: 0 0 0 50px; }
+            .slide.map figure,
+            .slide.map img { max-width: 720px; }
+            .slide.map figure { margin-left: 20px; }
+            .slide.map figcaption { text-align: right; }
         </style>
         <h2 data-l10n-id="p2p-title"></h2>
         <figure>
-        <img src="./pictures/bitnodes.png" style="max-height: 415px;">
+        <img src="./pictures/bitnodes.png">
         <figcaption><a href="http://getaddr.bitnodes.io/">bitnodes.io</a></figcaption>
         </figure>
     </div></section>
@@ -807,11 +811,14 @@
     </div></section>
     <section class="slide realtime"><div>
         <style>
-            .slide.realtime .greater { width: 100px; text-align: center; }
-            .slide.realtime .numbers { color: #666; }
+            .slide.realtime .greater    { width: 100px; text-align: center; }
+            .slide.realtime .numbers    { color: #666; }
+            .slide.realtime iframe      { display: none; }
+            .slide.realtime .static, iframe { width: 100%; height: 365px; }
         </style>
         <h2 data-l10n-id="realtime-title"></h2>
-        <iframe src="./pictures/realtimebitcoin.png" data-dynamic-src="http://realtimebitcoin.info/" scrolling="no" style="width: 100%; height: 365px;"></iframe>
+        <img class="static" src="./pictures/realtimebitcoin.png">
+        <iframe src="about:blank" scrolling="no"></iframe>
         <table>
             <tr>
                 <td data-l10n-id="realtime-data-1"></td>
@@ -828,11 +835,16 @@
         </table>
         <script defer>
             (function() {
-                if (navigator.onLine) {
-                    var slide = document.querySelector('.slide.realtime');
-                    var iframe = slide.querySelector('iframe')
-                    iframe.setAttribute('src', iframe.getAttribute('data-dynamic-src'));
-                }
+                var slide = document.querySelector('.slide.realtime');
+                var img = slide.querySelector('img.static');
+                img.addEventListener('click', function(e) {
+                    if (navigator.onLine) {
+                        var iframe = slide.querySelector('iframe')
+                        img.style.display = 'none';
+                        iframe.setAttribute('src', 'http://realtimebitcoin.info/');
+                        iframe.style.display = 'block';
+                    }
+                }, true);
             })();
         </script>
     </div></section>
