@@ -7,7 +7,8 @@
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<link rel="stylesheet" href="./node_modules/shower-ribbon/styles/screen.css">
     <script type="text/javascript" src="js/l10n.js"></script>
-    <link rel="prefetch" type="application/l10n" href="l10n.ini" />
+    <link rel="prefetch" type="application/l10n" href="l10n-en.ini" />
+    <link rel="prefetch" type="application/l10n" href="l10n-fr.ini" />
     <link rel="shortcut icon" href="pictures/favicon.png">
     <style>
         abbr                            { border-bottom: #999 dotted 1px; }
@@ -40,6 +41,9 @@
         <style>
             .slide.language.selection h2, 
             .slide.language.selection p                     { text-align: center; }
+            .slide.language.selection small                 { font-size: 20px; }
+            .slide.language.selection .origin               { text-align: left; }
+            .slide.language.selection hr                    { border: 1px solid black; }
             .slide.language.selection p a.selected          { color: green; }
             .slide.language.selection p a.selected:before   { content: "✓"; }
             @media print {
@@ -48,6 +52,8 @@
         </style>
         <h2>Langue - Language</h2>
         <p><a href="" class="french">en français</a> - <a href="" class="english">in english</a></p>
+        <hr>
+        <p class="origin" data-l10n-id="slides-origin"></p>
         <script defer>
             var setLang = function(lng, elToSelect, elToDeselect, e) {
                 if (e) {
