@@ -347,18 +347,24 @@
     </div></section>
     <section class="slide proof-of-work"><div>
         <style>
-            .slide.proof-of-work figure   { width: 260px; display: inline-block; }
-            .slide.proof-of-work pre      { display: inline-block;position: absolute; width: 520px;}
-            .slide.proof-of-work img      { max-height: 250px; }
-            .slide.proof-of-work input    { position: absolute; margin: 18px 0 0 28px; width: 160px; font-size: 28px; border: 1px solid black; text-align: center; }
-            .slide.proof-of-work code     { white-space: pre-wrap; word-wrap: break-word; line-height: 1.2em; font-size: 32px; margin-top: .7em; }
+            .slide.proof-of-work figure             { width: 260px; display: inline-block; }
+            .slide.proof-of-work pre                { display: inline-block;position: absolute; width: 520px;}
+            .slide.proof-of-work img                { max-height: 250px; }
+            .slide.proof-of-work input              { font-size: 28px; border: 1px solid black; text-align: center; }
+            .slide.proof-of-work input.in           { position: absolute; margin: 18px 0 0 28px; width: 160px; }
+            .slide.proof-of-work input.difficulty   { width: 100px; }
+            .slide.proof-of-work code               { white-space: pre-wrap; word-wrap: break-word; line-height: 1.2em; font-size: 32px; margin-top: .7em; border: 1px solid grey; padding: 10px; }
+            .slide.proof-of-work code:before        { display: none; }
         </style>
         <h2 data-l10n-id="proof-of-work-currency-title"></h2>
         <figure>
-            <input type="number" class="in" value="1" min="0">
+            <input type="number" class="in" value="1" min="0" autocomplete="off">
             <img data-l10n-id="coins-generation-img">
         </figure>
-        <pre><code class="sha"></code></pre>
+        <pre>
+            <label data-l10n-id="proof-of-work-difficulty-input" for="proof-of-work-difficulty"></label><input id="proof-of-work-difficulty" type="text" class="difficulty" value="00" autocomplete="off">
+            <code class="sha"></code>
+        </pre>
         <ul>
             <li data-l10n-id="proof-of-work-bitcoin">
             <li data-l10n-id="proof-of-work-litecoin" class="next">
@@ -368,10 +374,14 @@
         <script defer>
             (function() {
                 var slide = document.querySelector('.slide.proof-of-work');
-                var input = slide.querySelector('input');
+                var input = slide.querySelector('input.in');
+                var difficulty = slide.querySelector('input.difficulty');
+                var output = slide.querySelector('.sha');
+
                 var hash = function() {
                     var hash = CryptoJS.SHA256(input.value).toString();
-                    document.querySelector('.slide.proof-of-work .sha').innerHTML = hash;
+                    output.innerHTML = hash;
+                    return (hash.indexOf(difficulty.value) === 0)
                 }
                 var hashing = null;
                 var shouldHash = false;
@@ -379,12 +389,16 @@
 
                 var increaseAndHash = function() {
                     input.value = parseInt(input.value, 10) + 1;
-                    hash();
-                    if (shouldHash === true) {
+                    if (shouldHash === true && !hash()) {
                         clearTimeout(hashing);
-                        hashing = setTimeout(increaseAndHash, 500);
+                        setTimeout(increaseAndHash, 10);
                     }
                 }
+
+                difficulty.addEventListener('keyup', function() {
+                    input.value = 0;
+                    increaseAndHash();
+                }, false);
 
                 var observer = new MutationObserver(function(mutations) {
                     mutations.forEach(function(mutation) {
