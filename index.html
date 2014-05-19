@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=792, user-scalable=no">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<link rel="stylesheet" href="./node_modules/shower-ribbon/styles/screen.css">
+	<link rel="stylesheet" href="css/fontello.css">
     <script type="text/javascript" src="js/l10n.js"></script>
     <link rel="prefetch" type="application/l10n" href="l10n-en.ini" />
     <link rel="prefetch" type="application/l10n" href="l10n-fr.ini" />
@@ -93,10 +94,9 @@
             #Cover ul            { background-color: #53B6BC; font-size:30px; width: 60%; color: white; padding: 30px 15px; }
             #Cover ul li         { padding: 0; font-weight: bold; }
             #Cover ul a          { color: white; }
-            #Cover a.valtech     { margin-left: 40px; position: relative; top: -4px; }
             #Cover a.valtech img { width: 130px; }
             #Cover ul img        { display: inline; position: relative; z-index: 1; margin: 0 .2em 0 0; vertical-align: middle; }
-            #Cover a.twitter     { margin-right: 25px; }
+            #Cover .me           { margin-right: 50px; }
             #Cover h4            { background: white url('pictures/devoxxfr.png') no-repeat 10px 10px; height: 80px; margin-top: 100px; }
             #Cover h5            { background: #53B6BC; height: 50px; margin-top: 5px; color: white; font-size: 24px; padding-left: 10px; }
 		</style>
@@ -104,18 +104,56 @@
             <h2 data-l10n-id="main-title"></h2>
             <h3></h3>
             <ul>
-                <li>Grégory Paul <a href="http://valtech.fr/" class="valtech"><img src="pictures/valtech-logo.png"></a>
-                <li><img src="pictures/twitter.png"><a href="https://twitter.com/paulgreg" rel="me" class="twitter">@paulgreg</a><img src="pictures/user_circle.png"><a href="http://paulgreg.me" rel="me">http://paulgreg.me</a>
+                <li>
+                    <span class="me">Grégory Paul</span>
+                    <i class="icon-twitter"></i><a href="https://twitter.com/paulgreg" rel="me" class="twitter">@paulgreg</a>
+                <li>
+                <a href="http://valtech.fr/" class="valtech"><img src="pictures/valtech-logo-white.png"></a>
             </ul>
             <h4></h4>
             <h5><a class="hashtag" href="https://twitter.com/search?q=%23deboxxbtc">#devoxxbtc</a></h5>
         </div>
 		<img src="pictures/bitcoins.jpg" alt="">
 	</div></section>
+    <section class="slide me"><div>
+        <style>
+            .slide.me ul        { float: left; width: 50%; list-style-type: square; }
+            .slide.me ul:first-child li { margin: 10px;  }
+            .slide.me li:before { content: ""; }
+            .slide.me a         { color: black; }
+            .slide.me .valtech  { width: 120px; background: none; }
+        </style>
+        <h2 data-l10n-id="about-title"></h2>
+        <ul>
+            <li>Grégory Paul
+            <li data-l10n-id="about-function">Développeur (Java, JS)
+            <li><i class="icon-twitter"></i><a href="https://twitter.com/paulgreg" rel="me">@paulgreg</a>
+            <li><i class="icon-github-circled"></i><a href="https://github.com/paulgreg" rel="me">paulgreg</a>
+            <li><i class="icon-user"></i><a href="http://paulgreg.me" rel="me">http://paulgreg.me</a>
+        </ul>
+        <ul class="next">
+            <li>
+                <img src="pictures/valtech-logo-black.png" class="valtech"><br>
+                <img src="pictures/flags/France.png" title="France">
+                <img src="pictures/flags/Germany.png" title="Germany">
+                <img src="pictures/flags/Denmark.png" title="Denmark">
+                <img src="pictures/flags/Sweden.png" title="Sweden">
+                <img src="pictures/flags/United-States.png" title="United States of America">
+                <img src="pictures/flags/United-Kingdom.png" title="United Kingdon">
+                <img src="pictures/flags/India.png" title="India">
+            <li data-l10n-id="about-what">
+            <li data-l10n-id="about-how-many">
+            <li data-l10n-id="about-money">
+        </ul>
+    </div></section>
     <section class="slide poll big"><div>
+        <style>
+            .slide.poll li { margin: 1em 0; }
+        </style>
         <h2 data-l10n-id="poll-title"></h2>
         <ul>
-            <li data-l10n-id="poll-who-know">
+            <li data-l10n-id="poll-who-know-btc">
+            <li data-l10n-id="poll-who-know-other" class="next">
             <li data-l10n-id="poll-who-own" class="next">
             <li data-l10n-id="poll-who-have-mined" class="next">
         </ul>
@@ -167,7 +205,7 @@
         <div class="color1"></div><div class="color2"></div><div class="color3"></div>
         <h1 data-l10n-id="intro-title"></h1>
 		<img src="pictures/bitcoins.jpg" alt="">
-        <p class="footer"><a class="hashtag" href="https://twitter.com/search?q=%23deboxxbtc">#devoxxbtc</a><span class="twitter"><img src="pictures/twitter.png"><a href="https://twitter.com/paulgreg" rel="me" class="twitter">@paulgreg</a></span></p>
+        <p class="footer"><a class="hashtag" href="https://twitter.com/search?q=%23deboxxbtc">#devoxxbtc</a><span class="twitter"><i class="icon-twitter"></i><a href="https://twitter.com/paulgreg" rel="me" class="twitter">@paulgreg</a></span></p>
     </div></section>
     <section class="slide what big"><div>
         <h2>Bitcoin ?</h2>
@@ -213,7 +251,7 @@
         <div class="color1"></div><div class="color2"></div><div class="color3"></div>
         <h1 data-l10n-id="p2p-title"></h1>
 		<img src="pictures/bitcoins.jpg" alt="">
-        <p class="footer"><a class="hashtag" href="https://twitter.com/search?q=%23deboxxbtc">#devoxxbtc</a><span class="twitter"><img src="pictures/twitter.png"><a href="https://twitter.com/paulgreg" rel="me" class="twitter">@paulgreg</a></span></p>
+        <p class="footer"><a class="hashtag" href="https://twitter.com/search?q=%23deboxxbtc">#devoxxbtc</a><span class="twitter"><i class="icon-twitter"></i><a href="https://twitter.com/paulgreg" rel="me" class="twitter">@paulgreg</a></span></p>
     </div></section>
     <section class="slide map"><div>
         <style>
@@ -232,7 +270,7 @@
         <div class="color1"></div><div class="color2"></div><div class="color3"></div>
         <h1 data-l10n-id="crypto-title"></h1>
 		<img src="pictures/bitcoins.jpg" alt="">
-        <p class="footer"><a class="hashtag" href="https://twitter.com/search?q=%23deboxxbtc">#devoxxbtc</a><span class="twitter"><img src="pictures/twitter.png"><a href="https://twitter.com/paulgreg" rel="me" class="twitter">@paulgreg</a></span></p>
+        <p class="footer"><a class="hashtag" href="https://twitter.com/search?q=%23deboxxbtc">#devoxxbtc</a><span class="twitter"><i class="icon-twitter"></i><a href="https://twitter.com/paulgreg" rel="me" class="twitter">@paulgreg</a></span></p>
     </div></section>
     <section class="slide symetric"><div>
         <style>
@@ -276,7 +314,7 @@
         <div class="color1"></div><div class="color2"></div><div class="color3"></div>
         <h1 data-l10n-id="coins-generation-title"></h1>
 		<img src="pictures/bitcoins.jpg" alt="">
-        <p class="footer"><a class="hashtag" href="https://twitter.com/search?q=%23deboxxbtc">#devoxxbtc</a><span class="twitter"><img src="pictures/twitter.png"><a href="https://twitter.com/paulgreg" rel="me" class="twitter">@paulgreg</a></span></p>
+        <p class="footer"><a class="hashtag" href="https://twitter.com/search?q=%23deboxxbtc">#devoxxbtc</a><span class="twitter"><i class="icon-twitter"></i><a href="https://twitter.com/paulgreg" rel="me" class="twitter">@paulgreg</a></span></p>
     </div></section>
     <section class="slide generation"><div>
         <style>
@@ -322,7 +360,7 @@
         <div class="color1"></div><div class="color2"></div><div class="color3"></div>
         <h1 data-l10n-id="proof-of-work-title"></h1>
 		<img src="pictures/bitcoins.jpg" alt="">
-        <p class="footer"><a class="hashtag" href="https://twitter.com/search?q=%23deboxxbtc">#devoxxbtc</a><span class="twitter"><img src="pictures/twitter.png"><a href="https://twitter.com/paulgreg" rel="me" class="twitter">@paulgreg</a></span></p>
+        <p class="footer"><a class="hashtag" href="https://twitter.com/search?q=%23deboxxbtc">#devoxxbtc</a><span class="twitter"><i class="icon-twitter"></i><a href="https://twitter.com/paulgreg" rel="me" class="twitter">@paulgreg</a></span></p>
     </div></section>
     <section class="slide proof-intro"><div>
         <style>
@@ -370,7 +408,7 @@
             <img data-l10n-id="coins-generation-img">
         </figure>
         <pre>
-            <label data-l10n-id="proof-of-work-difficulty-input" for="proof-of-work-difficulty"></label><input id="proof-of-work-difficulty" type="text" class="difficulty" value="00" autocomplete="off">
+            <label data-l10n-id="proof-of-work-difficulty-input" for="proof-of-work-difficulty"></label><input id="proof-of-work-difficulty" type="text" class="difficulty" value="0" autocomplete="off">
             <code class="sha"></code>
         </pre>
         <ul>
@@ -403,10 +441,7 @@
                     }
                 }
 
-                difficulty.addEventListener('keyup', function() {
-                    input.value = 0;
-                    increaseAndHash();
-                }, false);
+                difficulty.addEventListener('keyup', increaseAndHash, false);
 
                 var observer = new MutationObserver(function(mutations) {
                     mutations.forEach(function(mutation) {
@@ -423,7 +458,7 @@
         <div class="color1"></div><div class="color2"></div><div class="color3"></div>
         <h1 data-l10n-id="transaction-title"></h1>
 		<img src="pictures/bitcoins.jpg" alt="">
-        <p class="footer"><a class="hashtag" href="https://twitter.com/search?q=%23deboxxbtc">#devoxxbtc</a><span class="twitter"><img src="pictures/twitter.png"><a href="https://twitter.com/paulgreg" rel="me" class="twitter">@paulgreg</a></span></p>
+        <p class="footer"><a class="hashtag" href="https://twitter.com/search?q=%23deboxxbtc">#devoxxbtc</a><span class="twitter"><i class="icon-twitter"></i><a href="https://twitter.com/paulgreg" rel="me" class="twitter">@paulgreg</a></span></p>
     </div></section>
     <section class="slide diag"><div>
         <style>
@@ -476,6 +511,8 @@
             .slide.diag .next-block li:first-child       { margin-bottom: 140px; text-align: center; }
             .slide.diag .next-block li:last-child        { border-top: 1px solid black; text-align: center; }
             .slide.diag .found-block                     { position: absolute; top: 450px; left: 680px; }
+            .slide.diag .next-block .icon-bitcoin,
+            .slide.diag .trans-to-bob .icon-bitcoin      { margin-left: .6em;}
 
             .slide.diag .step1 .keys,
             .slide.diag .step1 .network,       .slide.diag .step2 .network,
@@ -549,8 +586,8 @@
                     <img class="keypair2 k3 private" src="pictures/key-green.png">
                 </div>
                 <div class="trans">
-                    <div class="trans1">10.00 BTC<img src="pictures/key-blue.png"></div>
-                    <div class="trans2">08.99 BTC<img src="pictures/key-red.png"></div>
+                    <div class="trans1">10.00<i class="icon-bitcoin"></i><img src="pictures/key-blue.png"></div>
+                    <div class="trans2">08.99<i class="icon-bitcoin"></i><img src="pictures/key-red.png"></div>
                 </div>
                 <div class="link"></div>
             </div>
@@ -562,7 +599,7 @@
                     <img class="k2 public" src="pictures/key-purple.png">
                 </div>
                 <div class="trans">
-                    <div class="trans3">01.00 BTC<img src="pictures/key-purple.png"></div>
+                    <div class="trans3">01.00 <i class="icon-bitcoin"></i><img src="pictures/key-purple.png"></div>
                 </div>
                 <div class="link"></div>
             </div>
@@ -574,7 +611,7 @@
                     <img class="k2 public" src="pictures/key-white.png">
                 </div>
                 <div class="trans">
-                    <div class="trans3">25.01 BTC<img src="pictures/key-white.png"></div>
+                    <div class="trans3">25.01 <i class="icon-bitcoin"></i><img src="pictures/key-white.png"></div>
                 </div>
                 <div class="link"></div>
             </div>
@@ -592,15 +629,15 @@
                 <div class="block"><h2 data-l10n-id="transaction-block"></h2></div>
             </div>
             <ul class="trans trans-to-bob">
-                <li><span class="input" data-l10n-id="transaction-input"></span>10.00 BTC<img class="public" src="pictures/key-blue.png">
-                <li><span class="output" data-l10n-id="transaction-output"></span>01.00 BTC<img class="public" src="pictures/key-purple.png">
-                <li class="without-fees"><span class="output" data-l10n-id="transaction-output"></span>09.00 BTC<img class="public" src="pictures/key-red.png">
-                <li class="with-fees"><span class="output" data-l10n-id="transaction-output"></span>08.99 BTC<img class="public" src="pictures/key-red.png">
+                <li><span class="input" data-l10n-id="transaction-input"></span>10.00 <i class="icon-bitcoin"></i><img class="public" src="pictures/key-blue.png">
+                <li><span class="output" data-l10n-id="transaction-output"></span>01.00 <i class="icon-bitcoin"></i><img class="public" src="pictures/key-purple.png">
+                <li class="without-fees"><span class="output" data-l10n-id="transaction-output"></span>09.00 <i class="icon-bitcoin"></i><img class="public" src="pictures/key-red.png">
+                <li class="with-fees"><span class="output" data-l10n-id="transaction-output"></span>08.99 <i class="icon-bitcoin"></i><img class="public" src="pictures/key-red.png">
                 <li><span class="signed" data-l10n-id="transaction-signed"></span>Alice<img class="private" src="pictures/key-orange.png">
             </ul>
             <ul class="trans next-block">
                 <li><span class="nonce" data-l10n-id="transaction-nonce"></span>
-                <li><span class="output" data-l10n-id="transaction-output"></span>25.01 BTC<img class="public" src="pictures/key-white.png">
+                <li><span class="output" data-l10n-id="transaction-output"></span>25.01 <i class="icon-bitcoin"></i><img class="public" src="pictures/key-white.png">
                 <li><span class="signed" data-l10n-id="transaction-signed"></span><span data-l10n-id="transaction-miner"></span><img class="private" src="pictures/key-grey.png">
                 <li><span class="hash" data-l10n-id="transaction-hash"></span>
             </ul>
@@ -674,9 +711,9 @@
                     // 187 »
                     // 173 -
                     // 189 ½
-                    if (e.which === 43 || e.which === 61 || e.which === 66 || e.which === 187) {
+                    if (e.which === 43 || e.which === 61 || e.which === 66 || e.which === 107 || e.which === 187) {
                         next();
-                    } else if (e.which === 173 || e.which === 189) {
+                    } else if (e.which === 109 || e.which === 173 || e.which === 189) {
                         back();
                     }
                 });
@@ -711,7 +748,7 @@
         <div class="color1"></div><div class="color2"></div><div class="color3"></div>
         <h1 data-l10n-id="mining-title"></h1>
 		<img src="pictures/bitcoins.jpg" alt="">
-        <p class="footer"><a class="hashtag" href="https://twitter.com/search?q=%23deboxxbtc">#devoxxbtc</a><span class="twitter"><img src="pictures/twitter.png"><a href="https://twitter.com/paulgreg" rel="me" class="twitter">@paulgreg</a></span></p>
+        <p class="footer"><a class="hashtag" href="https://twitter.com/search?q=%23deboxxbtc">#devoxxbtc</a><span class="twitter"><i class="icon-twitter"></i><a href="https://twitter.com/paulgreg" rel="me" class="twitter">@paulgreg</a></span></p>
     </div></section>
     <section class="slide miningpower"><div>
          <style>
@@ -784,7 +821,7 @@
         <div class="color1"></div><div class="color2"></div><div class="color3"></div>
         <h1 data-l10n-id="security-title"></h1>
 		<img src="pictures/bitcoins.jpg" alt="">
-        <p class="footer"><a class="hashtag" href="https://twitter.com/search?q=%23deboxxbtc">#devoxxbtc</a><span class="twitter"><img src="pictures/twitter.png"><a href="https://twitter.com/paulgreg" rel="me" class="twitter">@paulgreg</a></span></p>
+        <p class="footer"><a class="hashtag" href="https://twitter.com/search?q=%23deboxxbtc">#devoxxbtc</a><span class="twitter"><i class="icon-twitter"></i><a href="https://twitter.com/paulgreg" rel="me" class="twitter">@paulgreg</a></span></p>
     </div></section>
     <section class="slide clients"><div>
         <style>
@@ -833,7 +870,7 @@
         <div class="color1"></div><div class="color2"></div><div class="color3"></div>
         <h1 data-l10n-id="practical-title"></h1>
 		<img src="pictures/bitcoins.jpg" alt="">
-        <p class="footer"><a class="hashtag" href="https://twitter.com/search?q=%23deboxxbtc">#devoxxbtc</a><span class="twitter"><img src="pictures/twitter.png"><a href="https://twitter.com/paulgreg" rel="me" class="twitter">@paulgreg</a></span></p>
+        <p class="footer"><a class="hashtag" href="https://twitter.com/search?q=%23deboxxbtc">#devoxxbtc</a><span class="twitter"><i class="icon-twitter"></i><a href="https://twitter.com/paulgreg" rel="me" class="twitter">@paulgreg</a></span></p>
     </div></section>
     <section class="slide big"><div>
         <h2 data-l10n-id="feature-title"></h2>
@@ -891,11 +928,11 @@
         </style>
         <h2>Division</h2>
         <table>
-            <tr><td>1 BTC</td><td></td><td>= 1 bitcoin</td>
-            <tr><td>0.01 BTC</td><td>= 1 cBTC</td><td>= 1 centibitcoin, bitcent</td>
-            <tr><td>0.001 BTC</td><td>= 1 mBTC</td><td>= 1 millibitcoin, mbit, millibit, bitmill</td>
-            <tr><td>0.000 001 BTC</td><td>= 1 μBTC</td><td>= 1 microbitcoin, ubit, microbit</td>
-            <tr><td>0.000 000 01 BTC</td><td></td><td>= 1 Satoshi</td>
+            <tr><td>1 <i class="icon-bitcoin"></i></td><td></td><td>= 1 bitcoin</td>
+            <tr><td>0.01 <i class="icon-bitcoin"></i></td><td>= 1 c<i class="icon-bitcoin"></i></td><td>= 1 centibitcoin, bitcent</td>
+            <tr><td>0.001 <i class="icon-bitcoin"></i></td><td>= 1 m<i class="icon-bitcoin"></i></td><td>= 1 millibitcoin, mbit, millibit, bitmill</td>
+            <tr><td>0.000 001 <i class="icon-bitcoin"></i></td><td>= 1 μ<i class="icon-bitcoin"></i></td><td>= 1 microbitcoin, ubit, microbit</td>
+            <tr><td>0.000 000 01 <i class="icon-bitcoin"></i></td><td></td><td>= 1 Satoshi</td>
         </table>
     </div></section>
     <section class="slide legal"><div>
@@ -1018,7 +1055,7 @@
         <div class="color1"></div><div class="color2"></div><div class="color3"></div>
         <h1 data-l10n-id="more-title"></h1>
 		<img src="pictures/bitcoins.jpg" alt="">
-        <p class="footer"><a class="hashtag" href="https://twitter.com/search?q=%23deboxxbtc">#devoxxbtc</a><span class="twitter"><img src="pictures/twitter.png"><a href="https://twitter.com/paulgreg" rel="me" class="twitter">@paulgreg</a></span></p>
+        <p class="footer"><a class="hashtag" href="https://twitter.com/search?q=%23deboxxbtc">#devoxxbtc</a><span class="twitter"><i class="icon-twitter"></i><a href="https://twitter.com/paulgreg" rel="me" class="twitter">@paulgreg</a></span></p>
     </div></section>
     <section class="slide script"><div>
         <h2>Bitcoin Script</h2>
@@ -1045,7 +1082,7 @@
         <div class="color1"></div><div class="color2"></div><div class="color3"></div>
         <h1 data-l10n-id="dev-title"></h1>
 		<img src="pictures/bitcoins.jpg" alt="">
-        <p class="footer"><a class="hashtag" href="https://twitter.com/search?q=%23deboxxbtc">#devoxxbtc</a><span class="twitter"><img src="pictures/twitter.png"><a href="https://twitter.com/paulgreg" rel="me" class="twitter">@paulgreg</a></span></p>
+        <p class="footer"><a class="hashtag" href="https://twitter.com/search?q=%23deboxxbtc">#devoxxbtc</a><span class="twitter"><i class="icon-twitter"></i><a href="https://twitter.com/paulgreg" rel="me" class="twitter">@paulgreg</a></span></p>
     </div></section>
     <section class="slide"><div>
         <h2 data-l10n-id="dev-title"></h2>
@@ -1061,7 +1098,7 @@
         <div class="color1"></div><div class="color2"></div><div class="color3"></div>
         <h1 data-l10n-id="resources-title"></h1>
 		<img src="pictures/bitcoins.jpg" alt="">
-        <p class="footer"><a class="hashtag" href="https://twitter.com/search?q=%23deboxxbtc">#devoxxbtc</a><span class="twitter"><img src="pictures/twitter.png"><a href="https://twitter.com/paulgreg" rel="me" class="twitter">@paulgreg</a></span></p>
+        <p class="footer"><a class="hashtag" href="https://twitter.com/search?q=%23deboxxbtc">#devoxxbtc</a><span class="twitter"><i class="icon-twitter"></i><a href="https://twitter.com/paulgreg" rel="me" class="twitter">@paulgreg</a></span></p>
     </div></section>
     <section class="slide"><div>
         <h2 data-l10n-id="resources-title">Resources</h2>
@@ -1081,7 +1118,7 @@
         <div class="color1"></div><div class="color2"></div><div class="color3"></div>
         <h1 data-l10n-id="conclusion-title"></h1>
 		<img src="pictures/bitcoins.jpg" alt="">
-        <p class="footer"><a class="hashtag" href="https://twitter.com/search?q=%23deboxxbtc">#devoxxbtc</a><span class="twitter"><img src="pictures/twitter.png"><a href="https://twitter.com/paulgreg" rel="me" class="twitter">@paulgreg</a></span></p>
+        <p class="footer"><a class="hashtag" href="https://twitter.com/search?q=%23deboxxbtc">#devoxxbtc</a><span class="twitter"><i class="icon-twitter"></i><a href="https://twitter.com/paulgreg" rel="me" class="twitter">@paulgreg</a></span></p>
     </div></section>
     <section class="slide conclusion big"><div>
         <style>
@@ -1101,7 +1138,7 @@
         <div class="color1"></div><div class="color2"></div><div class="color3"></div>
         <h1 data-l10n-id="qa-title"></h1>
 		<img src="pictures/bitcoins.jpg" alt="">
-        <p class="footer"><a class="hashtag" href="https://twitter.com/search?q=%23deboxxbtc">#devoxxbtc</a><span class="twitter"><img src="pictures/twitter.png"><a href="https://twitter.com/paulgreg" rel="me" class="twitter">@paulgreg</a></span></p>
+        <p class="footer"><a class="hashtag" href="https://twitter.com/search?q=%23deboxxbtc">#devoxxbtc</a><span class="twitter"><i class="icon-twitter"></i><a href="https://twitter.com/paulgreg" rel="me" class="twitter">@paulgreg</a></span></p>
     </div></section>
     <section class="slide qa"><div>
         <style>
@@ -1126,7 +1163,7 @@
         <div class="color1"></div><div class="color2"></div><div class="color3"></div>
         <h1 data-l10n-id="assets-title"></h1>
 		<img src="pictures/bitcoins.jpg" alt="">
-        <p class="footer"><a class="hashtag" href="https://twitter.com/search?q=%23deboxxbtc">#devoxxbtc</a><span class="twitter"><img src="pictures/twitter.png"><a href="https://twitter.com/paulgreg" rel="me" class="twitter">@paulgreg</a></span></p>
+        <p class="footer"><a class="hashtag" href="https://twitter.com/search?q=%23deboxxbtc">#devoxxbtc</a><span class="twitter"><i class="icon-twitter"></i><a href="https://twitter.com/paulgreg" rel="me" class="twitter">@paulgreg</a></span></p>
     </div></section>
     <section class="slide big"><div>
         <h2 data-l10n-id="assets-title"></h2>
@@ -1143,7 +1180,7 @@
         <div class="color1"></div><div class="color2"></div><div class="color3"></div>
         <h1 data-l10n-id="more-title"></h1>
 		<img src="pictures/bitcoins.jpg" alt="">
-        <p class="footer"><a class="hashtag" href="https://twitter.com/search?q=%23deboxxbtc">#devoxxbtc</a><span class="twitter"><img src="pictures/twitter.png"><a href="https://twitter.com/paulgreg" rel="me" class="twitter">@paulgreg</a></span></p>
+        <p class="footer"><a class="hashtag" href="https://twitter.com/search?q=%23deboxxbtc">#devoxxbtc</a><span class="twitter"><i class="icon-twitter"></i><a href="https://twitter.com/paulgreg" rel="me" class="twitter">@paulgreg</a></span></p>
     </div></section>
     <div class="progress"><div></div></div>
 	<script src="./node_modules/shower-core/shower.min.js"></script>
