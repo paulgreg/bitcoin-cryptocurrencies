@@ -720,10 +720,12 @@
             })();
         </script>
     </div></section>
+    <style>
+        .slide blockchain-element li                                { text-indent: 0; }
+        .slide blockchain-element li:before                         { display: none; }
+    </style>
     <section class="slide blockchain"><div>
         <style>
-            .slide blockchain-element li                                { text-indent: 0; }
-            .slide blockchain-element li:before                         { display: none; }
             .slide.blockchain figure blockgenesis-element,
             .slide.blockchain figure blockchain-element                 { margin-left: .1em; display: inline-flex;}
             .slide.blockchain figure blockchain-element:before          { content: "←"; position: relative; right: 5px;  }
@@ -742,9 +744,39 @@
             <div class="next cross">X</div>
         </figure>
     </div></section>
-    <section class="slide"><div>
+    <section class="slide confirmation"><div>
+        <style>
+            .slide.confirmation figure blockgenesis-element,
+            .slide.confirmation figure blockchain-element                 { margin-left: .1em; display: inline-flex;}
+            .slide.confirmation figure blockchain-element:before          { content: "←"; position: relative; right: 5px;  }
+            .slide.confirmation figure .confirmation {
+                position: absolute;
+                top: 130x;
+                background: red;
+                color: white;
+                font-weight: bold;
+                width: 30px;
+                height: 30px;
+                border-radius: 30px;
+                line-height: 30px;
+                text-align: center;
+            }
+            .slide.confirmation figure .conf-1 { left: 330px; }
+            .slide.confirmation figure .conf-2 { left: 480px; }
+            .slide.confirmation figure .conf-3 { left: 630px; }
+            .slide.confirmation figure .conf-4 { left: 780px; }
+        </style>
         <h2 data-l10n-id="confirmation-title"></h2>
         <figure>
+            <blockgenesis-element data-l10n-id="blockgenesis"></blockgenesis-element>
+            <blockchain-element data-l10n-id="blockchain" length="2"></blockchain-element>
+            <blockchain-element data-l10n-id="blockchain" length="4"></blockchain-element>
+            <blockchain-element data-l10n-id="blockchain" length="3"></blockchain-element>
+            <blockchain-element data-l10n-id="blockchain" length="3"></blockchain-element>
+            <span class="confirmation conf-4 next">0</span>
+            <span class="confirmation conf-3 next">1</span>
+            <span class="confirmation conf-2 next">2</span>
+            <span class="confirmation conf-1 next">3</span>
         </figure>
     </div></section>
     <section class="slide address"><div>
