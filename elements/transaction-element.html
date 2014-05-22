@@ -1,0 +1,43 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<polymer-element name="transaction-element" attributes="labelfrom from labelto to labelamount amount signature txid" noscript>
+    <style>
+        transaction-element ul {
+            display: inline-block;
+            list-style-type: none;
+            border: 1px solid black;
+            font-family: Helvetica, Sans-Serif;
+            font-size: 14px;
+            padding: .5em;
+            background-color: #C9DAF8;
+        }
+        transaction-element label {
+            font-style: italic;
+        }
+        transaction-element li {
+            border-top: 1px solid black;
+            border-right: 1px solid black;
+            border-left: 1px solid black;
+            padding: .2em .5em;
+            background-color: white;
+            text-align: center;
+            width: 180px;
+        }
+        transaction-element li.signature {
+            background-color: #9FF;
+        }
+        transaction-element li:last-child {
+            border-bottom: 1px solid black;
+            background-color: #F4CCCC;
+       }
+    </style>
+    <template>
+        <ul id="list">
+            <li><label>{{labelfrom}}</label> : {{from}}
+            <li><label>{{labelto}}</label> : {{to}}
+            <li><label>{{labelamount}}</label> : {{amount}}
+            <li class="signature"><label>Signature</label>: <strong>{{signature}}</strong>
+            <li><label><abbr title="Transaction ID">TXID</abbr></label> : <strong>{{txid}}</strong>
+        </ul>
+    </template>
+</polymer-element>
