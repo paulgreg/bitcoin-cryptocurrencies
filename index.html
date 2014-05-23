@@ -404,7 +404,7 @@
         </style>
         <h2 data-l10n-id="proof-of-work-currency-title"></h2>
         <figure>
-            <input type="number" class="in" value="1" min="0" autocomplete="off">
+            <input type="number" class="in" value="37" min="0" autocomplete="off">
             <img data-l10n-id="coins-generation-img">
         </figure>
         <pre>
@@ -435,22 +435,14 @@
 
                 var increaseAndHash = function() {
                     input.value = parseInt(input.value, 10) + 1;
-                    if (shouldHash === true && !hash()) {
+                    if (!hash()) {
                         clearTimeout(hashing);
                         setTimeout(increaseAndHash, 10);
                     }
                 }
+                increaseAndHash();
 
                 difficulty.addEventListener('keyup', increaseAndHash, false);
-
-                var observer = new MutationObserver(function(mutations) {
-                    mutations.forEach(function(mutation) {
-                        shouldHash = slide.classList.contains('active');
-                        increaseAndHash();
-                    });
-                });
-                observer.observe(slide, { attributes: true, childList: false, characterData: false});
-
             })();
         </script>
     </div></section>
