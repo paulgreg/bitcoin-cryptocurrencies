@@ -9,7 +9,7 @@
             font-family: Helvetica, Sans-Serif;
             font-size: 14px;
             padding: .5em;
-            background-color: #C9DAF8;
+            background-color: #FFC5B0;
         }
         transaction-element label {
             font-style: italic;
@@ -24,18 +24,18 @@
             width: 180px;
         }
         transaction-element li.signature {
-            background-color: #9FF;
+            background-color: #FAFFB0;
         }
         transaction-element li:last-child {
             border-bottom: 1px solid black;
-            background-color: #F4CCCC;
+            background-color: #FFB0E0;
        }
     </style>
     <template>
         <ul id="list">
             <li><label>{{labelfrom}}</label> : {{from}}
             <li><label>{{labelto}}</label> : {{to}}
-            <li><label>{{labelamount}}</label> : {{amount}}
+            <li><label>{{labelamount}}</label> : {{amount}} <i class="icon-bitcoin"></i>
             <li class="signature"><label>Signature</label>: <strong>{{signature}}</strong>
             <li><label><abbr title="Transaction ID">TXID</abbr></label> : <strong>{{txid}}</strong>
         </ul>
