@@ -1,33 +1,26 @@
 BUILD LOG
 ---------
-Build Time: 2014-04-18T13:26:52
+Build Time: 2015-02-17T17:25:22
 
 NODEJS INFORMATION
 ==================
-nodejs: v0.10.26
-chai: 1.9.1
-grunt: 0.4.4
-grunt-audit: 0.0.3
-grunt-contrib-uglify: 0.4.0
-grunt-contrib-yuidoc: 0.5.2
-grunt-karma: 0.8.2
-karma: 0.12.2
-karma-chrome-launcher: 0.0.2
-karma-crbot-reporter: 0.0.4
-karma-firefox-launcher: 0.1.3
-karma-ie-launcher: 0.1.3
-karma-mocha: 0.1.3
-karma-safari-launcher: 0.1.1
-karma-script-launcher: 0.1.0
-mocha: 1.18.2
-Polymer: 0.2.3
+nodejs: v0.12.0
+grunt: 0.4.5
+grunt-audit: 1.0.0
+grunt-contrib-concat: 0.5.0
+grunt-contrib-copy: 0.7.0
+grunt-contrib-uglify: 0.6.0
+grunt-string-replace: 1.0.0
+web-component-tester: 1.6.2
 
 REPO REVISIONS
 ==============
-polymer-expressions: 3bd624bbdc1de09085524529e7f259d3cac084ae
-polymer-gestures: f16090bbb8e3d08d912f33f4a1e554e56e7ba55a
-polymer-dev: 24c48ff7ae443e69dd2ee60b0f23d55753ae96cd
+polymer-expressions: f2229c2f3db2332aab5c4dba029c17f8bc3f99f2
+polymer-gestures: ccd9dfae58896dff2e4fe9ce123870d321e393d1
+polymer: f53db3fe961a3094844ad46e70e3f721604b0a2b
 
 BUILD HASHES
 ============
-build/polymer.js: ef8cd13c151e94688aa961e695b6c1ea473475d5
+dist/polymer.js: 0238138d46a41de3724926295213f1babf66ed41
+dist/polymer.min.js: d5907053e8535c422393aa240e9026ffe0b5fefc
+dist/layout.html: 348d358a91712ecc2f8811efa430fcd954b4590c

@@ -10,21 +10,23 @@
     "web-components"
   ],
   "author": "Polymer Authors <polymer-dev@googlegroups.com>",
-  "version": "0.2.3",
-  "main": [
-    "polymer.js"
-  ],
+  "private": true,
   "dependencies": {
-    "platform": "Polymer/platform#0.2.3"
+    "core-component-page": "Polymer/core-component-page#^0.5",
+    "webcomponentsjs": "Polymer/webcomponentsjs#^0.5"
   },
-  "_release": "0.2.3",
+  "devDependencies": {
+    "tools": "Polymer/tools#master",
+    "web-component-tester": "Polymer/web-component-tester#^1.4.2"
+  },
+  "version": "0.5.5",
+  "_release": "0.5.5",
   "_resolution": {
     "type": "version",
-    "tag": "0.2.3",
-    "commit": "087c1bc1e81a6492c58e093ff907cf69e02aed2b"
+    "tag": "0.5.5",
+    "commit": "b94b680c966fc9ea86bc8f14b3af6f13d77f217a"
   },
-  "_source": "git://github.com/components/polymer.git",
-  "_target": "~0.2.3",
-  "_originalSource": "polymer",
-  "_direct": true
+  "_source": "git://github.com/Polymer/polymer.git",
+  "_target": "~0.5.5",
+  "_originalSource": "polymer"
 }
