@@ -233,9 +233,31 @@
         <figcaption><a href="https://en.wikipedia.org/wiki/Cryptocurrency">Wikipedia</a></figcaption>
         </figure>
     </div></section>
+    <section class="slide price"><div>
+        <style>
+            .slide.price img { margin-top: 80px; }
+            .slide.price figcaption { text-align: center; }
+        </style>
+        <h2 data-l10n-id="price-title"></h2>
+        <figure>
+            <img src="./pictures/prices.png">
+            <figcaption><small><a href="https://www.coinbase.com/charts">https://www.coinbase.com/charts</a></small></figcaption>
+        </figure>
+    </div></section>
+    <section class="slide transaction"><div>
+        <style>
+            .slide.transaction figure { width: 100%; }
+            .slide.transaction img { max-height: 400px; display: block; margin: auto; }
+            .slide.transaction figcaption { text-align: center; }
+        </style>
+        <h2 data-l10n-id="transaction-title"></h2>
+        <figure>
+        <img src="./pictures/transactions.png">
+        <figcaption><small><a href="https://www.coinbase.com/charts">https://www.coinbase.com/charts</a></small></figcaption>
+        </figure>
+    </div></section>
     <section class="slide history"><div>
         <style>
-            .slide.history .prices  { background: url('pictures/price-history.png') 0 bottom no-repeat; height: 84%; background-size: 100%;  }
             .slide.history ul       { width: 88%; }
             .slide.history li span  { font-weight: bold; font-style:italic; color: #444; }
             .slide.history i        { margin-left: .5em; }
@@ -250,6 +272,7 @@
                 <li data-l10n-id="history-2012" class="next">
                 <li data-l10n-id="history-2013" class="next">
                 <li data-l10n-id="history-2014" class="next">
+                <li data-l10n-id="history-2015" class="next">
             </ul>
         </div>
     </div></section>
@@ -966,7 +989,7 @@
         </style>
         <h2 data-l10n-id="realtime-title"></h2>
         <img class="static" src="./pictures/realtimebitcoin.png">
-        <iframe src="about:blank" scrolling="no"></iframe>
+        <iframe src="about:blank" scrolling="no" data-url="http://realtimebitcoin.info/"></iframe>
         <table>
             <tr>
                 <td data-l10n-id="realtime-data-1"></td>
@@ -989,7 +1012,7 @@
                     if (navigator.onLine) {
                         var iframe = slide.querySelector('iframe')
                         img.style.display = 'none';
-                        iframe.setAttribute('src', 'http://realtimebitcoin.info/');
+                        iframe.setAttribute('src', iframe.getAttribute('data-url'));
                         iframe.style.display = 'block';
                     }
                 }, true);
