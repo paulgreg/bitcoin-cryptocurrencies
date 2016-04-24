@@ -21,12 +21,12 @@
         .slide.big                      { font-size: 32px; }
         .slide .hashtag                 { float: left; color: white; border: 0; }
         .slide h2                       { color: #019BDB; }
-        .slide.title h1                 { color: white; font-size: 70px; font-weight: bold; position: absolute; top: 130px; left: 400px; transform:rotate(-46deg); -webkit-transform:rotate(-46deg); 
+        .slide.title h1                 { color: white; font-size: 70px; font-weight: bold; position: absolute; top: 130px; left: 400px; transform:rotate(-46deg); -webkit-transform:rotate(-46deg);
                                           line-height: 80px; background-color: rgba(0,0,0,0.6); padding: 10px 20px; width: 500px; }
         .slide.title .color1            { background-color: #019BDB; height: 400px; width: 400px; position: absolute; top: -200px; left: 200px; transform:rotate(-135deg); -webkit-transform:rotate(-135deg); }
         .slide.title .color2            { background-color: #D60374; height: 400px; width: 400px; position: absolute; top: -270px; left: 300px; transform:rotate(-135deg); -webkit-transform:rotate(-135deg); }
         .slide.title .color3            { background-color: white;   height: 400px; width: 400px; position: absolute; top: -340px; left: 400px; transform:rotate(-135deg); -webkit-transform:rotate(-135deg); }
-        .slide.title .footer            { background: #019BDB url('pictures/valtech-logo-white.png') no-repeat center center; background-size: 120px auto; height: 50px; position: absolute; bottom: -25px; left: 0; right: 0; color: white; font-size: 24px; padding: 0 10px; }
+        .slide.title .footer            { background: #019BDB url('pictures/mappy-logo.png') no-repeat center center; background-size: 120px auto; height: 50px; position: absolute; bottom: -25px; left: 0; right: 0; color: white; font-size: 24px; padding: 0 10px; }
         .slide.title .footer a          { color: white; border: 0; }
         .slide.title .footer .twitter   { float: right; }
         .slide.title .footer .twitter img { display: inline; position: relative; z-index: 1; margin: 0 .2em 0 0; vertical-align: middle; }
@@ -46,7 +46,7 @@
 	</header>
     <section class="slide language selection big"><div>
         <style>
-            .slide.language.selection h2, 
+            .slide.language.selection h2,
             .slide.language.selection p                     { text-align: center; }
             .slide.language.selection small                 { font-size: 20px; }
             .slide.language.selection .origin               { text-align: left; }
@@ -101,8 +101,8 @@
             #Cover ul li                { padding: 0; font-weight: bold; }
             #Cover ul a                 { color: white; }
             #Cover ul img               { display: inline; position: relative; z-index: 1; margin: 0 .2em 0 0; vertical-align: middle; }
-            #Cover h4                   { background: white; height: 80px; margin-top: 100px; }
-            #Cover h4 img               { position: relative; max-height: 70px; z-index: 2; margin: 5px 0 0 10px; }
+            #Cover h4                   { background: white; height: 60px; margin-top: 100px; }
+            #Cover h4 img               { position: relative; max-height: 40px; z-index: 2; margin: 10px 0 0 10px; }
             #Cover h4 img + img         { float: right; margin-right: 20px; }
             #Cover h5                   { background: #019BDB; height: 50px; margin-top: 5px; color: white; font-size: 24px; padding-left: 10px; }
 		</style>
@@ -111,10 +111,10 @@
             <h3></h3>
             <ul>
                 <li><i class="icon-twitter"></i><a href="https://twitter.com/paulgreg" rel="me" class="twitter">@paulgreg</a> - <span class="me">Grégory Paul</span>
-                <li><span class="valtech"><i class="icon-twitter"></i><a href="https://twitter.com/valtechtechno" rel="me" class="twitter">@valtechtechno</a>
+                <li><span class="mappy"><i class="icon-twitter"></i><a href="https://twitter.com/mappy" rel="me" class="twitter">@mappy</a>
             </ul>
             <h4>
-                <img src="pictures/valtech-big.png">
+                <img src="pictures/mappy-logo.png">
                 <img src="pictures/brownBag.png">
             </h4>
             <h5><a class="hashtag" href="https://twitter.com/search?q=%23bitcoin">#bitcoin</a></h5>
@@ -123,32 +123,28 @@
 	</div></section>
     <section class="slide me"><div>
         <style>
-            .slide.me ul        { float: left; width: 50%; list-style-type: square; }
+            .slide.me ul                { float: left; width: 50%; list-style-type: square; }
             .slide.me ul:first-child li { margin: 10px;  }
-            .slide.me li:before { content: ""; }
-            .slide.me a         { color: black; }
-            .slide.me .valtech  { width: 120px; background: none; }
+            .slide.me li:before         { content: ""; }
+            .slide.me a                 { color: black; }
+            .slide.me .mappy            { width: 120px; background: none; }
+            .slide.me .mappy-home,
+            .slide.me .mappy-immersive  { width: 430px; position: absolute; top: 340px; border: 1px solid black }
+            .slide.me .mappy-home       { left: 60px; }
+            .slide.me .mappy-immersive  { left: 510px; }
         </style>
         <h2 data-l10n-id="about-title"></h2>
         <ul>
             <li>Grégory Paul
-            <li data-l10n-id="about-function">Développeur Web
-            <li><i class="icon-twitter"></i><a href="https://twitter.com/paulgreg" rel="me">@paulgreg</a>
-            <li><i class="icon-github-circled"></i><a href="https://github.com/paulgreg" rel="me">paulgreg</a>
-            <li><i class="icon-user"></i><a href="http://paulgreg.me" rel="me">http://paulgreg.me</a>
+            <li data-l10n-id="about-function">
+            <li><i class="icon-twitter"></i><a href="https://twitter.com/paulgreg" rel="me">@paulgreg</a> <i class="icon-github-circled"></i><a href="https://github.com/paulgreg" rel="me">paulgreg</a>
+            <li><i class="icon-user"></i><a href="https://paulgreg.me" rel="me">https://paulgreg.me</a>
         </ul>
         <ul class="next">
-            <li>
-                <img src="pictures/valtech-logo-black.png" class="valtech"><br>
-                <img src="pictures/flags/France.png" title="France">
-                <img src="pictures/flags/Germany.png" title="Germany">
-                <img src="pictures/flags/Denmark.png" title="Denmark">
-                <img src="pictures/flags/Sweden.png" title="Sweden">
-                <img src="pictures/flags/United-Kingdom.png" title="United Kingdon">
-                <img src="pictures/flags/United-States.png" title="United States of America">
-                <img src="pictures/flags/India.png" title="India">
-            <li data-l10n-id="about-how-many">
-            <li data-l10n-id="about-what">
+            <li data-l10n-id="about-what"></li>
+            <li data-l10n-id="about-visit"></li>
+            <img class="mappy-home" alt="" src="pictures/mappy-home.png" />
+            <img class="mappy-immersive" alt="" src="pictures/mappy-immersive.png" />
         </ul>
     </div></section>
     <section class="slide poll big"><div>
@@ -170,7 +166,8 @@
     <section class="slide toc big"><div>
         <style>
             @media screen {
-                .slide.toc ol { columns: 2; -moz-columns: 2; -webkit-columns: 2; width: 920px; }
+                .slide.toc ol       { columns: 2; -moz-columns: 2; -webkit-columns: 2; width: 920px; }
+                .slide.toc ol li    { text-indent: -1em;}
             }
             @media print {
                 .slide.toc ol { font-size: 20px; }
@@ -235,12 +232,17 @@
     </div></section>
     <section class="slide prices"><div>
         <style>
-            .slide.prices img { margin-top: 80px; }
+            .slide.prices img { margin-top: 80px; width: 110%; }
             .slide.prices figcaption { text-align: center; }
+            .slide.prices span { position: absolute; top: 410px; }
         </style>
         <h2 data-l10n-id="prices-title"></h2>
         <figure>
             <img src="./pictures/prices.png">
+            <span style="left: 140px;">2013</span>
+            <span style="left: 370px;">2014</span>
+            <span style="left: 620px;">2015</span>
+            <span style="left: 850px;">2016</span>
             <figcaption><small><a href="https://www.coinbase.com/charts">https://www.coinbase.com/charts</a></small></figcaption>
         </figure>
     </div></section>
@@ -258,8 +260,8 @@
     </div></section>
     <section class="slide history"><div>
         <style>
-            .slide.history ul       { width: 88%; }
-            .slide.history li span  { font-weight: bold; font-style:italic; color: #444; }
+            .slide.history li       { line-height: 160%; }
+            .slide.history li span  { font-weight: bold; font-style:italic; color: #444; line-height: 90%; }
             .slide.history i        { margin-left: .5em; }
         </style>
         <h2 data-l10n-id="history-title"></h2>
@@ -273,6 +275,7 @@
                 <li data-l10n-id="history-2013" class="next">
                 <li data-l10n-id="history-2014" class="next">
                 <li data-l10n-id="history-2015" class="next">
+                <li data-l10n-id="history-2016" class="next">
             </ul>
         </div>
     </div></section>
@@ -304,20 +307,22 @@
     <section class="slide symetric"><div>
         <style>
             .slide.symetric figure { margin: 100px 0 0 80px; }
+            .slide.symetric figure img { width: 100%; }
         </style>
         <h2 data-l10n-id="crypto-symmetric-cipher-title"></h2>
         <figure>
-        <img src="./pictures/symmetric-cipher.png">
+        <img src="./pictures/symetric-cipher.png">
         <figcaption></figcaption>
         </figure>
     </div></section>
     <section class="slide asymetric"><div>
         <style>
             .slide.asymetric figure { margin: 0 0 0 80px; }
+            .slide.asymetric figure img { width: 90%; }
         </style>
         <h2 data-l10n-id="crypto-asymmetric-cipher-title"></h2>
         <figure>
-        <img src="./pictures/asymmetric-cipher.png">
+        <img src="./pictures/asymetric-cipher.png">
         <figcaption data-l10n-id="crypto-asymmetric-types"></figcaption>
         </figure>
     </div></section>
@@ -333,6 +338,9 @@
        </pre>
     </div></section>
     <section class="slide signature"><div>
+        <style>
+            .slide.signature figure img { width: 110%; }
+        </style>
         <h2 data-l10n-id="crypto-signature-title"></h2>
         <figure>
             <img src="./pictures/signature.png">
@@ -438,7 +446,7 @@
             <img data-l10n-id="coins-generation-img">
         </figure>
         <pre>
-            <label data-l10n-id="proof-of-work-difficulty-input" for="proof-of-work-difficulty"></label><input id="proof-of-work-difficulty" type="text" class="difficulty" value="0" autocomplete="off">
+            <label data-l10n-id="proof-of-work-difficulty-input" for="proof-of-work-difficulty"></label> <input id="proof-of-work-difficulty" type="text" class="difficulty" value="0" autocomplete="off">
             <code class="sha"></code>
         </pre>
         <ul>
@@ -1079,12 +1087,12 @@
     </div></section>
     <section class="slide merchants"><div>
         <style>
-            .slide.merchants ul 		{ width: 106%; } 
-            .slide.merchants ul > li:before 	{ content: none; } 
-            .slide.merchants li 		{ display: inline; } 
-            .slide.merchants li span		{ display: inline-block; height: 90px; width: 90px; text-align: center; } 
-            .slide.merchants li img		{ max-height: 90px; max-width: 90px; display: inline; vertical-align: middle; } 
-            .slide.merchants li a 		{ border-bottom: none; background: none; } 
+            .slide.merchants ul 		{ width: 106%; }
+            .slide.merchants ul > li:before 	{ content: none; }
+            .slide.merchants li 		{ display: inline; }
+            .slide.merchants li span		{ display: inline-block; height: 90px; width: 90px; text-align: center; }
+            .slide.merchants li img		{ max-height: 90px; max-width: 90px; display: inline; vertical-align: middle; }
+            .slide.merchants li a 		{ border-bottom: none; background: none; }
         </style>
         <h2 data-l10n-id="merchants-title"></h2>
         <ul>
@@ -1095,8 +1103,8 @@
 		<li class="trading"><a href="https://localbitcoins.com/buy-bitcoins-with-cash/859644186/france/?ch=8j3"><span><img src="pictures/merchants/local-bitcoin.jpeg"/></span></a>
 
 		<!-- miner hardware -->
-		<li class="hardware"><a href="http://www.achatnet.pro/"><span><img src="pictures/merchants/fr/achatnetpro.png"/></span></a> 
-		<li class="hardware"><a href="http://www.computerz.org/"><span><img src="pictures/merchants/fr/computerz.jpg"/></span></a> 
+		<li class="hardware"><a href="http://www.achatnet.pro/"><span><img src="pictures/merchants/fr/achatnetpro.png"/></span></a>
+		<li class="hardware"><a href="http://www.computerz.org/"><span><img src="pictures/merchants/fr/computerz.jpg"/></span></a>
 		<li class="hardware"><a href="http://www.butterflylabs.com/"><span><img src="pictures/merchants/butterflylabs.png"/></span></a>
 		<li class="hardware"><a href="http://www.la-boutique-du-mineur.com"><span><img src="pictures/merchants/fr/boutique-miner.png"/></span></a>
 
@@ -1111,8 +1119,8 @@
 		<li class="shops"><a href="https://www.humblebundle.com/"><span><img src="pictures/merchants/humble-bundle.jpeg"/></span></a>
 
 		<!-- services -->
-		<li class="services"><a href="http://www.pizza.fr/"><span><img src="pictures/merchants/fr/pizzafr.png"/></span></a> 
-		<li class="services"><a href="http://www.pharma7.fr/"><span><img src="pictures/merchants/fr/pharma7.png"/></span></a> 
+		<li class="services"><a href="http://www.pizza.fr/"><span><img src="pictures/merchants/fr/pizzafr.png"/></span></a>
+		<li class="services"><a href="http://www.pharma7.fr/"><span><img src="pictures/merchants/fr/pharma7.png"/></span></a>
 		<li class="services"><a href="http://www.virgin.com/richard-branson/bitcoins-in-space"><span><img src="pictures/merchants/virgin-galactic.jpg"/></span></a>
 		<li class="services"><a href="http://investorplace.com/2014/06/expedia-bitcoin-expe-stock/"><span><img src="pictures/merchants/expedia.gif"/></span></a>
 		<li class="services"><a href="http://www.jimprimeen3d.fr/"><span><img src="pictures/merchants/jimprime3d.png"/></span></a>
@@ -1217,26 +1225,6 @@
     </div></section>
     <section class="slide cover title"><div>
         <div class="color1"></div><div class="color2"></div><div class="color3"></div>
-        <h1 data-l10n-id="resources-title"></h1>
-		<img src="pictures/bitcoins.jpg" alt="">
-        <p class="footer"><a class="hashtag" href="https://twitter.com/search?q=%23bitcoin">#bitcoin</a><span class="twitter"><i class="icon-twitter"></i><a href="https://twitter.com/paulgreg" rel="me" class="twitter">@paulgreg</a></span></p>
-    </div></section>
-    <section class="slide"><div>
-        <h2 data-l10n-id="resources-title">Resources</h2>
-        <ul>
-		<li><a href="https://en.bitcoin.it/wiki/FAQ">Bitcoin FAQ</a>
-		<li><a href="https://www.grc.com/sn/sn-287.htm" title="transcript">Podcast - Security Now n°287</a>
-		<li><a href="http://bitcoin.stackexchange.com">http://bitcoin.stackexchange.com</a>
-		<li><a href="https://en.bitcoin.it/">Bitcoin wiki</a>
-		<li><a href="http://www.righto.com/2014/02/bitcoins-hard-way-using-raw-bitcoin.html">Bitcoins the hard way: using the raw Bitcoin protocol</a>
-        <li><a href="http://bitcoin.org/bitcoin.pdf">Bitcoin: a Peer-to-Peer Electronic Cash System</a>
-		<li><a href="https://github.com/bitcoin/bitcoin">github.com/bitcoin</a>
-        <li><a href="http://www.e-ducat.fr/">e-ducat.fr</a> : blog de Pierre Noizat, co-fondateur de Paymium <small>(ex bitcoin-central)</small>
-		<li><a href="https://rsstodolist.appspot.com/?name=bitcoin&l=100">http://rsstodolist.appspot.com/?n=bitcoin</a>
-        </ul>
-    </div></section>
-    <section class="slide cover title"><div>
-        <div class="color1"></div><div class="color2"></div><div class="color3"></div>
         <h1 data-l10n-id="conclusion-title"></h1>
 		<img src="pictures/bitcoins.jpg" alt="">
         <p class="footer"><a class="hashtag" href="https://twitter.com/search?q=%23bitcoin">#bitcoin</a><span class="twitter"><i class="icon-twitter"></i><a href="https://twitter.com/paulgreg" rel="me" class="twitter">@paulgreg</a></span></p>
@@ -1285,6 +1273,26 @@
     </div></section>
     <section class="slide cover title"><div>
         <div class="color1"></div><div class="color2"></div><div class="color3"></div>
+        <h1 data-l10n-id="resources-title"></h1>
+		<img src="pictures/bitcoins.jpg" alt="">
+        <p class="footer"><a class="hashtag" href="https://twitter.com/search?q=%23bitcoin">#bitcoin</a><span class="twitter"><i class="icon-twitter"></i><a href="https://twitter.com/paulgreg" rel="me" class="twitter">@paulgreg</a></span></p>
+    </div></section>
+    <section class="slide"><div>
+        <h2 data-l10n-id="resources-title">Resources</h2>
+        <ul>
+		<li><a href="https://en.bitcoin.it/wiki/FAQ">Bitcoin FAQ</a>
+		<li><a href="https://www.grc.com/sn/sn-287.htm" title="transcript">Podcast - Security Now n°287</a>
+		<li><a href="http://bitcoin.stackexchange.com">http://bitcoin.stackexchange.com</a>
+		<li><a href="https://en.bitcoin.it/">Bitcoin wiki</a>
+		<li><a href="http://www.righto.com/2014/02/bitcoins-hard-way-using-raw-bitcoin.html">Bitcoins the hard way: using the raw Bitcoin protocol</a>
+        <li><a href="http://bitcoin.org/bitcoin.pdf">Bitcoin: a Peer-to-Peer Electronic Cash System</a>
+		<li><a href="https://github.com/bitcoin/bitcoin">github.com/bitcoin</a>
+        <li><a href="http://www.e-ducat.fr/">e-ducat.fr</a> : blog de Pierre Noizat, co-fondateur de Paymium <small>(ex bitcoin-central)</small>
+		<li><a href="https://rsstodolist.appspot.com/?name=bitcoin&l=100">http://rsstodolist.appspot.com/?n=bitcoin</a>
+        </ul>
+    </div></section>
+    <section class="slide cover title"><div>
+        <div class="color1"></div><div class="color2"></div><div class="color3"></div>
         <h1 data-l10n-id="assets-title"></h1>
 		<img src="pictures/bitcoins.jpg" alt="">
         <p class="footer"><a class="hashtag" href="https://twitter.com/search?q=%23bitcoin">#bitcoin</a><span class="twitter"><i class="icon-twitter"></i><a href="https://twitter.com/paulgreg" rel="me" class="twitter">@paulgreg</a></span></p>
@@ -1299,12 +1307,6 @@
             <li data-l10n-id="assets-shower">
             <li data-l10n-id="assets-webl10n">
         </ul>
-    </div></section>
-    <section class="slide cover title"><div>
-        <div class="color1"></div><div class="color2"></div><div class="color3"></div>
-        <h1 data-l10n-id="more-title"></h1>
-		<img src="pictures/bitcoins.jpg" alt="">
-        <p class="footer"><a class="hashtag" href="https://twitter.com/search?q=%23bitcoin">#bitcoin</a><span class="twitter"><i class="icon-twitter"></i><a href="https://twitter.com/paulgreg" rel="me" class="twitter">@paulgreg</a></span></p>
     </div></section>
     <div class="progress"><div></div></div>
 	<script src="./bower_components/shower-core/shower.min.js"></script>
