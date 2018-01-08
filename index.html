@@ -952,31 +952,6 @@
             <li data-l10n-id="feature-6" class="next">
         </ul>
     </div></section>
-    <section class="slide realtime"><div>
-        <style>
-            .slide.realtime .greater    { width: 100px; text-align: center; }
-            .slide.realtime .numbers    { color: #666; }
-            .slide.realtime iframe      { display: none; }
-            .slide.realtime .static, iframe { width: 100%; height: 365px; }
-        </style>
-        <h2 data-l10n-id="realtime-title"></h2>
-        <img class="static" src="./pictures/realtimebitcoin.png">
-        <iframe src="about:blank" scrolling="no" data-url="http://realtimebitcoin.info/"></iframe>
-        <script defer>
-            (function() {
-                var slide = document.querySelector('.slide.realtime');
-                var img = slide.querySelector('img.static');
-                img.addEventListener('click', function(e) {
-                    if (navigator.onLine) {
-                        var iframe = slide.querySelector('iframe')
-                        img.style.display = 'none';
-                        iframe.setAttribute('src', iframe.getAttribute('data-url'));
-                        iframe.style.display = 'block';
-                    }
-                }, true);
-            })();
-        </script>
-    </div></section>
     <section class="slide division"><div>
         <style>
             .slide.division li span { width: 50%; }
@@ -1026,17 +1001,7 @@
         </style>
         <h2 data-l10n-id="other-cryptocurrencies-title"></h2>
         <img src="pictures/marketcap-currencies.png">
-        <ul>
-            <li data-l10n-id="other-ltc">
-            <li data-l10n-id="other-ppc">
-            <li data-l10n-id="other-dov">
-            <li data-l10n-id="other-mmc">
-            <li data-l10n-id="other-nvc">
-            <li data-l10n-id="other-dvc">
-            <li data-l10n-id="other-vtc">
-            <li data-l10n-id="other-aur">
-            <li data-l10n-id="other-etc">
-        </ul>
+        <p><strong>Ethereum</strong>, <strong>Ripple</strong>, <strong>Bitcoin Cash</strong>, Cardano, NEM, <strong>Litecoin</strong>, Stellar, <strong>IOTA</strong>, TRON, Dash, NEO, <strong>Monero</strong>, EOS, Qtum, ICON, Bitcoin Gold, Lisk, RaiBlocks, <strong>Ethereum Classic</strong>, Verge, Siacoin, OmiseGO, Bytecoin, BitConnect, Populous, <strong>Zcash</strong>, Stratis, Dentacoin, BitShares, Binance Coin, <strong>Dogecoin</strong>, Status, Ardor, KuCoin Shares, Steem, Tether, Waves, VeChain, DigiByte, Dragonchain, Komodo, Augur, Golem, Veritaseum, Hshare, SALT, Electroneum, Kin, Ark, Dent, Ethos, ReddCoin, 0x, Decred, Nexus,...</p>
     </div></section>
     <section class="slide cover title"><div>
         <div class="color1"></div><div class="color2"></div><div class="color3"></div>
@@ -1057,8 +1022,8 @@
         <h2 data-l10n-id="dev-title"></h2>
         <ul>
             <li>Java : <a href="https://bitcoinj.github.io/">bitcoinj</a>,
-            <li>JavaScript : <a href="https://github.com/defunctzombie/bitcoin-address" data-l10n-id=dev-validation></a>, <a href="http://miohtama.github.io/bitcoin-prices/">bitcoinprices.js</a>, <a href="http://bitcoinjs.org/">bitcoinjs</a>, <a href="https://npmjs.org/package/bitcoin">node-bitcoin</a>,
-            <li><span data-l10n-id="dev-miner"></span> : <a href="http://www.bitcoinplus.com/miner/embeddable">bitcoinplus</a>, <a href="https://github.com/derjanb/hamiyoca">hamiyoca</a> (WebWorker, WebGL),
+            <li>JavaScript : <a href="https://github.com/defunctzombie/bitcoin-address" data-l10n-id=dev-validation></a>, <a href="http://miohtama.github.io/bitcoin-prices/">bitcoinprices.js</a>, <a href="https://github.com/bitcoinjs/bitcoinjs-lib">bitcoinjs-lib</a>, <a href="https://npmjs.org/package/bitcoin">node-bitcoin</a>,
+                <li><span data-l10n-id="dev-miner"></span> : <a href="https://coinhive.com/">CoinHive</a>, <a href="http://www.bitcoinplus.com/miner/embeddable">bitcoinplus</a>, <a href="https://github.com/derjanb/hamiyoca">hamiyoca</a> (WebWorker, WebGL),
             <li><span data-l10n-id="dev-blockchain"></span> : <a href="https://blockchain.info/">blockchain.info</a>, <a href="https://blockexplorer.com/">block explorer</a>,
             <li><span data-l10n-id="dev-tools"></span> : <a href="http://bitcore.io/playground/">bitcore.io/playground/</a>, <a href="https://www.bitaddress.org">bitaddress.org</a>, <a href="http://brainwallet.org">Brainwallet.org</a>, <a href="http://gobittest.appspot.com/">TP’s Go Bitcoin Tests</a>.
         </ul>
@@ -1151,6 +1116,31 @@
         <div class="color1"></div><div class="color2"></div><div class="color3"></div>
         <h1 data-l10n-id="appendix-title"></h1>
 		<img src="pictures/bitcoins.jpg" alt="">
+    </div></section>
+    <section class="slide realtime"><div>
+        <style>
+            .slide.realtime .greater    { width: 100px; text-align: center; }
+            .slide.realtime .numbers    { color: #666; }
+            .slide.realtime iframe      { display: none; }
+            .slide.realtime .static, iframe { width: 100%; height: 365px; }
+        </style>
+        <h2 data-l10n-id="realtime-title"></h2>
+        <img class="static" src="./pictures/realtimebitcoin.png">
+        <iframe src="about:blank" scrolling="no" data-url="http://realtimebitcoin.info/"></iframe>
+        <script defer>
+            (function() {
+                var slide = document.querySelector('.slide.realtime');
+                var img = slide.querySelector('img.static');
+                img.addEventListener('click', function(e) {
+                    if (navigator.onLine) {
+                        var iframe = slide.querySelector('iframe')
+                        img.style.display = 'none';
+                        iframe.setAttribute('src', iframe.getAttribute('data-url'));
+                        iframe.style.display = 'block';
+                    }
+                }, true);
+            })();
+        </script>
     </div></section>
     <section class="slide merchants"><div>
         <style>
