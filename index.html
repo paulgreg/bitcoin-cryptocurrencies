@@ -267,11 +267,10 @@
                 <li data-l10n-id="history-2009" class="next">
                 <li data-l10n-id="history-2010" class="next">
                 <li data-l10n-id="history-2011" class="next">
-                <li data-l10n-id="history-2012" class="next">
                 <li data-l10n-id="history-2013" class="next">
                 <li data-l10n-id="history-2014" class="next">
                 <li data-l10n-id="history-2015" class="next">
-                <li data-l10n-id="history-2016" class="next">
+                <li data-l10n-id="history-2017" class="next">
             </ul>
         </div>
     </div></section>
@@ -866,7 +865,7 @@
         </figure>
         <figure>
             <img src="pictures/asic.png">
-            <figcaption><strong><abbr title="Application-Specific Integrated Circuit">ASIC</abbr> : 600 Gh/s - 1714 Mh/J</strong>(Monarch BPU 600C)</figcaption>
+            <figcaption><strong><abbr title="Application-Specific Integrated Circuit">ASIC</abbr> : 14 Th/s - 10 Gh/J</strong>(AntMiner S9)</figcaption>
         </figure>
         <h3 class="litecoin">Litecoin</h3>
         <figure>
@@ -878,8 +877,8 @@
             <figcaption><strong><abbr title="Graphics Processing Unit">GPU</abbr> : 620 Kh/s</strong>(AMD Radeon 7970)</figcaption>
         </figure>
         <figure>
-            <img src="pictures/asic-viper.png">
-            <figcaption><strong><abbr title="Application-Specific Integrated Circuit">ASIC</abbr> : 50 Mh/s ?</strong>(Viper)</figcaption>
+            <img src="pictures/asic.png">
+            <figcaption><strong><abbr title="Application-Specific Integrated Circuit">ASIC</abbr> : 500 Mh/s</strong>(AntMiner L3+)</figcaption>
         </figure>
     </div></section>
     <section class="slide"><div>
@@ -917,13 +916,13 @@
         </style>
         <h2 data-l10n-id="malware-title"></h2>
         <ul>
-            <li data-l10n-id="malware-404s">
+            <li data-l10n-id="malware-cryptolocker">
+            <li data-l10n-id="malware-404s" class="next">
             <pre>
                 <code>404 Not Found</code>
                 <code>  /.bitcoin/wallet.dat</code>
             </pre>
             <li data-l10n-id="malware-wallet" class="next">
-            <li data-l10n-id="malware-cryptolocker" class="next">
         </ul>
     </div></section>
     <section class="slide attack51 big"><div>
@@ -935,37 +934,6 @@
             <img src="pictures/ghashio-51.jpg">
             <figcaption data-l10n-id="attack51-caption"></figcaption>
         </figure>
-    </div></section>
-    <section class="slide mtgox"><div>
-        <style>
-            .slide.mtgox i { margin-left: 10px; }
-        </style>
-        <h2 data-l10n-id="mtgox-title"></h2>
-        <ul>
-            <li>2009 : <strong>M</strong>agic: <strong>t</strong>he <strong>G</strong>athering, <strong>o</strong>nline e<strong>x</strong>change
-            <li class="next" data-l10n-id="mtgox-history-2010">
-            <li class="next" data-l10n-id="mtgox-history-2011">
-            <li class="next" data-l10n-id="mtgox-history-2011-2">
-            <li class="next" data-l10n-id="mtgox-history-2013">
-            <li class="next" data-l10n-id="mtgox-history-2014">
-            <li class="next" data-l10n-id="mtgox-malleabilty">
-        </ul>
-    </div></section>
-    <section class="slide mtgox2"><div>
-        <style>
-            .slide.mtgox2 transaction-element li:before       { display: none; }
-            .slide.mtgox2 transaction-element i               { margin-left: 10px; }
-            .slide.mtgox2 span                                { display: inline-block; width: 48%; text-align: center; }
-            .slide.mtgox2 a.source                            { position: relative; left: 590px; line-height: 13px; }
-        </style>
-        <h2 data-l10n-id="mtgox-malleabilty"></h2>
-        <span>
-            <transaction-element data-l10n-id="mtgox-transaction" from="Alice" to="Bob" amount="1,00" signature="00042a98fb" txid="45fb14099a" />
-        </span>
-        <span class="next">
-            <transaction-element data-l10n-id="mtgox-transaction" from="Alice" to="Bob" amount="1,00" signature="42a98fb" txid="98baa3217" />
-        </span>
-        <small><a href="https://anders.io/the-troublesome-history-of-the-bitcoin-exchange-mtgox/" class="next source">http://anders.io/</a></small>
     </div></section>
     <section class="slide cover title"><div>
         <div class="color1"></div><div class="color2"></div><div class="color3"></div>
@@ -994,20 +962,6 @@
         <h2 data-l10n-id="realtime-title"></h2>
         <img class="static" src="./pictures/realtimebitcoin.png">
         <iframe src="about:blank" scrolling="no" data-url="http://realtimebitcoin.info/"></iframe>
-        <table>
-            <tr>
-                <td data-l10n-id="realtime-data-1"></td>
-                <td class="greater">&lt;</td>
-                <td data-l10n-id="realtime-data-2"></td>
-                <td></td>
-            </tr>
-            <tr class="numbers">
-                <td data-l10n-id="realtime-data-3"></td>
-                <td class="greater">&lt;</td>
-                <td data-l10n-id="realtime-data-4"></td>
-                <td><small>(<a href="http://www.forbes.com/sites/reuvencohen/2013/11/28/global-bitcoin-computing-power-now-256-times-faster-than-top-500-supercomputers-combined/">http://forbes.com/...</a>)</small></td>
-            </tr>
-        </table>
         <script defer>
             (function() {
                 var slide = document.querySelector('.slide.realtime');
@@ -1036,24 +990,6 @@
             <tr><td>0.000 000 01 <i class="icon-bitcoin"></i></td><td></td><td>= 1 Satoshi</td>
         </table>
     </div></section>
-    <section class="slide legal"><div>
-        <style>
-            .slide.legal img { width: 640px; }
-            .slide.legal figcaption { text-align: right; margin-right: 140px; line-height: 13px; }
-            .slide.legal ul { float: right; list-style-type: square; }
-        </style>
-        <h2 data-l10n-id="legal-status-title"></h2>
-        <figure>
-        <img src="pictures/legal.png" title="Legal status">
-        <ul>
-            <li style="color: #2ECC71" data-l10n-id="legal-ok">
-            <li style="color: #F1C40F" data-l10n-id="legal-mixed">
-            <li style="color: #E74C3C" data-l10n-id="legal-ko">
-            <li style="color: #34495E" data-l10n-id="legal-unknown">
-        </ul>
-        <figcaption><small><a href="http://bitlegal.net/">http://bitlegal.net/</a></small></figcaption>
-        </figure>
-    </div></section>
     <section class="slide get-btc"><div>
         <style>
             .slide.get-btc i    { margin-left: .5em; }
@@ -1080,64 +1016,6 @@
             <img src="pictures/la-maison-du-btc.jpg" style="max-width: 700px;">
             <figcaption><a href="http://www.lamaisondubitcoin.fr/">La Maison du Bitcoin</a> - 35 rue du Caire, 75002 Paris</figcaption>
         </figure>
-    </div></section>
-    <section class="slide merchants"><div>
-        <style>
-            .slide.merchants ul 		{ width: 106%; }
-            .slide.merchants ul > li:before 	{ content: none; }
-            .slide.merchants li 		{ display: inline; }
-            .slide.merchants li span		{ display: inline-block; height: 90px; width: 90px; text-align: center; }
-            .slide.merchants li img		{ max-height: 90px; max-width: 90px; display: inline; vertical-align: middle; }
-            .slide.merchants li a 		{ border-bottom: none; background: none; }
-        </style>
-        <h2 data-l10n-id="merchants-title"></h2>
-        <ul>
-        <!-- exchange, bitcoin service -->
-		<li class="trading"><a href="https://bitpay.com/"><span><img src="pictures/merchants/bitpay.jpeg"/></span></a>
-		<li class="trading"><a href="https://coinbase.com/"><span><img src="pictures/merchants/coinbase.jpeg"/></span></a>
-		<li class="trading"><a href="https://bitcoin-central.net/"><span><img src="pictures/merchants/fr/bitcoin-central.jpeg"/></span></a>
-		<li class="trading"><a href="https://localbitcoins.com/buy-bitcoins-with-cash/859644186/france/?ch=8j3"><span><img src="pictures/merchants/local-bitcoin.jpeg"/></span></a>
-
-		<!-- miner hardware -->
-		<li class="hardware"><a href="http://www.achatnet.pro/"><span><img src="pictures/merchants/fr/achatnetpro.png"/></span></a>
-		<li class="hardware"><a href="http://www.computerz.org/"><span><img src="pictures/merchants/fr/computerz.jpg"/></span></a>
-		<li class="hardware"><a href="http://www.butterflylabs.com/"><span><img src="pictures/merchants/butterflylabs.png"/></span></a>
-		<li class="hardware"><a href="http://www.la-boutique-du-mineur.com"><span><img src="pictures/merchants/fr/boutique-miner.png"/></span></a>
-
-		<!-- shops -->
-		<li class="shops"><a href="http://www.carsforbitcoins.com/"><span><img src="pictures/merchants/carsforbitcoin.png"/></span></a>
-		<li class="shops"><a href="http://www.bizbazar.fr/"><span><img src="pictures/merchants/fr/bizbazar.png"/></span></a>
-		<li class="shops"><a href="http://aubitcoin.fr/"><span><img src="pictures/merchants/fr/aubitcoin.png"/></span></a>
-		<li class="shops"><a href="http://www.leboncoin.fr/annonces/offres/?f=a&amp;th=1&amp;q=bitcoin"><span><img src="pictures/merchants/fr/leboncoin.png"/></span></a>
-		<li class="shops"><a href="http://www.miniplanes.fr/"><span><img src="pictures/merchants/fr/miniplanes.png"/></span></a>
-		<li class="shops"><a href="http://www.oyoo.fr/"><span><img src="pictures/merchants/fr/oyoo.jpeg"/></span></a>
-		<li class="shops"><a href="http://zynga.com/"><span><img src="pictures/merchants/zynga.png"/></span></a>
-		<li class="shops"><a href="https://www.humblebundle.com/"><span><img src="pictures/merchants/humble-bundle.jpeg"/></span></a>
-
-		<!-- services -->
-		<li class="services"><a href="http://www.pizza.fr/"><span><img src="pictures/merchants/fr/pizzafr.png"/></span></a>
-		<li class="services"><a href="http://www.pharma7.fr/"><span><img src="pictures/merchants/fr/pharma7.png"/></span></a>
-		<li class="services"><a href="http://www.virgin.com/richard-branson/bitcoins-in-space"><span><img src="pictures/merchants/virgin-galactic.jpg"/></span></a>
-		<li class="services"><a href="http://investorplace.com/2014/06/expedia-bitcoin-expe-stock/"><span><img src="pictures/merchants/expedia.gif"/></span></a>
-		<li class="services"><a href="http://www.jimprimeen3d.fr/"><span><img src="pictures/merchants/jimprime3d.png"/></span></a>
-
-		<!-- online service -->
-		<li class="services"><a href="https://mega.co.nz/"><span><img src="pictures/merchants/mega.jpeg"/></span></a>
-		<li class="services"><a href="http://fr.wordpress.com/"><span><img src="pictures/merchants/wordpress.jpeg"/></span></a>
-		<li class="services"><a href="https://ipredator.se"><span><img src="pictures/merchants/ipredator.png"/></span></a>
-		<li class="services"><a href="http://fr.reddit.com/"><span><img src="pictures/merchants/reddit.jpeg"/></span></a>
-		<li class="services"><a href="http://www.jupiterbroadcasting.com/contact/"><span><img src="pictures/merchants/jupiter-broadcasting.jpeg"/></span></a>
-
-		<!-- computer services -->
-		<li class="computing"><a href="http://www.clever-cloud.com"><span><img src="pictures/merchants/fr/clevercloud.jpeg"/></span></a>
-		<li class="computing"><a href="http://www.webapp.fr/faq.html"><span><img src="pictures/merchants/fr/webappfr.png"/></span></a>
-
-		<!-- Association -->
-		<li class="assoc"><a href="https://soutien.laquadrature.net/#faq-bitcoin"><span><img src="pictures/merchants/fr/quadrature.png"/></span></a>
-		<li class="assoc"><a href="http://archive.org/"><span><img src="pictures/merchants/internet-archives.jpeg"/></span></a>
-		<li class="assoc"><a href="https://supporters.eff.org/donate"><span><img src="pictures/merchants/eff.jpeg"/></span></a>
-		<li class="assoc"><a href="http://shop.wikileaks.org/donate#dbitcoin"><span><img src="pictures/merchants/wikileaks.jpeg"/></span></a>
-        </ul>
     </div></section>
     <section class="slide currencies"><div>
         <style>
@@ -1175,45 +1053,12 @@
             <li data-l10n-id="script-4" class="next">
         </ul>
     </div></section>
-    <section class="slide scalability big"><div>
-        <style>
-            .slide.scalability .visa    { height: 40px; vertical-align: middle; }
-            .slide.scalability i        { margin-left: .5em; }
-            .slide.scalability li       { margin-bottom: .8em; }
-            .slide.scalability .ok      { color: green; }
-            .slide.scalability .mixed   { color: orange; }
-        </style>
-        <h2 data-l10n-id="scalability-title"></h2>
-        <ul>
-            <li data-l10n-id="scalability-tps">
-            <li data-l10n-id="scalability-cpu" class="next">
-            <li data-l10n-id="scalability-network" class="next">
-            <li data-l10n-id="scalability-storage" class="next">
-        </ul>
-    </div></section>
-    <section class="slide basedonbtc big"><div>
-        <style>
-            .slide.basedonbtc li            { margin: 40px 0 30px 0; }
-        </style>
-        <h2 data-l10n-id="based-on-bitcoin-title"></h2>
-        <ul>
-            <li><a href="http://storj.io/">storj.io</a> / <a href="http://filecoin.io/">filecoin.io</a>
-            <li><a href="http://www.proofofexistence.com/">proofofexistence.com</a> / <a href="https://bitproof.io/">bitproof.io</a>
-            <li><a href="http://www.v-initiative.org/">V initiative</a>
-        </ul>
-    </div></section>
-    <section class="slide cover title"><div>
-        <div class="color1"></div><div class="color2"></div><div class="color3"></div>
-        <h1 data-l10n-id="dev-title"></h1>
-		<img src="pictures/bitcoins.jpg" alt="">
-        <p class="footer"><a class="hashtag" href="https://twitter.com/search?q=%23bitcoin">#bitcoin</a><span class="twitter"><i class="icon-twitter"></i><a href="https://twitter.com/paulgreg" rel="me" class="twitter">@paulgreg</a></span></p>
-    </div></section>
     <section class="slide"><div>
         <h2 data-l10n-id="dev-title"></h2>
         <ul>
-            <li>Java : <a href="http://code.google.com/p/bitcoinj/">bitcoinj</a>,
+            <li>Java : <a href="https://bitcoinj.github.io/">bitcoinj</a>,
             <li>JavaScript : <a href="https://github.com/defunctzombie/bitcoin-address" data-l10n-id=dev-validation></a>, <a href="http://miohtama.github.io/bitcoin-prices/">bitcoinprices.js</a>, <a href="http://bitcoinjs.org/">bitcoinjs</a>, <a href="https://npmjs.org/package/bitcoin">node-bitcoin</a>,
-            <li><span data-l10n-id="dev-miner"></span> : <a href="http://www.bitcoinplus.com/miner/embeddable">bitcoinplus</a>, <a href="https://code.google.com/p/hamiyoca/">hamiyoca</a> (WebWorker, WebGL),
+            <li><span data-l10n-id="dev-miner"></span> : <a href="http://www.bitcoinplus.com/miner/embeddable">bitcoinplus</a>, <a href="https://github.com/derjanb/hamiyoca">hamiyoca</a> (WebWorker, WebGL),
             <li><span data-l10n-id="dev-blockchain"></span> : <a href="https://blockchain.info/">blockchain.info</a>, <a href="https://blockexplorer.com/">block explorer</a>,
             <li><span data-l10n-id="dev-tools"></span> : <a href="http://bitcore.io/playground/">bitcore.io/playground/</a>, <a href="https://www.bitaddress.org">bitaddress.org</a>, <a href="http://brainwallet.org">Brainwallet.org</a>, <a href="http://gobittest.appspot.com/">TP’s Go Bitcoin Tests</a>.
         </ul>
@@ -1301,6 +1146,127 @@
             <li data-l10n-id="assets-shower">
             <li data-l10n-id="assets-webl10n">
         </ul>
+    </div></section>
+    <section class="slide cover title"><div>
+        <div class="color1"></div><div class="color2"></div><div class="color3"></div>
+        <h1 data-l10n-id="appendix-title"></h1>
+		<img src="pictures/bitcoins.jpg" alt="">
+    </div></section>
+    <section class="slide merchants"><div>
+        <style>
+            .slide.merchants ul 		{ width: 106%; }
+            .slide.merchants ul > li:before 	{ content: none; }
+            .slide.merchants li 		{ display: inline; }
+            .slide.merchants li span		{ display: inline-block; height: 90px; width: 90px; text-align: center; }
+            .slide.merchants li img		{ max-height: 90px; max-width: 90px; display: inline; vertical-align: middle; }
+            .slide.merchants li a 		{ border-bottom: none; background: none; }
+        </style>
+        <h2 data-l10n-id="merchants-title"></h2>
+        <ul>
+        <!-- exchange, bitcoin service -->
+		<li class="trading"><a href="https://bitpay.com/"><span><img src="pictures/merchants/bitpay.jpeg"/></span></a>
+		<li class="trading"><a href="https://coinbase.com/"><span><img src="pictures/merchants/coinbase.jpeg"/></span></a>
+		<li class="trading"><a href="https://bitcoin-central.net/"><span><img src="pictures/merchants/fr/bitcoin-central.jpeg"/></span></a>
+		<li class="trading"><a href="https://localbitcoins.com/buy-bitcoins-with-cash/859644186/france/?ch=8j3"><span><img src="pictures/merchants/local-bitcoin.jpeg"/></span></a>
+
+		<!-- miner hardware -->
+		<li class="hardware"><a href="http://www.achatnet.pro/"><span><img src="pictures/merchants/fr/achatnetpro.png"/></span></a>
+		<li class="hardware"><a href="http://www.computerz.org/"><span><img src="pictures/merchants/fr/computerz.jpg"/></span></a>
+		<li class="hardware"><a href="http://www.butterflylabs.com/"><span><img src="pictures/merchants/butterflylabs.png"/></span></a>
+		<li class="hardware"><a href="http://www.la-boutique-du-mineur.com"><span><img src="pictures/merchants/fr/boutique-miner.png"/></span></a>
+
+		<!-- shops -->
+		<li class="shops"><a href="http://www.carsforbitcoins.com/"><span><img src="pictures/merchants/carsforbitcoin.png"/></span></a>
+		<li class="shops"><a href="http://www.bizbazar.fr/"><span><img src="pictures/merchants/fr/bizbazar.png"/></span></a>
+		<li class="shops"><a href="http://aubitcoin.fr/"><span><img src="pictures/merchants/fr/aubitcoin.png"/></span></a>
+		<li class="shops"><a href="http://www.leboncoin.fr/annonces/offres/?f=a&amp;th=1&amp;q=bitcoin"><span><img src="pictures/merchants/fr/leboncoin.png"/></span></a>
+		<li class="shops"><a href="http://www.miniplanes.fr/"><span><img src="pictures/merchants/fr/miniplanes.png"/></span></a>
+		<li class="shops"><a href="http://www.oyoo.fr/"><span><img src="pictures/merchants/fr/oyoo.jpeg"/></span></a>
+		<li class="shops"><a href="http://zynga.com/"><span><img src="pictures/merchants/zynga.png"/></span></a>
+		<li class="shops"><a href="https://www.humblebundle.com/"><span><img src="pictures/merchants/humble-bundle.jpeg"/></span></a>
+
+		<!-- services -->
+		<li class="services"><a href="http://www.pizza.fr/"><span><img src="pictures/merchants/fr/pizzafr.png"/></span></a>
+		<li class="services"><a href="http://www.pharma7.fr/"><span><img src="pictures/merchants/fr/pharma7.png"/></span></a>
+		<li class="services"><a href="http://www.virgin.com/richard-branson/bitcoins-in-space"><span><img src="pictures/merchants/virgin-galactic.jpg"/></span></a>
+		<li class="services"><a href="http://investorplace.com/2014/06/expedia-bitcoin-expe-stock/"><span><img src="pictures/merchants/expedia.gif"/></span></a>
+		<li class="services"><a href="http://www.jimprimeen3d.fr/"><span><img src="pictures/merchants/jimprime3d.png"/></span></a>
+
+		<!-- online service -->
+		<li class="services"><a href="https://mega.co.nz/"><span><img src="pictures/merchants/mega.jpeg"/></span></a>
+		<li class="services"><a href="http://fr.wordpress.com/"><span><img src="pictures/merchants/wordpress.jpeg"/></span></a>
+		<li class="services"><a href="https://ipredator.se"><span><img src="pictures/merchants/ipredator.png"/></span></a>
+		<li class="services"><a href="http://fr.reddit.com/"><span><img src="pictures/merchants/reddit.jpeg"/></span></a>
+		<li class="services"><a href="http://www.jupiterbroadcasting.com/contact/"><span><img src="pictures/merchants/jupiter-broadcasting.jpeg"/></span></a>
+
+		<!-- computer services -->
+		<li class="computing"><a href="http://www.clever-cloud.com"><span><img src="pictures/merchants/fr/clevercloud.jpeg"/></span></a>
+		<li class="computing"><a href="http://www.webapp.fr/faq.html"><span><img src="pictures/merchants/fr/webappfr.png"/></span></a>
+
+		<!-- Association -->
+		<li class="assoc"><a href="https://soutien.laquadrature.net/#faq-bitcoin"><span><img src="pictures/merchants/fr/quadrature.png"/></span></a>
+		<li class="assoc"><a href="http://archive.org/"><span><img src="pictures/merchants/internet-archives.jpeg"/></span></a>
+		<li class="assoc"><a href="https://supporters.eff.org/donate"><span><img src="pictures/merchants/eff.jpeg"/></span></a>
+		<li class="assoc"><a href="http://shop.wikileaks.org/donate#dbitcoin"><span><img src="pictures/merchants/wikileaks.jpeg"/></span></a>
+        </ul>
+    </div></section>
+    <section class="slide scalability big"><div>
+        <style>
+            .slide.scalability .visa    { height: 40px; vertical-align: middle; }
+            .slide.scalability i        { margin-left: .5em; }
+            .slide.scalability li       { margin-bottom: .8em; }
+            .slide.scalability .ok      { color: green; }
+            .slide.scalability .mixed   { color: orange; }
+        </style>
+        <h2 data-l10n-id="scalability-title"></h2>
+        <ul>
+            <li data-l10n-id="scalability-tps">
+            <li data-l10n-id="scalability-cpu" class="next">
+            <li data-l10n-id="scalability-network" class="next">
+            <li data-l10n-id="scalability-storage" class="next">
+        </ul>
+    </div></section>
+    <section class="slide basedonbtc big"><div>
+        <style>
+            .slide.basedonbtc li            { margin: 40px 0 30px 0; }
+        </style>
+        <h2 data-l10n-id="based-on-bitcoin-title"></h2>
+        <ul>
+            <li><a href="http://storj.io/">storj.io</a> / <a href="http://filecoin.io/">filecoin.io</a>
+            <li><a href="http://www.proofofexistence.com/">proofofexistence.com</a> / <a href="https://bitproof.io/">bitproof.io</a>
+            <li><a href="http://www.v-initiative.org/">V initiative</a>
+        </ul>
+    </div></section>
+    <section class="slide mtgox"><div>
+        <style>
+            .slide.mtgox i { margin-left: 10px; }
+        </style>
+        <h2 data-l10n-id="mtgox-title"></h2>
+        <ul>
+            <li>2009 : <strong>M</strong>agic: <strong>t</strong>he <strong>G</strong>athering, <strong>o</strong>nline e<strong>x</strong>change
+            <li class="next" data-l10n-id="mtgox-history-2010">
+            <li class="next" data-l10n-id="mtgox-history-2011">
+            <li class="next" data-l10n-id="mtgox-history-2011-2">
+            <li class="next" data-l10n-id="mtgox-history-2013">
+            <li class="next" data-l10n-id="mtgox-history-2014">
+            <li class="next" data-l10n-id="mtgox-malleabilty">
+        </ul>
+    </div></section>
+    <section class="slide mtgox2"><div>
+        <style>
+            .slide.mtgox2 transaction-element li:before       { display: none; }
+            .slide.mtgox2 transaction-element i               { margin-left: 10px; }
+            .slide.mtgox2 span                                { display: inline-block; width: 48%; text-align: center; }
+            .slide.mtgox2 a.source                            { position: relative; left: 590px; line-height: 13px; }
+        </style>
+        <h2 data-l10n-id="mtgox-malleabilty"></h2>
+        <span>
+            <transaction-element data-l10n-id="mtgox-transaction" from="Alice" to="Bob" amount="1,00" signature="00042a98fb" txid="45fb14099a" />
+        </span>
+        <span class="next">
+            <transaction-element data-l10n-id="mtgox-transaction" from="Alice" to="Bob" amount="1,00" signature="42a98fb" txid="98baa3217" />
+        </span>
+        <small><a href="https://anders.io/the-troublesome-history-of-the-bitcoin-exchange-mtgox/" class="next source">http://anders.io/</a></small>
     </div></section>
     <div class="progress"><div></div></div>
 	<script src="./bower_components/shower-core/shower.min.js"></script>
