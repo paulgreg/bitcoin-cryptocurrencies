@@ -7,7 +7,7 @@
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<link rel="stylesheet" href="./bower_components/shower-ribbon/styles/screen.css">
 	<link rel="stylesheet" href="css/fontello.css">
-    <script type="text/javascript" src="js/l10n.js"></script>
+    <script src="js/l10n.js"></script>
     <link rel="prefetch" type="application/l10n" href="l10n-en.ini" />
     <link rel="prefetch" type="application/l10n" href="l10n-fr.ini" />
     <link rel="shortcut icon" href="pictures/favicon.png">
@@ -110,12 +110,12 @@
             <h2 data-l10n-id="main-title"></h2>
             <h3></h3>
             <ul>
-                <li><i class="icon-twitter"></i><a href="https://twitter.com/paulgreg" rel="me" class="twitter">@paulgreg</a> - <span class="me">Grégory Paul</span>
-                <li><span class="mappy"><i class="icon-twitter"></i><a href="https://twitter.com/mappy" rel="me" class="twitter">@mappy</a>
+                <li><i class="icon-twitter"></i><a href="https://twitter.com/paulgreg" rel="me" class="twitter">@paulgreg</a> - <span class="me">Grégory Paul</span></li>
+                <li><i class="icon-twitter"></i><a href="https://twitter.com/mappy" rel="me" class="twitter">@mappy</a></li>
             </ul>
             <h4>
-                <img src="pictures/mappy-logo.png">
-                <img src="pictures/brownBag.png">
+                <img src="pictures/mappy-logo.png" alt="">
+                <img src="pictures/brownBag.png" alt="">
             </h4>
             <h5><a class="hashtag" href="https://twitter.com/search?q=%23bitcoin">#bitcoin</a></h5>
         </div>
@@ -162,52 +162,6 @@
     <section class="slide disclaimer big"><div>
         <h2 data-l10n-id="disclaimer-title"></h2>
         <p data-l10n-id="disclaimer-p"></p>
-    </div></section>
-    <section class="slide toc big"><div>
-        <style>
-            @media screen {
-                .slide.toc ol       { columns: 2; -moz-columns: 2; -webkit-columns: 2; width: 920px; }
-                .slide.toc ol li    { text-indent: -1em;}
-            }
-            @media print {
-                .slide.toc ol { font-size: 20px; }
-            }
-        </style>
-        <h2 data-l10n-id="toc-title"></h2>
-        <ol>
-            <li data-l10n-id="intro-title">
-            <li data-l10n-id="p2p-title" class="next">
-            <li data-l10n-id="crypto-title" class="next">
-            <li data-l10n-id="coins-generation-title" class="next">
-            <li data-l10n-id="proof-of-work-title" class="next">
-            <li data-l10n-id="transaction-title" class="next">
-            <li data-l10n-id="mining-title" class="next">
-            <li data-l10n-id="security-title" class="next">
-            <li data-l10n-id="practical-title" class="next">
-            <li data-l10n-id="dev-title" class="next">
-            <li data-l10n-id="conclusion-title" class="next">
-            <li data-l10n-id="qa-title" class="next">
-        </ol>
-    </div></section>
-    <section class="slide motivation"><div>
-        <style>
-            .slide.motivation p { text-align: center; }
-            .slide.motivation img { width: 340px; margin: 0 10px; display: inline; }
-            .slide.motivation a { position: absolute; border-bottom: none; text-decoration: underline; bottom: 0; right: 120px; }
-        </style>
-        <h2 data-l10n-id="motivation-title"></h2>
-        <p>
-        <small><a href="http://www.commitstrip.com/fr/2014/02/28/about-bitcoins/">http://commitstrip.com/</a></small>
-        <img data-l10n-id="motivation-comic1" src="pictures/CommitStrip-fr-1.gif"/>
-        <img class="next" data-l10n-id="motivation-comic2" src="pictures/CommitStrip-fr-2.gif"/>
-        <img class="next" data-l10n-id="motivation-comic3" src="pictures/CommitStrip-fr-3.gif"/>
-        </p>
-    </div></section>
-    <section class="slide cover title"><div>
-        <div class="color1"></div><div class="color2"></div><div class="color3"></div>
-        <h1 data-l10n-id="intro-title"></h1>
-		<img src="pictures/bitcoins.jpg" alt="">
-        <p class="footer"><a class="hashtag" href="https://twitter.com/search?q=%23bitcoin">#bitcoin</a><span class="twitter"><i class="icon-twitter"></i><a href="https://twitter.com/paulgreg" rel="me" class="twitter">@paulgreg</a></span></p>
     </div></section>
     <section class="slide what big"><div>
         <h2>Bitcoin ?</h2>
@@ -449,7 +403,7 @@
             <li data-l10n-id="proof-of-work-litecoin" class="next">
             <li data-l10n-id="proof-of-work-difficulty" class="next">
         </ul>
-        <script type="text/javascript" src="js/sha256.js"></script>
+        <script src="js/sha256.js"></script>
         <script defer>
             (function() {
                 var slide = document.querySelector('.slide.proof-of-work');
@@ -1116,6 +1070,52 @@
         <div class="color1"></div><div class="color2"></div><div class="color3"></div>
         <h1 data-l10n-id="appendix-title"></h1>
 		<img src="pictures/bitcoins.jpg" alt="">
+    </div></section>
+    <section class="slide toc big"><div>
+        <style>
+            @media screen {
+                .slide.toc ol       { columns: 2; -moz-columns: 2; -webkit-columns: 2; width: 920px; }
+                .slide.toc ol li    { text-indent: -1em;}
+            }
+            @media print {
+                .slide.toc ol { font-size: 20px; }
+            }
+        </style>
+        <h2 data-l10n-id="toc-title"></h2>
+        <ol>
+            <li data-l10n-id="intro-title">
+            <li data-l10n-id="p2p-title" class="next">
+            <li data-l10n-id="crypto-title" class="next">
+            <li data-l10n-id="coins-generation-title" class="next">
+            <li data-l10n-id="proof-of-work-title" class="next">
+            <li data-l10n-id="transaction-title" class="next">
+            <li data-l10n-id="mining-title" class="next">
+            <li data-l10n-id="security-title" class="next">
+            <li data-l10n-id="practical-title" class="next">
+            <li data-l10n-id="dev-title" class="next">
+            <li data-l10n-id="conclusion-title" class="next">
+            <li data-l10n-id="qa-title" class="next">
+        </ol>
+    </div></section>
+    <section class="slide motivation"><div>
+        <style>
+            .slide.motivation p { text-align: center; }
+            .slide.motivation img { width: 340px; margin: 0 10px; display: inline; }
+            .slide.motivation a { position: absolute; border-bottom: none; text-decoration: underline; bottom: 0; right: 120px; }
+        </style>
+        <h2 data-l10n-id="motivation-title"></h2>
+        <p>
+        <small><a href="http://www.commitstrip.com/fr/2014/02/28/about-bitcoins/">http://commitstrip.com/</a></small>
+        <img data-l10n-id="motivation-comic1" src="pictures/CommitStrip-fr-1.gif"/>
+        <img class="next" data-l10n-id="motivation-comic2" src="pictures/CommitStrip-fr-2.gif"/>
+        <img class="next" data-l10n-id="motivation-comic3" src="pictures/CommitStrip-fr-3.gif"/>
+        </p>
+    </div></section>
+    <section class="slide cover title"><div>
+        <div class="color1"></div><div class="color2"></div><div class="color3"></div>
+        <h1 data-l10n-id="intro-title"></h1>
+		<img src="pictures/bitcoins.jpg" alt="">
+        <p class="footer"><a class="hashtag" href="https://twitter.com/search?q=%23bitcoin">#bitcoin</a><span class="twitter"><i class="icon-twitter"></i><a href="https://twitter.com/paulgreg" rel="me" class="twitter">@paulgreg</a></span></p>
     </div></section>
     <section class="slide realtime"><div>
         <style>
