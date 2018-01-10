@@ -138,7 +138,7 @@
             <li>Grégory Paul
             <li data-l10n-id="about-function">
             <li><i class="icon-twitter"></i><a href="https://twitter.com/paulgreg" rel="me">@paulgreg</a> <i class="icon-github-circled"></i><a href="https://github.com/paulgreg" rel="me">paulgreg</a>
-            <li><i class="icon-user"></i><a href="https://paulgreg.me" rel="me">https://paulgreg.me</a>
+            <li><i class="icon-user"></i><a href="https://paulgreg.me/" rel="me">https://paulgreg.me/</a>
         </ul>
         <ul class="next">
             <li data-l10n-id="about-what"></li>
@@ -157,6 +157,7 @@
             <li data-l10n-id="poll-who-know-other" class="next">
             <li data-l10n-id="poll-who-own" class="next">
             <li data-l10n-id="poll-who-have-mined" class="next">
+            <li data-l10n-id="poll-who-is-expert" class="next">
         </ul>
     </div></section>
     <section class="slide disclaimer big"><div>
@@ -272,18 +273,21 @@
         <h2 data-l10n-id="crypto-asymmetric-cipher-title"></h2>
         <figure>
         <img src="./pictures/asymetric-cipher.png">
-        <figcaption data-l10n-id="crypto-asymmetric-types"></figcaption>
         </figure>
     </div></section>
     <section class="slide"><div>
         <h2 data-l10n-id="crypto-hash-title"></h2>
         <pre>
-            <code>$ echo -n "Hello World" | sha1sum</code>
+            <code>sha1("Hello World")</code>
             <code><mark>0a4d55a8d778e5022fab701977c5d840bbc486d0</mark></code>
-            <code>$ echo -n "Hello World<mark class="important">.</mark>" | sha1sum</code>
+        </pre>
+        <pre class="next">
+            <code>sha1("Hello World<mark class="important">.</mark>")</code>
             <code><mark>b701146cf2c1262a6385c8b1fb1db98f05820499</mark></code>
-            <code>$ sha1sum ubuntu-12.04.3-desktop-amd64.iso</code>
-            <code><mark>0c06d876dabb4403cede1245e3b0bf1d81afd497</mark></code>
+       </pre>
+        <pre class="next">
+            <code>sha1("Very long text..................")</code>
+            <code><mark>02d837618c9cae8509a7410866f6caf2457be9d5</mark></code>
        </pre>
     </div></section>
     <section class="slide signature"><div>
@@ -853,6 +857,7 @@
             .slide.clients img      { margin: -20px 0 0 60px; max-height: 340px; }
             .slide.clients ol li    { display: inline; margin-left: 40px;  }
             .slide.clients ol li:first-child    { margin-left: 15px;  }
+            .slide.clients .bad { color: red;  }
         </style>
         <h2 data-l10n-id="clients-title"></h2>
         <img src="pictures/client-types.png">
@@ -871,12 +876,12 @@
         <h2 data-l10n-id="malware-title"></h2>
         <ul>
             <li data-l10n-id="malware-cryptolocker">
+            <li data-l10n-id="malware-wallet" class="next">
             <li data-l10n-id="malware-404s" class="next">
             <pre>
                 <code>404 Not Found</code>
                 <code>  /.bitcoin/wallet.dat</code>
             </pre>
-            <li data-l10n-id="malware-wallet" class="next">
         </ul>
     </div></section>
     <section class="slide attack51 big"><div>
@@ -954,7 +959,6 @@
             .slide.currencies img           { float: right; max-width: 200px; }
         </style>
         <h2 data-l10n-id="other-cryptocurrencies-title"></h2>
-        <img src="pictures/marketcap-currencies.png">
         <p><strong>Ethereum</strong>, <strong>Ripple</strong>, <strong>Bitcoin Cash</strong>, Cardano, NEM, <strong>Litecoin</strong>, Stellar, <strong>IOTA</strong>, TRON, Dash, NEO, <strong>Monero</strong>, EOS, Qtum, ICON, Bitcoin Gold, Lisk, RaiBlocks, <strong>Ethereum Classic</strong>, Verge, Siacoin, OmiseGO, Bytecoin, BitConnect, Populous, <strong>Zcash</strong>, Stratis, Dentacoin, BitShares, Binance Coin, <strong>Dogecoin</strong>, Status, Ardor, KuCoin Shares, Steem, Tether, Waves, VeChain, DigiByte, Dragonchain, Komodo, Augur, Golem, Veritaseum, Hshare, SALT, Electroneum, Kin, Ark, Dent, Ethos, ReddCoin, 0x, Decred, Nexus,...</p>
     </div></section>
     <section class="slide cover title"><div>
